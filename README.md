@@ -31,7 +31,7 @@ Make sure you have Node.js installed on your machine.
 
 2. Navigate into the project directory:
    ```bash
-   cd ceebee-enterprises
+   cd <directory_name>
    ```
 
 3. Install the dependencies:
