@@ -26,3 +26,16 @@ dist-ssr
 # Env files
 .env
 .env.*
+
+# Data processing scripts and raw data files
+*.xlsx
+*.txt
+analyze_*.js
+analyze_*.cjs
+convert_*.cjs
+debug_*.cjs
+extract_*.cjs
+extract_*.js
+extract.cjs
+test_fix.cjs
+scripts/
