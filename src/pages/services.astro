@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import FaqList from '../components/FaqList.astro';
+import { SITE } from '../config/site';
+import { faqSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services/' },
+];
+const wa = 'Hi, I want home delivery of some materials. My location is: ';
+const faqs = [
+  {
+    q: 'Do you deliver plywood and hardware in Hazaribag district?',
+    a: 'Yes. We deliver across Hazaribag district, to homes and building sites. Send your location and material list on WhatsApp for delivery details.',
+  },
+  {
+    q: 'How much does delivery cost?',
+    a: 'It depends on the distance and the size of the order. Tell us your location and what you are buying and we will tell you before you order.',
+  },
+  {
+    q: 'Can you suggest a carpenter?',
+    a: 'Yes. Ask us and we can refer you to carpenters we know for furniture, kitchens and wardrobes.',
+  },
+];
+---
+
+<Base
+  title="Delivery in Hazaribag District | Bulk Supply | CB Decor"
+  description="Cee Bee Enterprises delivers plywood, hardware & interior products across Hazaribag district, supplies contractors in bulk and refers carpenters."
+  path="/services/"
+  breadcrumbs={crumbs}
+  schema={[faqSchema(faqs)]}
+  wa={wa}
+>
+  <PageHero crumbs={crumbs} h1="Delivery Across Hazaribag District & Other Services" eyebrow="Services">
+    <p class="lead">
+      Along with selling from the shop near Bajrangi Chowk, Cee Bee Enterprises (CB Decor) offers home and site delivery across Hazaribag
+      district, bulk supply for contractors and builders, and carpenter referrals.
+    </p>
+    <ContactButtons wa={wa} placement="services-hero" waLabel="Ask about delivery" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap grid grid--3">
+      <article class="card">
+        <h2 style="font-size:1.4rem">Home & site delivery</h2>
+        <p>
+          We deliver plywood, boards, hardware, interior products and mattresses across {SITE.areaServed}, including
+          {' '}{SITE.deliveryTowns.join(', ')}.
+        </p>
+        <p class="small muted">Delivery charges depend on distance and order size. Ask before you order.</p>
+      </article>
+      <article class="card">
+        <h2 style="font-size:1.4rem">Bulk & contractor supply</h2>
+        <p>
+          Contractors, builders, architects and interior designers can send a full material list on WhatsApp and get one combined quote, with
+          delivery to site. <a href="/contractors/">More for contractors →</a>
+        </p>
+      </article>
+      <article class="card">
+        <h2 style="font-size:1.4rem">Carpenter referral</h2>
+        <p>
+          Need someone to build your kitchen, wardrobe or bed? Ask us and we can refer you to carpenters we know, who can then pick the
+          material with you at the shop.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={faqs} />
+    </div>
+  </section>
+</Base>

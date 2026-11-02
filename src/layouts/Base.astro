@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StickyBar from '../components/StickyBar.astro';
+import { SITE, isFilled } from '../config/site';
+import { storeSchema, breadcrumbSchema } from '../lib/schema';
+import { ui, type Lang } from '../lib/i18n';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Canonical path, e.g. "/products/" */
+  path: string;
+  lang?: Lang;
+  /** Paths of the same page in each language, for hreflang. */
+  alternates?: { en: string; hi: string };
+  breadcrumbs?: { name: string; path: string }[];
+  schema?: object[];
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  /** Prefilled WhatsApp message for this page's buttons. */
+  wa?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  lang = 'en',
+  alternates,
+  breadcrumbs,
+  schema = [],
+  noindex = false,
+  ogType = 'website',
+  wa = ui[lang].defaultWa,
+} = Astro.props;
+
+const canonical = new URL(path, SITE.url).href;
+const ogImage = new URL('/og-default.jpg', SITE.url).href;
+const ldJson = [storeSchema(), ...(breadcrumbs ? [breadcrumbSchema(breadcrumbs)] : []), ...schema];
+const gaId = isFilled(SITE.ga4Id) ? SITE.ga4Id : '';
+---
+
+<!doctype html>
+<html lang={lang === 'hi' ? 'hi-IN' : 'en-IN'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {
+      alternates && (
+        <>
+          <link rel="alternate" hreflang="en-IN" href={new URL(alternates.en, SITE.url).href} />
+          <link rel="alternate" hreflang="hi-IN" href={new URL(alternates.hi, SITE.url).href} />
+          <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, SITE.url).href} />
+        </>
+      )
+    }
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={lang === 'hi' ? 'hi_IN' : 'en_IN'} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#2e1f15" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+    {ldJson.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#main">{ui[lang].skip}</a>
+    <Header lang={lang} path={path} alternates={alternates} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <StickyBar lang={lang} wa={wa} />
+
+    <script is:inline define:vars={{ gaId }}>
+      // Click tracking: any element with data-track="call|whatsapp|directions|…"
+      // sends a GA4 event. Works whether or not GA has loaded yet (queued).
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest && e.target.closest('[data-track]');
+        if (!el) return;
+        gtag('event', 'click_' + el.dataset.track, {
+          link_url: el.href || '',
+          page_path: location.pathname,
+          placement: el.dataset.placement || '',
+        });
+      });
+      // Load GA4 only after the page is idle, so it never slows first paint.
+      if (gaId) {
+        gtag('js', new Date());
+        gtag('config', gaId);
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+          document.head.appendChild(s);
+        };
+        addEventListener('load', function () { setTimeout(load, 2500); }, { once: true });
+      }
+    </script>
+  </body>
+</html>

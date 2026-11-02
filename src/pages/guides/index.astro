@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides')).sort((a, b) => a.data.order - b.data.order);
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides/' },
+];
+---
+
+<Base
+  title="Plywood, Laminate & Kitchen Hardware Buying Guides"
+  description="Honest buying guides from a Hazaribag plywood & hardware shop: BWP vs MR plywood, laminate finishes, kitchen hinges and channels, plywood for a 2BHK."
+  path="/guides/"
+  breadcrumbs={crumbs}
+>
+  <PageHero crumbs={crumbs} h1="Buying Guides" eyebrow="Learn before you buy">
+    <p class="lead">
+      Straight answers to the questions customers ask us most at the counter, written by Cee Bee Enterprises (CB Decor), Hazaribag.
+    </p>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap grid grid--2">
+      {
+        guides.map((g) => (
+          <a class="cat-card" href={`/guides/${g.id}/`}>
+            <strong>{g.data.title}</strong>
+            <span>{g.data.description}</span>
+            <em>Read guide →</em>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Base>

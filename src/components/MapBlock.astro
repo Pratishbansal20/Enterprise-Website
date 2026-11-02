@@ -1,0 +1,48 @@
+---
+// Google Map of the shop. By default shows a light placeholder and only loads
+// Google's heavy map iframe when tapped (saves ~500 KB on mobile data).
+// `live` embeds the map straight away (used on the contact page).
+import { SITE, directionsUrl, mapEmbedUrl, addressLine } from '../config/site';
+import { icons } from '../lib/icons';
+
+interface Props {
+  live?: boolean;
+  lang?: 'en' | 'hi';
+}
+const { live = false, lang = 'en' } = Astro.props;
+const hi = lang === 'hi';
+const title = `Map: ${SITE.name}, ${addressLine()}`;
+---
+
+<div class="map" data-map={mapEmbedUrl} data-title={title}>
+  {
+    live ? (
+      <iframe src={mapEmbedUrl} title={title} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen />
+    ) : (
+      <div class="map-facade">
+        <span class="map-pin" set:html={icons.pin} />
+        <strong>{SITE.legalName}</strong>
+        <span class="muted small">{addressLine()}</span>
+        <div class="btn-row" style="justify-content:center">
+          <button class="btn btn--primary" type="button" data-map-load>{hi ? 'नक्शा दिखाएँ' : 'Show map'}</button>
+          <a class="btn btn--ghost" href={directionsUrl} target="_blank" rel="noopener" data-track="directions" data-placement="map">
+            {hi ? 'रास्ता देखें' : 'Directions'}
+          </a>
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-map-load]').forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const box = btn.closest<HTMLElement>('[data-map]')!;
+      const iframe = document.createElement('iframe');
+      iframe.src = box.dataset.map!;
+      iframe.title = box.dataset.title!;
+      iframe.allowFullscreen = true;
+      box.replaceChildren(iframe);
+    }),
+  );
+</script>

@@ -1,0 +1,43 @@
+# SEO & AI-search notes
+
+## robots.txt, line by line
+
+`public/robots.txt` tells crawlers what they may read. Everything public is open on purpose: the more crawlers that can read the site, the more places it can appear.
+
+| Line | What it means |
+| --- | --- |
+| `User-agent: Googlebot` / `Allow: /` | Google Search (and Google AI Overviews, which are built from Google's index) may crawl every page. |
+| `User-agent: Bingbot` / `Allow: /` | Bing may crawl everything. This matters beyond Bing itself: **ChatGPT search, Microsoft Copilot and DuckDuckGo lean on Bing's index**. |
+| `User-agent: OAI-SearchBot` / `Allow: /` | OpenAI's crawler for **ChatGPT search results**. Allowing it lets ChatGPT show and link the site when people ask about shops in Hazaribag. |
+| `User-agent: GPTBot` / `Allow: /` | OpenAI's crawler for **training** future models. Allowing it is optional; it doesn't affect ChatGPT search. Kept open as you asked. |
+| `User-agent: PerplexityBot` / `Allow: /` | Perplexity's crawler for its answer engine and citations. |
+| `User-agent: ClaudeBot` / `Allow: /` | Anthropic's crawler for Claude. |
+| `User-agent: *` / `Allow: /` | Every other well-behaved crawler may read the site… |
+| `Disallow: /thanks/` | …except the "thank you" page after a form is sent, which has no useful content. (It also carries a `noindex` tag.) |
+| `Sitemap: https://cb-mirror.cc/sitemap-index.xml` | Where the full list of pages lives, so crawlers find everything quickly. |
+
+To block AI training while staying in AI search, change `GPTBot` to `Disallow: /`.
+
+## What's in place
+
+- **Content in the HTML.** Every page is plain server-rendered HTML; no crawler has to run JavaScript to read it.
+- **One primary keyword per page**, in the title (≤ 60 chars), meta description (≤ 155), H1, first paragraph and URL. `npm run check:seo` checks the lengths.
+- **Structured data (JSON-LD):** `HardwareStore` on every page (NAP, hours, area served, brand catalogue, `hasMap`, `sameAs`); `Organization`, `WebSite`, `VideoObject` and `FAQPage` on the home page; `BreadcrumbList` on inner pages; `FAQPage` on category, FAQ, services and contractor pages; `Article` on guides. **No review/rating markup**: add it only with real review data.
+- **Question-style headings with direct answers**, which AI tools quote.
+- **`/llms.txt`:** a plain-text business summary for AI assistants, generated from the same config as the site. Low effort, uncertain impact.
+- **Hindi pages** (`/hi/`, `/hi/products/`, `/hi/contact/`) linked to their English versions with `hreflang`.
+- **Canonical tags** on every page, so the UTM-tagged GBP link doesn't create duplicates.
+
+## Validate after launch
+
+1. Google Rich Results Test, for the home page, one category page and one guide: https://search.google.com/test/rich-results
+2. Schema.org validator: https://validator.schema.org/
+3. PageSpeed Insights on mobile, targeting LCP < 2.5 s, INP < 200 ms and CLS < 0.1: https://pagespeed.web.dev/
+
+## Submit the site (do this in launch week)
+
+- [ ] **Google Search Console:** add `cb-mirror.cc` as a *Domain* property (verify with a DNS TXT record at Spaceship), then submit `https://cb-mirror.cc/sitemap-index.xml`.
+- [ ] **Bing Webmaster Tools:** sign in, choose *Import from Google Search Console* (one click), and submit the sitemap. This is what ChatGPT search draws on.
+- [ ] **Bing Places for Business:** claim the listing (import from GBP).
+- [ ] **Apple Business Connect:** claim the Apple Maps listing.
+- [ ] Link Search Console to GA4 (Admin → Product links).

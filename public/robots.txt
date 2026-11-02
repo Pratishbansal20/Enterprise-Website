@@ -1,0 +1,29 @@
+# robots.txt for cb-mirror.cc — Cee Bee Enterprises (CB Decor)
+# Every line is explained in docs/seo-and-ai-search.md.
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI search and assistants
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Everyone else
+User-agent: *
+Allow: /
+Disallow: /thanks/
+
+Sitemap: https://cb-mirror.cc/sitemap-index.xml

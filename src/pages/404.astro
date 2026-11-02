@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import { categories } from '../data/categories';
+---
+
+<Base title="Page not found | Cee Bee Enterprises (CB Decor)" description="This page does not exist." path="/404/" noindex>
+  <section class="section">
+    <div class="wrap narrow">
+      <p class="eyebrow">Error 404</p>
+      <h1>We couldn’t find that page</h1>
+      <p class="lead">The link may be old. Try one of these, or ask us directly on WhatsApp.</p>
+      <ContactButtons wa="Hi, I was looking for something on your website: " placement="404" />
+      <h2 style="margin-top:40px">Popular pages</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">All products</a></li>
+        {categories.slice(0, 5).map((c) => <li><a href={`/products/${c.slug}/`}>{c.name}</a></li>)}
+        <li><a href="/contact/">Contact & directions</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,141 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import ContactButtons from '../../components/ContactButtons.astro';
+import ShowroomReel from '../../components/ShowroomReel.astro';
+import FaqList from '../../components/FaqList.astro';
+import MapBlock from '../../components/MapBlock.astro';
+import { SITE, addressLine } from '../../config/site';
+import { brands } from '../../data/brands';
+import { categories } from '../../data/categories';
+import { categoriesHi } from '../../data/categories-hi';
+import { faqSchema } from '../../lib/schema';
+
+const wa = 'नमस्ते, मुझे सामान का रेट और उपलब्धता जाननी है।';
+const call = `कॉल करें ${SITE.phoneDisplay}`;
+const faqs = [
+  {
+    q: 'हजारीबाग में प्लाईवुड कहाँ मिलेगी?',
+    a: 'Cee Bee Enterprises (CB Decor), बजरंगी चौक, हजारीबाग में। हम Century, Greenply और Royale Touche के अधिकृत डीलर हैं और 3 mm से 25 mm तक BWP, MR और कमर्शियल प्लाईवुड रखते हैं।',
+  },
+  {
+    q: 'दुकान कब खुली रहती है?',
+    a: 'मंगलवार से रविवार, सुबह 9:30 से रात 8:00 बजे तक। सोमवार को दुकान बंद रहती है।',
+  },
+  {
+    q: 'क्या आप होम डिलीवरी करते हैं?',
+    a: 'हाँ। हम पूरे हजारीबाग ज़िले में घर और साइट पर डिलीवरी करते हैं। अपनी लोकेशन और सामान की लिस्ट व्हाट्सऐप पर भेजें।',
+  },
+  {
+    q: 'आज का रेट कैसे पता करें?',
+    a: 'सामान का नाम, ब्रांड, साइज़ और मात्रा व्हाट्सऐप पर भेजें, हम आज का रेट बता देंगे। कंपनी के रेट बदलते रहते हैं, इसलिए हम वेबसाइट पर दाम नहीं लिखते।',
+  },
+];
+---
+
+<Base
+  title="हार्डवेयर दुकान हजारीबाग | प्लाईवुड दुकान | CB Decor"
+  description="Cee Bee Enterprises (CB Decor): बजरंगी चौक, हजारीबाग की हार्डवेयर और प्लाईवुड दुकान, 2001 से। Century, Godrej, Merino के अधिकृत डीलर। आज ही कॉल करें।"
+  path="/hi/"
+  lang="hi"
+  alternates={{ en: '/', hi: '/hi/' }}
+  schema={[faqSchema(faqs)]}
+  wa={wa}
+>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">बजरंगी चौक, हजारीबाग · {SITE.foundingYear} से</p>
+        <h1>हजारीबाग में हार्डवेयर और प्लाईवुड की दुकान</h1>
+        <p class="lead">
+          Cee Bee Enterprises (CB Decor) बजरंगी चौक, हजारीबाग की एक पारिवारिक हार्डवेयर और प्लाईवुड दुकान है। {SITE.foundingYear} से हम घरों,
+          कारपेंटरों और ठेकेदारों को प्लाईवुड, लैमिनेट, दरवाज़े और किचन का हार्डवेयर, इंटीरियर का सामान और King Koil गद्दे दे रहे हैं।
+        </p>
+        <ContactButtons wa={wa} placement="hero-hi" light waLabel="व्हाट्सऐप पर रेट पूछें" callLabel={call} />
+        <ul class="hero-facts">
+          <li>{SITE.foundingYear} से पारिवारिक दुकान</li>
+          <li>{brands.length} ब्रांड के अधिकृत डीलर</li>
+          <li>पूरे हजारीबाग ज़िले में डिलीवरी</li>
+          <li>मंगल–रवि 9:30–8 · सोमवार बंद</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <Photo
+          name="cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag"
+          alt="Cee Bee Enterprises (CB Decor) की दुकान, बजरंगी चौक, हजारीबाग"
+          eager
+          sizes="(min-width: 900px) 460px, 100vw"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">हमारे पास क्या मिलता है</p>
+      <h2>हजारीबाग प्लाईवुड दुकान: सारा सामान एक जगह</h2>
+      <p class="lead">घर या दुकान के इंटीरियर का पूरा सामान, प्लाईवुड से लेकर हैंडल, वॉल पैनल और गद्दे तक, एक ही दुकान में।</p>
+      <div class="grid grid--3">
+        {
+          categories.map((c) => (
+            <a class="cat-card" href={`/products/${c.slug}/`}>
+              <strong>{categoriesHi[c.slug].name}</strong>
+              <span>{categoriesHi[c.slug].blurb}</span>
+              <em>पूरी जानकारी (English) →</em>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark reel-section">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">शोरूम</p>
+        <h2>बजरंगी चौक पर हमारा शोरूम देखें</h2>
+        <p class="lead">आने से पहले शोरूम की एक झलक देखें। लैमिनेट के शेड, हैंडल की फिनिश और वॉल पैनल सामने देखकर चुनना आसान होता है।</p>
+        <p><strong>{addressLine()}</strong></p>
+        <ContactButtons wa="नमस्ते, मैं आपका शोरूम देखने आना चाहता/चाहती हूँ।" placement="showroom-hi" light directions waLabel="व्हाट्सऐप करें" callLabel="कॉल करें" directionsLabel="रास्ता देखें" />
+      </div>
+      <ShowroomReel label="शोरूम" />
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap">
+      <p class="eyebrow">अधिकृत डीलर</p>
+      <h2>हम किन ब्रांड के अधिकृत डीलर हैं?</h2>
+      <p class="lead">Cee Bee Enterprises हजारीबाग में इन {brands.length} ब्रांड का अधिकृत डीलर है:</p>
+      <ul class="brand-tiles">
+        {brands.map((b) => <li><a class="brand-tile" href={`/brands/#${b.id}`}>{b.name.replace(/ \(.*\)/, '')}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>ग्राहक हमें क्यों चुनते हैं?</h2>
+        <ul class="feature-list">
+          <li><span><strong>{SITE.foundingYear} से पारिवारिक दुकान</strong>, {SITE.owner} द्वारा संचालित।</span></li>
+          <li><span><strong>{brands.length} ब्रांड के अधिकृत डीलर:</strong> असली माल, पक्का बिल।</span></li>
+          <li><span><strong>एक ही दुकान में सब कुछ:</strong> बोर्ड, लैमिनेट, हार्डवेयर, इंटीरियर और गद्दे।</span></li>
+          <li><span><strong>पूरे हजारीबाग ज़िले में डिलीवरी।</strong></span></li>
+          <li><span><strong>ठेकेदारों के लिए थोक सप्लाई:</strong> सामान की लिस्ट व्हाट्सऐप पर भेजें।</span></li>
+          <li><span><strong>कारपेंटर चाहिए?</strong> हमसे पूछें, हम जान-पहचान के कारपेंटर बता सकते हैं।</span></li>
+        </ul>
+      </div>
+      <div class="stack">
+        <MapBlock lang="hi" />
+        <p><a href="/hi/contact/">पता, समय और रास्ता →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={faqs} heading="अक्सर पूछे जाने वाले सवाल" />
+    </div>
+  </section>
+</Base>

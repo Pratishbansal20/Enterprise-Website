@@ -1,0 +1,70 @@
+---
+// Quote request form. Netlify Forms picks it up at deploy time (no backend
+// or database) and emails each submission, file included, to the address set
+// in Netlify → Forms → Notifications. The "Send on WhatsApp instead" button
+// turns the same fields into a prefilled WhatsApp message.
+import { SITE } from '../config/site';
+import { icons } from '../lib/icons';
+
+interface Props {
+  source: string;
+  heading?: string;
+}
+const { source, heading = 'Get a quote' } = Astro.props;
+---
+
+<form
+  class="form card"
+  name="quote"
+  method="POST"
+  action="/thanks/"
+  enctype="multipart/form-data"
+  data-netlify="true"
+  netlify-honeypot="company"
+  data-quote-form
+>
+  <h2 class="mb-0">{heading}</h2>
+  <p class="muted mb-0">Tell us what you need and we will reply on WhatsApp or by phone with prices and availability.</p>
+  <input type="hidden" name="form-name" value="quote" />
+  <input type="hidden" name="source-page" value={source} />
+  <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label></p>
+
+  <div class="field">
+    <label for={`q-name-${source}`}>Your name</label>
+    <input id={`q-name-${source}`} name="name" autocomplete="name" required />
+  </div>
+  <div class="field">
+    <label for={`q-phone-${source}`}>Phone / WhatsApp number</label>
+    <input id={`q-phone-${source}`} name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+\s\-]{10,15}" />
+  </div>
+  <div class="field">
+    <label for={`q-need-${source}`}>What do you need?</label>
+    <textarea id={`q-need-${source}`} name="need" required placeholder="e.g. 10 sheets 19 mm BWP plywood, 2 kitchen thali baskets, delivery to Barhi"></textarea>
+  </div>
+  <div class="field">
+    <label for={`q-file-${source}`}>Material list (optional)</label>
+    <input id={`q-file-${source}`} name="material-list" type="file" accept="image/*,.pdf,.xls,.xlsx,.doc,.docx" />
+    <span class="hint">Photo or PDF of your carpenter’s list. Max 8 MB.</span>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn--primary" type="submit" data-track="quote_submit">Send quote request</button>
+    <button class="btn btn--wa" type="button" data-wa-send data-track="whatsapp" data-placement="quote-form">
+      <Fragment set:html={icons.whatsapp} />Send on WhatsApp instead
+    </button>
+  </div>
+</form>
+
+<script define:vars={{ wa: SITE.whatsappE164 }}>
+  document.querySelectorAll('[data-quote-form]').forEach(function (form) {
+    form.querySelector('[data-wa-send]').addEventListener('click', function () {
+      var f = new FormData(form);
+      var msg =
+        'Hi, I want a quote.\n' +
+        'Name: ' + (f.get('name') || '') + '\n' +
+        'Phone: ' + (f.get('phone') || '') + '\n' +
+        'Need: ' + (f.get('need') || '');
+      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
+  });
+</script>

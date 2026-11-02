@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactButtons from '../../components/ContactButtons.astro';
+import { categories, type Group } from '../../data/categories';
+import { categoriesHi } from '../../data/categories-hi';
+import { waLink } from '../../config/site';
+
+const crumbs = [
+  { name: 'होम', path: '/hi/' },
+  { name: 'उत्पाद', path: '/hi/products/' },
+];
+const groupsHi: Record<Group, string> = {
+  boards: 'बोर्ड, शीट और लैमिनेट',
+  hardware: 'हार्डवेयर और फिटिंग',
+  interiors: 'इंटीरियर और डेकोर',
+  home: 'बेडरूम',
+};
+const order: Group[] = ['boards', 'hardware', 'interiors', 'home'];
+const wa = 'नमस्ते, मुझे इस सामान का रेट और उपलब्धता जाननी है: ';
+---
+
+<Base
+  title="प्लाईवुड, हार्डवेयर और इंटीरियर सामान, हजारीबाग | CB Decor"
+  description="हजारीबाग में प्लाईवुड, लैमिनेट, ताले, किचन हार्डवेयर, वॉल पैनल, वॉलपेपर और King Koil गद्दे। Cee Bee Enterprises, बजरंगी चौक। व्हाट्सऐप पर रेट पूछें।"
+  path="/hi/products/"
+  lang="hi"
+  alternates={{ en: '/products/', hi: '/hi/products/' }}
+  breadcrumbs={crumbs}
+  wa={wa}
+>
+  <PageHero crumbs={crumbs} h1="हजारीबाग में प्लाईवुड, हार्डवेयर और इंटीरियर का सामान" eyebrow="उत्पाद">
+    <p class="lead">
+      Cee Bee Enterprises (CB Decor), बजरंगी चौक, हजारीबाग में घर और दुकान के इंटीरियर का पूरा सामान मिलता है। हर सामान का आज का रेट जानने के लिए
+      व्हाट्सऐप करें।
+    </p>
+    <ContactButtons wa={wa} placement="products-hi" waLabel="व्हाट्सऐप पर रेट पूछें" callLabel="कॉल करें" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap">
+      {
+        order.map((g) => (
+          <>
+            <div class="group-title">
+              <h2>{groupsHi[g]}</h2>
+            </div>
+            <div class="grid grid--2">
+              {categories
+                .filter((c) => c.group === g)
+                .map((c) => (
+                  <div class="card">
+                    <h3>{categoriesHi[c.slug].name}</h3>
+                    <p>{categoriesHi[c.slug].blurb}</p>
+                    <p class="small mb-0">
+                      <a href={waLink(`नमस्ते, मुझे ${categoriesHi[c.slug].name} का रेट और उपलब्धता जाननी है।`)} target="_blank" rel="noopener" data-track="whatsapp" data-placement="products-hi-card">
+                        व्हाट्सऐप पर पूछें
+                      </a>
+                      {' · '}
+                      <a href={`/products/${c.slug}/`} lang="en">Full details (English)</a>
+                    </p>
+                  </div>
+                ))}
+            </div>
+          </>
+        ))
+      }
+      <p class="muted small more-link">ब्रांड, साइज़ और ग्रेड की पूरी जानकारी हर श्रेणी के अंग्रेज़ी पेज पर है।</p>
+    </div>
+  </section>
+</Base>

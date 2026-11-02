@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.astro
+.netlify
 *.local
 
 # Editor directories and files
@@ -30,6 +32,9 @@ dist-ssr
 # Data processing scripts and raw data files
 *.xlsx
 *.txt
+# …but robots.txt and the font licence must ship
+!public/*.txt
+!public/fonts/*.txt
 analyze_*.js
 analyze_*.cjs
 convert_*.cjs
@@ -39,3 +44,6 @@ extract_*.js
 extract.cjs
 test_fix.cjs
 scripts/
+
+# Original, uncompressed media (compress with npm run media:video)
+media-source/

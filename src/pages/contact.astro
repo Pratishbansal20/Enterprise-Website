@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import MapBlock from '../components/MapBlock.astro';
+import { SITE, telHref, waLink, directionsUrl } from '../config/site';
+import { icons } from '../lib/icons';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Contact', path: '/contact/' },
+];
+const wa = 'Hi, I want price and availability for: ';
+---
+
+<Base
+  title="Contact & Directions | Cee Bee Enterprises, Hazaribag"
+  description="Visit Cee Bee Enterprises (CB Decor), Bajrangi Chowk, Hazaribag 825301. Open Tue–Sun 9:30 AM–8 PM. Call +91 94313 94626 or WhatsApp for prices."
+  path="/contact/"
+  alternates={{ en: '/contact/', hi: '/hi/contact/' }}
+  breadcrumbs={crumbs}
+  wa={wa}
+>
+  <PageHero crumbs={crumbs} h1="Contact Cee Bee Enterprises, Hazaribag" eyebrow="Contact & directions">
+    <p class="lead">Call, WhatsApp or visit the shop near Bajrangi Chowk. For prices, WhatsApp is quickest: send the product, size and quantity.</p>
+    <ContactButtons wa={wa} placement="contact-hero" directions />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap split" style="align-items:start">
+      <div class="stack">
+        <div class="card">
+          <h2 style="font-size:1.5rem">Shop address</h2>
+          <address class="nap" style="font-style:normal">
+            <strong>{SITE.name}</strong><br />
+            {SITE.address.street}, {SITE.address.city},<br />
+            {SITE.address.region} {SITE.address.postalCode}
+          </address>
+          <p style="margin-top:12px"><a href={directionsUrl} target="_blank" rel="noopener" data-track="directions" data-placement="contact-card">Open in Google Maps →</a></p>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.5rem">Phone, WhatsApp & email</h2>
+          <p>
+            <a href={telHref} data-track="call" data-placement="contact-card">{SITE.phoneDisplay}</a> (call)<br />
+            <a href={waLink(wa)} target="_blank" rel="noopener" data-track="whatsapp" data-placement="contact-card">{SITE.phoneDisplay}</a> (WhatsApp)<br />
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          </p>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.5rem">Opening hours</h2>
+          <table class="range">
+            <tbody>
+              <tr><th scope="row">Tuesday – Sunday</th><td>9:30 AM – 8:00 PM</td></tr>
+              <tr><th scope="row">Monday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.5rem">How do I find the shop?</h2>
+          <p>
+            We are at Bajrangi Chowk in Hazaribag town. If you are coming by road, ask for Bajrangi Chowk; the shop is right there.
+            {' '}{`{{FILL: one or two landmarks next to the shop, e.g. "opposite X" or "next to Y", and the nearest well-known road}}`}
+          </p>
+        </div>
+      </div>
+      <div class="stack">
+        <MapBlock live />
+        <QuoteForm source="contact" />
+      </div>
+    </div>
+  </section>
+</Base>

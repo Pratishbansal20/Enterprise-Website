@@ -1,0 +1,181 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import ShowroomReel from '../components/ShowroomReel.astro';
+import CertificateStrip from '../components/CertificateStrip.astro';
+import FaqList from '../components/FaqList.astro';
+import MapBlock from '../components/MapBlock.astro';
+import { SITE, addressLine, yearsInBusiness } from '../config/site';
+import { REEL } from '../config/media';
+import { brands } from '../data/brands';
+import { siteFaqs } from '../data/faqs';
+import { getCollection } from 'astro:content';
+import { organizationSchema, websiteSchema, faqSchema, STORE_ID } from '../lib/schema';
+
+const homeFaqs = [siteFaqs[4], siteFaqs[1], siteFaqs[3], siteFaqs[5], siteFaqs[6]];
+const guides = (await getCollection('guides')).sort((a, b) => a.data.order - b.data.order);
+const wa = 'Hi, I want price and availability for some products.';
+
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'Inside the Cee Bee Enterprises (CB Decor) showroom, Hazaribag',
+  description: 'A walk through the Cee Bee Enterprises (CB Decor) hardware, plywood and interiors showroom near Bajrangi Chowk, Hazaribag.',
+  thumbnailUrl: new URL(REEL.poster, SITE.url).href,
+  contentUrl: new URL(REEL.src, SITE.url).href,
+  uploadDate: REEL.uploadDate,
+  duration: REEL.duration,
+  publisher: { '@id': STORE_ID },
+};
+---
+
+<Base
+  title="Hardware & Plywood Shop in Hazaribag | CB Decor"
+  description="Cee Bee Enterprises (CB Decor): hardware & plywood shop near Bajrangi Chowk, Hazaribag since 2001. Century, Godrej, Merino dealer. Call or WhatsApp today."
+  path="/"
+  alternates={{ en: '/', hi: '/hi/' }}
+  schema={[organizationSchema(), websiteSchema(), faqSchema(homeFaqs), videoSchema]}
+  wa={wa}
+>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Bajrangi Chowk, Hazaribag · Since {SITE.foundingYear}</p>
+        <h1>Hardware & Plywood Shop in Hazaribag</h1>
+        <p class="lead">
+          Cee Bee Enterprises (CB Decor) is a family-run hardware store in Hazaribag, near Bajrangi Chowk. Since {SITE.foundingYear} we have
+          supplied plywood, laminates, door and kitchen hardware, interior products and King Koil mattresses to homes, carpenters and contractors.
+        </p>
+        <ContactButtons wa={wa} placement="hero" light />
+        <ul class="hero-facts">
+          <li>Family-run since {SITE.foundingYear}</li>
+          <li>Authorised dealer for {brands.length} brands</li>
+          <li>Delivery across Hazaribag district</li>
+          <li>{SITE.hoursShort}</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <Photo
+          name="cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag"
+          alt="Cee Bee Enterprises (CB Decor) store front near Bajrangi Chowk, hardware and plywood shop in Hazaribag"
+          eager
+          sizes="(min-width: 900px) 460px, 100vw"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="what">
+    <div class="wrap">
+      <p class="eyebrow">Our range</p>
+      <h2 id="what">What can I buy at Cee Bee Enterprises?</h2>
+      <p class="lead">
+        Everything to build and finish an interior, under one roof in Hazaribag (Hazaribagh), Jharkhand: plywood, blockboard, MDF and flush doors;
+        laminates and veneers; door handles and locks; modular kitchen hardware; furniture fittings; Fevicol and adhesives; PVC, WPC, ACP and
+        acrylic sheets; wall panels, louvers and false ceiling material; wallpaper, flooring, blinds and curtain rods; and King Koil mattresses.
+      </p>
+      <CategoryGrid />
+      <p class="more-link"><a href="/products/">See all products and how to choose →</a></p>
+    </div>
+  </section>
+
+  <section class="section section--dark reel-section" aria-labelledby="showroom">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Inside the showroom</p>
+        <h2 id="showroom">Visit our showroom near Bajrangi Chowk</h2>
+        <p class="lead">
+          Take a quick look around the shop before you visit. Seeing laminate shades, handle finishes and wall panels in person makes choosing
+          much easier, and our team will help you match everything for your room.
+        </p>
+        <p>
+          <strong>{addressLine()}</strong><br />
+          {SITE.hoursDisplay}
+        </p>
+        <ContactButtons wa="Hi, I want to visit your showroom. Please share the location." placement="showroom" light directions waLabel="WhatsApp us" />
+      </div>
+      <ShowroomReel />
+    </div>
+  </section>
+
+  <section class="section section--sand" aria-labelledby="brands">
+    <div class="wrap">
+      <p class="eyebrow">Authorised dealer</p>
+      <h2 id="brands">Which brands is Cee Bee Enterprises an authorised dealer for?</h2>
+      <p class="lead">
+        We are an authorised dealer in Hazaribag for {brands.map((b) => b.name.replace(/ \(.*\)/, '')).join(', ').replace(/, ([^,]*)$/, ' and $1')}.
+      </p>
+      <ul class="brand-tiles">
+        {brands.map((b) => <li><a class="brand-tile" href={`/brands/#${b.id}`}>{b.name.replace(/ \(.*\)/, '')}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <CertificateStrip />
+
+  <section class="section" aria-labelledby="why">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Why us</p>
+        <h2 id="why">Why do customers in Hazaribag choose us?</h2>
+        <ul class="feature-list">
+          <li><span><strong>Family-run for {yearsInBusiness()} years.</strong> Run by {SITE.owner} near Bajrangi Chowk, serving Hazaribag since {SITE.foundingYear}.</span></li>
+          <li><span><strong>Authorised for {brands.length} brands.</strong> Genuine Century, Greenply, Merino, Godrej, Ebco, Pidilite and more.</span></li>
+          <li><span><strong>One shop for the whole job.</strong> Boards, laminates, hardware, interiors and mattresses, so you don’t run around town.</span></li>
+          <li><span><strong>Delivery across Hazaribag district</strong> for homes and sites.</span></li>
+          <li><span><strong>Help finding a carpenter.</strong> Ask us and we can refer you to carpenters we know.</span></li>
+        </ul>
+      </div>
+      <div class="cta-box">
+        <p class="eyebrow">Contractors · Builders · Architects</p>
+        <h3>Send us your material list on WhatsApp</h3>
+        <p>Plywood, laminates, hardware and fittings for a full site, priced together in one quote, with delivery to site.</p>
+        <div class="btn-row">
+          <a class="btn btn--light" href="/contractors/">Bulk & trade supply</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={homeFaqs} heading="Quick answers" />
+      <p class="more-link"><a href="/faq/">More questions answered →</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="find">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Find us</p>
+        <h2 id="find">Where is the shop?</h2>
+        <p class="lead">
+          {SITE.name} is at {addressLine()}, {SITE.landmark}. Search “Cee Bee Enterprises” on Google Maps for turn-by-turn directions.
+        </p>
+        <p><strong>Open:</strong> {SITE.hoursDisplay}</p>
+        <ContactButtons wa={wa} placement="find-us" directions />
+      </div>
+      <MapBlock />
+    </div>
+  </section>
+
+  <section class="section section--sand" aria-labelledby="guides">
+    <div class="wrap">
+      <p class="eyebrow">Buying guides</p>
+      <h2 id="guides">Before you buy: honest guides</h2>
+      <div class="grid grid--2">
+        {
+          guides.map((g) => (
+            <a class="cat-card" href={`/guides/${g.id}/`}>
+              <strong>{g.data.title}</strong>
+              <span>{g.data.description}</span>
+              <em>Read guide →</em>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

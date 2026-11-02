@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import ShowroomReel from '../components/ShowroomReel.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import { SITE, addressLine, yearsInBusiness } from '../config/site';
+import { brands } from '../data/brands';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about/' },
+];
+---
+
+<Base
+  title="About Cee Bee Enterprises (CB Decor), Hazaribag"
+  description="Cee Bee Enterprises (CB Decor): family-run hardware, plywood & interiors shop near Bajrangi Chowk, Hazaribag, run by Satish Bansal since 2001. Visit us."
+  path="/about/"
+  breadcrumbs={crumbs}
+>
+  <PageHero crumbs={crumbs} h1="About Cee Bee Enterprises (CB Decor)" eyebrow="Family-run since 2001">
+    <p class="lead">
+      Cee Bee Enterprises (CB Decor) is a family-run hardware, plywood and interior products shop at {addressLine()}. Run
+      by {SITE.owner}, the shop has served homeowners, carpenters, contractors, builders, architects and interior designers in Hazaribag
+      (Hazaribagh) and across the district since {SITE.foundingYear}.
+    </p>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Our story</h2>
+        <p>
+          The shop opened in {SITE.foundingYear} and is family-run, today led by {SITE.owner}: {yearsInBusiness()} years in Hazaribag and counting.
+          {' '}{`{{FILL: 2–4 sentences in your own words — how the shop started, what it sold at first, how it grew into CB Decor, who in the family works here today.}}`}
+        </p>
+        <h2>What we do</h2>
+        <p>
+          We sell plywood and boards, laminates, door and kitchen hardware, furniture fittings, adhesives, PVC/WPC and ACP sheets, wall panels,
+          false ceiling material, wallpaper, flooring, blinds and King Koil mattresses. We are an authorised dealer for {brands.length} brands, deliver
+          across Hazaribag district, supply contractors in bulk, and can refer you to carpenters we know.
+        </p>
+        <h2>Who we serve</h2>
+        <p>
+          Families building or renovating a home, carpenters buying for their customers, contractors and builders supplying full sites, and
+          architects and interior designers who need specific brands and finishes.
+        </p>
+        <ContactButtons wa="Hi, I want to visit your shop." placement="about" directions />
+      </div>
+      <div class="stack">
+        <div class="media-frame">
+          <Photo name="cee-bee-enterprises-shop-interior-hazaribag" alt="Inside the Cee Bee Enterprises (CB Decor) shop near Bajrangi Chowk, Hazaribag" />
+        </div>
+        <div class="media-frame">
+          <Photo name="satish-bansal-cee-bee-enterprises-hazaribag" alt="Satish Bansal at Cee Bee Enterprises (CB Decor), Hazaribag" ratio="1 / 1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark reel-section">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Showroom</p>
+        <h2>Take a look inside</h2>
+        <p class="lead">A short walk around our showroom near Bajrangi Chowk.</p>
+        <p>{SITE.hoursDisplay}</p>
+      </div>
+      <ShowroomReel />
+    </div>
+  </section>
+</Base>

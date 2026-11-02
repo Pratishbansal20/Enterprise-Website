@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactButtons from '../../components/ContactButtons.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { categoryBySlug } from '../../data/categories';
+import { articleSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((g) => ({ params: { slug: g.id }, props: { guide: g } }));
+}
+
+const { guide } = Astro.props as { guide: CollectionEntry<'guides'> };
+const { Content } = await render(guide);
+const path = `/guides/${guide.id}/`;
+const cat = categoryBySlug(guide.data.category);
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides/' },
+  { name: guide.data.title, path },
+];
+const fmt = (d: Date) => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Base
+  title={guide.data.seoTitle}
+  description={guide.data.description}
+  path={path}
+  breadcrumbs={crumbs}
+  ogType="article"
+  wa={guide.data.wa}
+  schema={[
+    articleSchema({
+      title: guide.data.title,
+      description: guide.data.description,
+      path,
+      published: guide.data.published,
+      updated: guide.data.updated,
+    }),
+  ]}
+>
+  <PageHero crumbs={crumbs} h1={guide.data.title} eyebrow="Buying guide">
+    <p class="muted small mb-0">
+      By Cee Bee Enterprises (CB Decor), Hazaribag · <time datetime={guide.data.published.toISOString()}>{fmt(guide.data.published)}</time>
+    </p>
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap layout-2">
+      <article class="prose">
+        <Content />
+      </article>
+      <aside class="cta-box">
+        <h3>{cat.name}</h3>
+        <p>See the sizes, grades and brands we stock at our shop near Bajrangi Chowk.</p>
+        <p><a href={`/products/${cat.slug}/`}>View {cat.short} →</a></p>
+        <ContactButtons wa={guide.data.wa} placement="guide-aside" light callLabel="Call us" waLabel="WhatsApp" />
+      </aside>
+    </div>
+  </section>
+</Base>

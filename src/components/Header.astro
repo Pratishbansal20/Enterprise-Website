@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/cb-decor-logo.png';
+import { SITE, telHref } from '../config/site';
+import { nav, ui, type Lang } from '../lib/i18n';
+import { icons } from '../lib/icons';
+
+interface Props {
+  lang: Lang;
+  path: string;
+  alternates?: { en: string; hi: string };
+}
+const { lang, path, alternates } = Astro.props;
+const t = ui[lang];
+const links = nav[lang];
+const home = lang === 'hi' ? '/hi/' : '/';
+const otherLang = alternates ? (lang === 'en' ? alternates.hi : alternates.en) : lang === 'en' ? '/hi/' : '/';
+const isCurrent = (href: string) => (href === home ? path === home : path.startsWith(href));
+---
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={home} aria-label={`${SITE.name} — ${t.home}`}>
+      <Image src={logo} alt="" width={80} height={80} loading="eager" />
+      <span class="brand-name">{SITE.legalName}<small>{SITE.brand}</small></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main">
+      <ul>
+        {links.map((l) => <li><a href={l.href} aria-current={isCurrent(l.href) ? 'page' : undefined}>{l.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <a class="lang-link" href={otherLang} lang={lang === 'en' ? 'hi' : 'en'} aria-label={t.switchLangLabel}>{t.switchLang}</a>
+
+    <a class="btn btn--primary header-cta" href={telHref} data-track="call" data-placement="header">
+      <Fragment set:html={icons.phone} />{SITE.phoneDisplay}
+    </a>
+
+    <details class="nav-mobile">
+      <summary aria-label={t.menu}>{t.menu}</summary>
+      <ul>
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        <li><a href={telHref} data-track="call" data-placement="menu">{t.callNow}: {SITE.phoneDisplay}</a></li>
+      </ul>
+    </details>
+  </div>
+</header>

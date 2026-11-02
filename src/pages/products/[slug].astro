@@ -1,0 +1,131 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Photo from '../../components/Photo.astro';
+import FaqList from '../../components/FaqList.astro';
+import ContactButtons from '../../components/ContactButtons.astro';
+import { categories, categoryBySlug, type Category } from '../../data/categories';
+import { brandById } from '../../data/brands';
+import { faqSchema } from '../../lib/schema';
+import { getCollection } from 'astro:content';
+import { SITE } from '../../config/site';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
+}
+
+const { cat } = Astro.props as { cat: Category };
+const path = `/products/${cat.slug}/`;
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Products', path: '/products/' },
+  { name: cat.short, path },
+];
+const catBrands = cat.brands.map(brandById);
+const allGuides = await getCollection('guides');
+const guides = cat.guides.map((id) => allGuides.find((g) => g.id === id)!).filter(Boolean);
+const related = cat.related.map(categoryBySlug);
+---
+
+<Base title={cat.title} description={cat.description} path={path} breadcrumbs={crumbs} schema={[faqSchema(cat.faqs)]} wa={cat.wa}>
+  <PageHero crumbs={crumbs} h1={cat.h1} eyebrow={cat.name}>
+    <p class="lead">{cat.intro}</p>
+    <ContactButtons wa={cat.wa} placement="category-hero" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap layout-2">
+      <div class="prose">
+        <h2>What we stock</h2>
+        <table class="range">
+          <tbody>
+            {
+              cat.range.map((r) => (
+                <tr>
+                  <th scope="row">{r.label}</th>
+                  <td>{r.items}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <p class="muted small" style="margin-top:10px">Stock changes often. WhatsApp us to confirm a size or shade before you visit.</p>
+
+        {
+          cat.sections.map((s) => (
+            <>
+              <h2>{s.h2}</h2>
+              <Fragment set:html={s.html} />
+            </>
+          ))
+        }
+
+        {
+          catBrands.length > 0 && (
+            <>
+              <h2>Brands we are authorised for</h2>
+              <ul>
+                {catBrands.map((b) => (
+                  <li>
+                    <strong>
+                      <a href={`/brands/#${b.id}`}>{b.name}</a>
+                    </strong>
+                    : {b.weStock}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+
+        {
+          guides.length > 0 && (
+            <>
+              <h2>Helpful guides</h2>
+              <ul>
+                {guides.map((g) => (
+                  <li>
+                    <a href={`/guides/${g.id}/`}>{g.data.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+      </div>
+
+      <aside class="stack">
+        {cat.photos.map((p) => <div class="media-frame"><Photo name={p.name} alt={p.alt} sizes="(min-width: 960px) 340px, 100vw" /></div>)}
+        <div class="cta-box">
+          <h3>Ask for price & availability</h3>
+          <p>Send the brand, size and quantity. We reply with today’s rate and stock.</p>
+          <ContactButtons wa={cat.wa} placement="category-aside" light callLabel="Call us" waLabel="WhatsApp" />
+          <p class="small" style="margin:14px 0 0">{SITE.hoursShort}</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={cat.faqs} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Often bought together</h2>
+      <div class="grid grid--3">
+        {
+          related.map((r) => (
+            <a class="cat-card" href={`/products/${r.slug}/`}>
+              <strong>{r.name}</strong>
+              <span>{r.range[0].items}</span>
+              <em>See range →</em>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

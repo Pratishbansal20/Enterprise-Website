@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqList from '../components/FaqList.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import { siteFaqs } from '../data/faqs';
+import { categories } from '../data/categories';
+import { faqSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq/' },
+];
+// Sitewide questions plus one question from every category page (the second,
+// because the first is usually "Where can I buy … in Hazaribag?").
+const productFaqs = categories.map((c) => c.faqs[1] ?? c.faqs[0]);
+---
+
+<Base
+  title="FAQ | Cee Bee Enterprises (CB Decor), Hazaribag"
+  description="Answers about Cee Bee Enterprises, Hazaribag: timings, location near Bajrangi Chowk, brands, delivery, bulk orders, choosing plywood and hardware."
+  path="/faq/"
+  breadcrumbs={crumbs}
+  schema={[faqSchema([...siteFaqs, ...productFaqs])]}
+>
+  <PageHero crumbs={crumbs} h1="Frequently Asked Questions" eyebrow="FAQ">
+    <p class="lead">Short, direct answers about the shop and the products we sell. Can’t find yours? Ask us on WhatsApp.</p>
+    <ContactButtons wa="Hi, I have a question." placement="faq-hero" waLabel="Ask on WhatsApp" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <FaqList faqs={siteFaqs} heading="About the shop" id="faq-shop" />
+    </div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={productFaqs} heading="About our products" id="faq-products" />
+    </div>
+  </section>
+</Base>

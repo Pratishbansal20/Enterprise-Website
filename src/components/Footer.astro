@@ -1,0 +1,79 @@
+---
+import { SITE, telHref, directionsUrl, isFilled } from '../config/site';
+import { categories } from '../data/categories';
+import type { Lang } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const hi = lang === 'hi';
+const year = new Date().getFullYear();
+const socials = [
+  ['Google', SITE.gbpUrl],
+  ['Facebook', SITE.social.facebook],
+  ['Instagram', SITE.social.instagram],
+  ['Justdial', SITE.social.justdial],
+  ['IndiaMART', SITE.social.indiamart],
+].filter(([, url]) => isFilled(url));
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>{hi ? 'दुकान का पता' : 'Visit the shop'}</h2>
+        {/* NAP block: must match Google Business Profile character for character. */}
+        <address class="nap">
+          <strong>{SITE.name}</strong><br />
+          {SITE.address.street}, {SITE.address.city},<br />
+          {SITE.address.region} {SITE.address.postalCode}<br />
+          <a href={telHref} data-track="call" data-placement="footer">{SITE.phoneDisplay}</a><br />
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </address>
+        <p class="footer-hours">
+          {hi ? 'मंगलवार से रविवार, सुबह 9:30 से रात 8:00 बजे तक। सोमवार बंद।' : SITE.hoursDisplay}
+        </p>
+        <a href={directionsUrl} target="_blank" rel="noopener" data-track="directions" data-placement="footer">
+          {hi ? 'Google Maps पर रास्ता देखें →' : 'Get directions on Google Maps →'}
+        </a>
+        <div class="socials">
+          {socials.map(([name, url]) => <a href={url} target="_blank" rel="noopener">{name}</a>)}
+        </div>
+      </div>
+
+      <div>
+        <h2>{hi ? 'उत्पाद' : 'Products'}</h2>
+        <ul class="footer-list">
+          {categories.slice(0, 6).map((c) => <li><a href={`/products/${c.slug}/`}>{c.short}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h2>{hi ? 'और उत्पाद' : 'More products'}</h2>
+        <ul class="footer-list">
+          {categories.slice(6).map((c) => <li><a href={`/products/${c.slug}/`}>{c.short}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h2>{hi ? 'जानकारी' : 'Company'}</h2>
+        <ul class="footer-list">
+          <li><a href="/about/">About us</a></li>
+          <li><a href="/brands/">Authorised brands</a></li>
+          <li><a href="/services/">Delivery & services</a></li>
+          <li><a href="/contractors/">For contractors</a></li>
+          <li><a href="/guides/">Buying guides</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href={hi ? '/' : '/hi/'}>{hi ? 'English' : 'हिंदी'}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {year} {SITE.name}. Family-run in Hazaribag since {SITE.foundingYear}.</span>
+      <a href="/sitemap-index.xml">Sitemap</a>
+    </div>
+  </div>
+</footer>
