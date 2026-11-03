@@ -12,13 +12,13 @@ const crumbs = [
   { name: 'FAQ', path: '/faq/' },
 ];
 // Sitewide questions plus one question from every category page (the second,
-// because the first is usually "Where can I buy … in Hazaribag?").
+// because the first is usually "Where can I buy … in Hazaribagh?").
 const productFaqs = categories.map((c) => c.faqs[1] ?? c.faqs[0]);
 ---
 
 <Base
-  title="FAQ | Cee Bee Enterprises (CB Decor), Hazaribag"
-  description="Answers about Cee Bee Enterprises, Hazaribag: timings, location near Bajrangi Chowk, brands, delivery, bulk orders, choosing plywood and hardware."
+  title="FAQ | Cee Bee Enterprises (CB Decor), Hazaribagh"
+  description="Answers about Cee Bee Enterprises, Hazaribagh: timings, location near Bajrangi Chowk, brands, delivery, bulk orders, choosing plywood and hardware."
   path="/faq/"
   breadcrumbs={crumbs}
   schema={[faqSchema([...siteFaqs, ...productFaqs])]}

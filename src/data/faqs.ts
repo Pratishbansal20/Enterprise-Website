@@ -4,7 +4,7 @@ import { SITE } from '../config/site';
 
 export const siteFaqs: { q: string; a: string }[] = [
   {
-    q: 'Where is Cee Bee Enterprises (CB Decor) in Hazaribag?',
+    q: 'Where is Cee Bee Enterprises (CB Decor) in Hazaribagh?',
     a: `We are at ${SITE.address.street}, ${SITE.address.city}, ${SITE.address.region} ${SITE.address.postalCode}. Search “Cee Bee Enterprises” on Google Maps for directions.`,
   },
   {
@@ -13,19 +13,19 @@ export const siteFaqs: { q: string; a: string }[] = [
   },
   {
     q: 'What does Cee Bee Enterprises sell?',
-    a: 'We sell plywood, blockboard, MDF, flush doors, laminates and veneers, door handles and locks, modular kitchen hardware, furniture fittings, Fevicol and adhesives, PVC/WPC boards, ACP and acrylic sheets, wall panels and louvers, false ceiling material, wallpaper, flooring, blinds, curtain rods and King Koil mattresses.',
+    a: 'We sell plywood, blockboard, MDF, flush doors, laminates and veneers, door handles and locks, modular kitchen hardware, furniture fittings, Fevicol and adhesives, PVC/WPC boards, ACP and acrylic sheets, wall panels and louvers, false ceiling material, wallpaper, wall putty, flooring, blinds, curtain rods, chandeliers and decorative lights, and King Koil mattresses.',
   },
   {
     q: 'Which brands are you an authorised dealer for?',
     a: 'We are an authorised dealer for Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel and King Koil.',
   },
   {
-    q: 'Where can I buy plywood in Hazaribag?',
-    a: 'You can buy plywood at Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribag. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.',
+    q: 'Where can I buy plywood in Hazaribagh?',
+    a: 'You can buy plywood at Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.',
   },
   {
     q: 'Do you deliver?',
-    a: 'Yes. We deliver across Hazaribag district. WhatsApp us your location and material list for delivery details.',
+    a: 'Yes. We deliver across Hazaribagh district. WhatsApp us your location and material list for delivery details.',
   },
   {
     q: 'Do you supply contractors and builders in bulk?',
@@ -41,6 +41,6 @@ export const siteFaqs: { q: string; a: string }[] = [
   },
   {
     q: 'Do you sell King Koil mattresses?',
-    a: 'Yes. Cee Bee Enterprises is an authorised King Koil dealer in Hazaribag and sells King Koil mattresses and pillows.',
+    a: 'Yes. Cee Bee Enterprises is an authorised King Koil dealer in Hazaribagh and sells King Koil mattresses and pillows.',
   },
 ];

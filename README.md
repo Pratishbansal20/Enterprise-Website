@@ -1,6 +1,6 @@
 # Cee Bee Enterprises (CB Decor) — website
 
-Static, fast, local-SEO website for **Cee Bee Enterprises (CB Decor)**, a hardware, plywood and interiors shop at Bajrangi Chowk, Hazaribag. It's built with [Astro](https://astro.build) and hosted on Netlify, for now at the free address **https://cbdecor.netlify.app** until the shop gets its own domain.
+Static, fast, local-SEO website for **Cee Bee Enterprises (CB Decor)**, a hardware, plywood and interiors shop at Bajrangi Chowk, Hazaribagh. It's built with [Astro](https://astro.build) and hosted on Netlify, for now at the free address **https://ceebee-enterprises.netlify.app** until the shop gets its own domain.
 
 Every page is plain HTML (readable by Google and AI crawlers without JavaScript), weighs roughly 15 KB gzipped before images, and is designed for cheap Android phones on mobile data.
 
@@ -55,13 +55,13 @@ npm run media:icons
 
 Regenerates `favicon.ico`, app icons and the social-share image `og-default.jpg` from the logo.
 
-## Deploy to Netlify (free address: cbdecor.netlify.app)
+## Deploy to Netlify (free address: ceebee-enterprises.netlify.app)
 
 You do this once. After that, every `git push` to `main` redeploys automatically. The site's address is never typed into the code: Netlify passes it in at build time (its `URL` variable), and canonicals, sitemap, robots.txt and schema all follow it.
 
 1. **Code on GitHub.** It's already at `Pratishbansal20/Enterprise-Website`. Merge the PR into `main`.
 2. **Create the Netlify site.** Sign up at netlify.com with GitHub → *Add new site* → *Import an existing project* → choose the repo, branch `main`. Build settings are read from `netlify.toml` (`npm run build`, publish `dist`). Click **Deploy**.
-3. **Name it.** *Site configuration → Change site name* → `cbdecor`, giving **https://cbdecor.netlify.app**. If the name is taken, choose another (e.g. `cbdecor-hazaribag`), then *Deploys → Trigger deploy* once so the new address is used everywhere. HTTPS is automatic.
+3. **Name it.** *Site configuration → Change site name* → `ceebee-enterprises`, giving **https://ceebee-enterprises.netlify.app**. If you ever rename it, use *Deploys → Trigger deploy* once so the new address is used everywhere. HTTPS is automatic.
 4. **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Settings & usage → Form notifications → Add notification → Email* → `satish.hzb@gmail.com`. Send a test from `/contact/` with a file attached. (Uploads up to 8 MB. Netlify's free plan covers a small shop's volume; check current limits under *Usage*.)
 
 Then work through **`docs/launch-checklist.md`** (Search Console, Bing, GBP, analytics).

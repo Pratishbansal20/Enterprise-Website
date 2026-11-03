@@ -8,13 +8,13 @@
 | --- | --- |
 | `User-agent: Googlebot` / `Allow: /` | Google Search (and Google AI Overviews, which are built from Google's index) may crawl every page. |
 | `User-agent: Bingbot` / `Allow: /` | Bing may crawl everything. This matters beyond Bing itself: **ChatGPT search, Microsoft Copilot and DuckDuckGo lean on Bing's index**. |
-| `User-agent: OAI-SearchBot` / `Allow: /` | OpenAI's crawler for **ChatGPT search results**. Allowing it lets ChatGPT show and link the site when people ask about shops in Hazaribag. |
+| `User-agent: OAI-SearchBot` / `Allow: /` | OpenAI's crawler for **ChatGPT search results**. Allowing it lets ChatGPT show and link the site when people ask about shops in Hazaribagh. |
 | `User-agent: GPTBot` / `Allow: /` | OpenAI's crawler for **training** future models. Allowing it is optional; it doesn't affect ChatGPT search. Kept open as you asked. |
 | `User-agent: PerplexityBot` / `Allow: /` | Perplexity's crawler for its answer engine and citations. |
 | `User-agent: ClaudeBot` / `Allow: /` | Anthropic's crawler for Claude. |
 | `User-agent: *` / `Allow: /` | Every other well-behaved crawler may read the site… |
 | `Disallow: /thanks/` | …except the "thank you" page after a form is sent, which has no useful content. (It also carries a `noindex` tag.) |
-| `Sitemap: https://cbdecor.netlify.app/sitemap-index.xml` | Where the full list of pages lives, so crawlers find everything quickly. |
+| `Sitemap: https://ceebee-enterprises.netlify.app/sitemap-index.xml` | Where the full list of pages lives, so crawlers find everything quickly. |
 
 To block AI training while staying in AI search, change `GPTBot` to `Disallow: /`.
 
@@ -36,7 +36,7 @@ To block AI training while staying in AI search, change `GPTBot` to `Disallow: /
 
 ## Submit the site (do this in launch week)
 
-- [ ] **Google Search Console:** add `https://cbdecor.netlify.app/` as a *URL prefix* property (verify with the HTML-tag method; a free `netlify.app` address can't use the DNS method), then submit `https://cbdecor.netlify.app/sitemap-index.xml`. When you move to your own domain, add it as a *Domain* property and use Search Console's *Change of address* tool.
+- [ ] **Google Search Console:** add `https://ceebee-enterprises.netlify.app/` as a *URL prefix* property (verify with the HTML-tag method; a free `netlify.app` address can't use the DNS method), then submit `https://ceebee-enterprises.netlify.app/sitemap-index.xml`. When you move to your own domain, add it as a *Domain* property and use Search Console's *Change of address* tool.
 - [ ] **Bing Webmaster Tools:** sign in, choose *Import from Google Search Console* (one click), and submit the sitemap. This is what ChatGPT search draws on.
 - [ ] **Bing Places for Business:** claim the listing (import from GBP).
 - [ ] **Apple Business Connect:** claim the Apple Maps listing.

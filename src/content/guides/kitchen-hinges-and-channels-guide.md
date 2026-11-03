@@ -3,7 +3,7 @@ title: 'Kitchen Hinges and Drawer Channels: Types and How to Choose'
 seoTitle: 'Kitchen Hinges & Drawer Channels: Types and Sizes'
 description: 'Full overlay, half overlay or inset hinge? Soft-close? Which channel length? A simple guide to modular kitchen hinges, channels and lift-up fittings.'
 published: 2026-11-02
-category: modular-kitchen-hardware-hazaribag
+category: modular-kitchen-hardware-hazaribagh
 wa: 'Hi, I want help choosing hinges and channels for my kitchen.'
 order: 3
 ---
@@ -72,4 +72,4 @@ Yes. **SS304 stainless steel** hinges and baskets resist rust much better than l
 4. Any lift-up, corner or tall units.
 5. Soft-close or normal.
 
-Send this list to us on WhatsApp and we will price the whole set together. See what we stock on our [modular kitchen hardware page](/products/modular-kitchen-hardware-hazaribag/), including Godrej and Ebco.
+Send this list to us on WhatsApp and we will price the whole set together. See what we stock on our [modular kitchen hardware page](/products/modular-kitchen-hardware-hazaribagh/), including Godrej and Ebco.

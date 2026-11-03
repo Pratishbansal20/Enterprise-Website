@@ -9,7 +9,7 @@ import { mkdirSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import ffmpeg from 'ffmpeg-static';
 
-const NAME = 'cee-bee-enterprises-showroom-hazaribag';
+const NAME = 'cee-bee-enterprises-showroom-hazaribagh';
 const OUT = 'public/video';
 
 const args = process.argv.slice(2);

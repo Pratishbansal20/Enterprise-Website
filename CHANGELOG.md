@@ -1,10 +1,21 @@
 # Changelog
 
+## 2.2.0 — 2026-11-03 · Match the Google Business Profile
+
+From an audit of the live Google listing (see `docs/google-business-profile.md`):
+
+- **Spelling "Hazaribagh"** everywhere, as on Google, Justdial and the GST record ("Hazaribag" kept once as an alternate spelling). **Page addresses changed** to `…-hazaribagh/`. This was safe because the site wasn't indexed yet; the old URLs were never public.
+- **Address** now matches Google: "Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301". **Coordinates** (23.9913656, 85.3528197) added to the schema, and the map link uses the listing's permanent Google Maps URL.
+- **Closing time 7:30 PM** (was 8 PM), matching Google.
+- **Chandeliers, decorative lights and wall putty** added to the product lists; paints, tools and plumbing listed as not sold in `llms.txt` (Google's AI summary claimed them).
+- Live address is `ceebee-enterprises.netlify.app`; docs and the build fallback updated.
+- New GBP audit and change list; citation block updated with the fixes for Justdial (two listings), Facebook (personal phone number) and Instagram (different landmark).
+
 ## 2.1.0 — 2026-11-03 · Deploy-ready without placeholders
 
 - **No placeholders on the live site.** Photo frames, the hero photo column, the About photos, certificates and awards are left out until their files exist; layouts fall back to one column. The About story and Contact landmarks became code `TODO` comments. `npm run dev` still shows every missing item as a labelled `TODO` panel.
 - **`check:seo` now fails** if any `TODO` or `{{FILL}}` would be visible on a live page.
-- **Site address no longer hard-coded.** `cb-mirror.cc` is used by the shop's billing app, so the site launches on the free `cbdecor.netlify.app`. The address comes from Netlify's `URL` variable at build time (override with `SITE_URL`), so moving to a custom domain later needs no code change. `robots.txt` is now generated so its Sitemap line follows the address.
+- **Site address no longer hard-coded.** `cb-mirror.cc` is used by the shop's billing app, so the site launches on the free `ceebee-enterprises.netlify.app`. The address comes from Netlify's `URL` variable at build time (override with `SITE_URL`), so moving to a custom domain later needs no code change. `robots.txt` is now generated so its Sitemap line follows the address.
 - Optional config values (`geo`, `ga4Id`, `priceRange`) are now empty strings instead of `{{FILL}}` text.
 - Docs updated: deploy steps, launch checklist (post-launch to-do list, custom-domain move), Search Console URL-prefix property for the netlify.app address.
 

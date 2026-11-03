@@ -12,7 +12,7 @@ export const GET: APIRoute = async () => {
   const guides = (await getCollection('guides')).sort((a, b) => a.data.order - b.data.order);
   const body = `# ${SITE.name}
 
-> ${SITE.name} is a family-run hardware, plywood and interior products shop at ${addressLine()}, India. Established in ${SITE.foundingYear} and run by ${SITE.owner}. Authorised dealer for ${brands.map((b) => b.name).join(', ')}. Delivers across Hazaribag district. Customers: homeowners, carpenters, contractors, builders, architects and interior designers. Languages: Hindi and English.
+> ${SITE.name} is a family-run hardware, plywood and interior products shop at ${addressLine()}, India. Established in ${SITE.foundingYear} and run by ${SITE.owner}. Authorised dealer for ${brands.map((b) => b.name).join(', ')}. Delivers across Hazaribagh district. Customers: homeowners, carpenters, contractors, builders, architects and interior designers. Languages: Hindi and English.
 
 ## Contact
 - Phone / WhatsApp: ${SITE.phoneDisplay}
@@ -25,8 +25,12 @@ export const GET: APIRoute = async () => {
 ## Products
 ${categories.map((c) => `- [${c.name}](${u(`/products/${c.slug}/`)}): ${c.range.map((r) => `${r.label}: ${r.items}`).join('; ')}`).join('\n')}
 
+## Also sold
+- Chandeliers and decorative lights
+- Wall putty
+
 ## Services
-- Home and site delivery across Hazaribag district: ${u('/services/')}
+- Home and site delivery across Hazaribagh district: ${u('/services/')}
 - Bulk supply for contractors, builders and architects: ${u('/contractors/')}
 - Carpenter referral: ${u('/services/')}
 
@@ -47,7 +51,7 @@ ${siteFaqs.map((f) => `- Q: ${f.q}\n  A: ${f.a}`).join('\n')}
 
 ## Notes
 - Prices are not published because company rates change; customers ask for today's price on WhatsApp.
-- Not sold: building materials (cement, steel, sand), curtain fabric, glass and mirrors.
+- Not sold: building materials (cement, steel, sand), paints, hand and power tools, plumbing supplies, curtain fabric, glass and mirrors.
 `;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

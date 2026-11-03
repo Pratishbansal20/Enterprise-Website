@@ -46,8 +46,8 @@ export function storeSchema() {
     })),
     ...(isFilled(SITE.priceRange) ? { priceRange: SITE.priceRange } : {}),
     areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Hazaribag district, Jharkhand' },
-      ...SITE.deliveryTowns.map((t) => ({ '@type': 'Place', name: `${t}, Hazaribag` })),
+      { '@type': 'AdministrativeArea', name: 'Hazaribagh district, Jharkhand' },
+      ...SITE.deliveryTowns.map((t) => ({ '@type': 'Place', name: `${t}, Hazaribagh` })),
     ],
     knowsLanguage: ['hi', 'en'],
     sameAs: sameAs(),
