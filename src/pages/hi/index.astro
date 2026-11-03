@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { showPhoto } from '../../lib/photos';
 import Photo from '../../components/Photo.astro';
 import ContactButtons from '../../components/ContactButtons.astro';
 import ShowroomReel from '../../components/ShowroomReel.astro';
@@ -59,6 +60,7 @@ const faqs = [
           <li>मंगल–रवि 9:30–8 · सोमवार बंद</li>
         </ul>
       </div>
+      {showPhoto('cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag') && (
       <div class="hero-media">
         <Photo
           name="cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag"
@@ -67,6 +69,7 @@ const faqs = [
           sizes="(min-width: 900px) 460px, 100vw"
         />
       </div>
+      )}
     </div>
   </section>
 

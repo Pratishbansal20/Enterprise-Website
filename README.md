@@ -1,6 +1,6 @@
 # Cee Bee Enterprises (CB Decor) — website
 
-Static, fast, local-SEO website for **Cee Bee Enterprises (CB Decor)**, a hardware, plywood and interiors shop at Bajrangi Chowk, Hazaribag. It's built with [Astro](https://astro.build) and hosted on Netlify at **https://cb-mirror.cc**.
+Static, fast, local-SEO website for **Cee Bee Enterprises (CB Decor)**, a hardware, plywood and interiors shop at Bajrangi Chowk, Hazaribag. It's built with [Astro](https://astro.build) and hosted on Netlify, for now at the free address **https://cbdecor.netlify.app** until the shop gets its own domain.
 
 Every page is plain HTML (readable by Google and AI crawlers without JavaScript), weighs roughly 15 KB gzipped before images, and is designed for cheap Android phones on mobile data.
 
@@ -33,13 +33,13 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:4321. In dev mode, missing photos and certificates show their expected file names.
+Open http://localhost:4321. In dev mode, every missing photo, certificate and award shows as a labelled `TODO` panel. On the live site they are simply left out until the file is added.
 
 ```bash
 npm run build && npm run check:seo
 ```
 
-`check:seo` checks every built page (title/description length, one H1, canonical, valid JSON-LD, image sizes, broken links) and lists any `{{FILL}}` placeholders still visible.
+`check:seo` checks every built page (title/description length, one H1, canonical, valid JSON-LD, image sizes, broken links) and fails if any `TODO` or `{{FILL}}` placeholder would be visible on the live site.
 
 ### Media scripts
 
@@ -55,23 +55,20 @@ npm run media:icons
 
 Regenerates `favicon.ico`, app icons and the social-share image `og-default.jpg` from the logo.
 
-## Deploy to cb-mirror.cc (Netlify + Spaceship)
+## Deploy to Netlify (free address: cbdecor.netlify.app)
 
-You do this once. After that, every `git push` redeploys automatically.
+You do this once. After that, every `git push` to `main` redeploys automatically. The site's address is never typed into the code: Netlify passes it in at build time (its `URL` variable), and canonicals, sitemap, robots.txt and schema all follow it.
 
-1. **Put the code on GitHub.** Create a private repo and push this folder.
-2. **Create the Netlify site.** Sign up at netlify.com with GitHub → *Add new site* → *Import an existing project* → choose the repo. Build settings are read from `netlify.toml` (`npm run build`, publish `dist`). Click **Deploy**. You'll get a temporary `something.netlify.app` address; check the site there.
-3. **Add your domain in Netlify.** *Site configuration → Domain management → Add a domain* → `cb-mirror.cc`. Netlify will also offer `www.cb-mirror.cc`; accept, and keep `cb-mirror.cc` as the primary domain.
-4. **Point the domain at Netlify (in Spaceship).** Spaceship → *Domains* → `cb-mirror.cc` → *DNS / Nameservers* → keep Spaceship nameservers → *DNS records*:
-   - Delete any existing `A`, `AAAA` or `CNAME` records for `@` and `www` (parking page records).
-   - Add `A` record: host `@`, value `75.2.60.5` (Netlify's load balancer; confirm the value Netlify shows on the domain screen).
-   - Add `CNAME` record: host `www`, value `<your-site>.netlify.app`.
-
-   DNS usually updates within an hour (up to 24 h).
-5. **HTTPS.** Back in Netlify → *Domain management → HTTPS*, click *Verify DNS configuration*. The free Let's Encrypt certificate is issued automatically. Then `http://`, `www.` and `https://www.` all redirect to `https://cb-mirror.cc/`.
-6. **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Settings & usage → Form notifications → Add notification → Email* → `satish.hzb@gmail.com`. Send a test from `/contact/` with a file attached. (Uploads up to 8 MB. Netlify's free plan covers a small shop's volume; check current limits under *Usage*.)
+1. **Code on GitHub.** It's already at `Pratishbansal20/Enterprise-Website`. Merge the PR into `main`.
+2. **Create the Netlify site.** Sign up at netlify.com with GitHub → *Add new site* → *Import an existing project* → choose the repo, branch `main`. Build settings are read from `netlify.toml` (`npm run build`, publish `dist`). Click **Deploy**.
+3. **Name it.** *Site configuration → Change site name* → `cbdecor`, giving **https://cbdecor.netlify.app**. If the name is taken, choose another (e.g. `cbdecor-hazaribag`), then *Deploys → Trigger deploy* once so the new address is used everywhere. HTTPS is automatic.
+4. **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Settings & usage → Form notifications → Add notification → Email* → `satish.hzb@gmail.com`. Send a test from `/contact/` with a file attached. (Uploads up to 8 MB. Netlify's free plan covers a small shop's volume; check current limits under *Usage*.)
 
 Then work through **`docs/launch-checklist.md`** (Search Console, Bing, GBP, analytics).
+
+### Adding your own domain later
+
+Netlify → *Domain management* → *Add a domain* → set it as **primary**, then add the DNS records Netlify shows at your domain registrar. Netlify redirects the old `netlify.app` address to the new domain automatically, and the next build switches canonicals, sitemap and robots.txt to it. Steps for Search Console and listings are in `docs/launch-checklist.md` section C.
 
 ## Deliverables in this repo
 

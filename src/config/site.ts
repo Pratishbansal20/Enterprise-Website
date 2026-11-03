@@ -1,11 +1,12 @@
 // Single source of truth for NAP (name, address, phone) and business facts.
 // Everything on the site, in the footer, contact page, schema markup and
 // llms.txt reads from here. Keep it character-for-character identical to the
-// Google Business Profile. Values starting with "{{FILL" are placeholders:
-// they are left out of schema markup until filled in.
+// Google Business Profile. Empty values are optional facts not known yet:
+// they are left out of the page and the schema markup until filled in.
 
 export const SITE = {
-  url: 'https://cb-mirror.cc',
+  // Comes from `site` in astro.config.mjs (Netlify's URL at build time).
+  url: import.meta.env.SITE.replace(/\/$/, ''),
 
   // ── Name ────────────────────────────────────────────────────────────────
   name: 'Cee Bee Enterprises (CB Decor)',
@@ -49,9 +50,11 @@ export const SITE = {
   gstin: '', // intentionally not shown
 
   // ── Location / maps ─────────────────────────────────────────────────────
+  // Shop coordinates: in Google Maps, long-press the shop pin and copy the
+  // two numbers, e.g. lat '23.99xxxx', lng '85.36xxxx'.
   geo: {
-    lat: '{{FILL: latitude from Google Maps, e.g. 23.99xxxx}}',
-    lng: '{{FILL: longitude from Google Maps, e.g. 85.36xxxx}}',
+    lat: '',
+    lng: '',
   },
   gbpUrl: 'https://share.google/lHSCm9gutzeIC0xpM',
   mapsQuery: 'Cee Bee Enterprises, Bajrangi Chowk, Hazaribag, Jharkhand 825301',
@@ -83,8 +86,8 @@ export const SITE = {
   },
 
   // ── Analytics / forms ───────────────────────────────────────────────────
-  ga4Id: '{{FILL: GA4 measurement ID, e.g. G-XXXXXXXXXX}}',
-  priceRange: '{{FILL: e.g. ₹₹}}',
+  ga4Id: '', // GA4 measurement ID, e.g. 'G-XXXXXXXXXX'. Analytics stays off until set.
+  priceRange: '', // optional, e.g. '₹₹'
 } as const;
 
 export const isFilled = (v: unknown): v is string =>

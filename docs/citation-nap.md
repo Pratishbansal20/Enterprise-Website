@@ -12,7 +12,7 @@ Address:        Bajrangi Chowk, Hazaribag, Jharkhand 825301, India
 Phone:          +91 94313 94626
 WhatsApp:       +91 94313 94626
 Email:          satish.hzb@gmail.com
-Website:        https://cb-mirror.cc/
+Website:        https://cbdecor.netlify.app/
 Hours:          Tuesday–Sunday 9:30 AM – 8:00 PM; Monday closed
 Established:    2001
 Category:       Hardware store
@@ -34,7 +34,7 @@ Family-run hardware, plywood and interiors shop at Bajrangi Chowk, Hazaribag sin
 | Google Business Profile | Live (name shows "Cee Bee Enterprises") | See the name note in `google-business-profile.md`; add the website link with UTM |
 | Justdial | Live, address shows "Bajrangi Chowk Jhanda Chowk" | Edit so the address matches the block above exactly; add website and hours |
 | Facebook page | Live (facebook.com/ceebeeenterprises24) | Update About → name, address, phone, hours, website |
-| Instagram | Live (@ceebeeenterprises) | Put `https://cb-mirror.cc/` in bio; same phone |
+| Instagram | Live (@ceebeeenterprises) | Put `https://cbdecor.netlify.app/` in bio; same phone |
 | Bing Places | Claim | bingplaces.com → "Import from Google Business Profile" (fastest) |
 | Apple Business Connect | Claim | businessconnect.apple.com → add place for Apple Maps / Siri |
 | IndiaMART | Create if wanted | Then add its URL to `SITE.social.indiamart` in `src/config/site.ts` |

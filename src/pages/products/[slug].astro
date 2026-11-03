@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
+import { showPhoto } from '../../lib/photos';
 import Photo from '../../components/Photo.astro';
 import FaqList from '../../components/FaqList.astro';
 import ContactButtons from '../../components/ContactButtons.astro';
@@ -95,7 +96,7 @@ const related = cat.related.map(categoryBySlug);
       </div>
 
       <aside class="stack">
-        {cat.photos.map((p) => <div class="media-frame"><Photo name={p.name} alt={p.alt} sizes="(min-width: 960px) 340px, 100vw" /></div>)}
+        {cat.photos.filter((p) => showPhoto(p.name)).map((p) => <div class="media-frame"><Photo name={p.name} alt={p.alt} sizes="(min-width: 960px) 340px, 100vw" /></div>)}
         <div class="cta-box">
           <h3>Ask for price & availability</h3>
           <p>Send the brand, size and quantity. We reply with today’s rate and stock.</p>

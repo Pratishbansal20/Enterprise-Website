@@ -1,12 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
+import { showPhoto } from '../lib/photos';
 import Photo from '../components/Photo.astro';
 import ShowroomReel from '../components/ShowroomReel.astro';
 import ContactButtons from '../components/ContactButtons.astro';
 import { SITE, addressLine, yearsInBusiness } from '../config/site';
 import { brands } from '../data/brands';
 
+const aboutPhotos = [
+  { name: 'cee-bee-enterprises-shop-interior-hazaribag', alt: 'Inside the Cee Bee Enterprises (CB Decor) shop near Bajrangi Chowk, Hazaribag' },
+  { name: 'satish-bansal-cee-bee-enterprises-hazaribag', alt: 'Satish Bansal at Cee Bee Enterprises (CB Decor), Hazaribag', ratio: '1 / 1' },
+].filter((p) => showPhoto(p.name));
 const crumbs = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about/' },
@@ -33,7 +38,7 @@ const crumbs = [
         <h2>Our story</h2>
         <p>
           The shop opened in {SITE.foundingYear} and is family-run, today led by {SITE.owner}: {yearsInBusiness()} years in Hazaribag and counting.
-          {' '}{`{{FILL: 2–4 sentences in your own words — how the shop started, what it sold at first, how it grew into CB Decor, who in the family works here today.}}`}
+          {/* TODO: add 2–4 sentences in the family’s own words: how the shop started, what it sold first, how it grew into CB Decor, who works here today. */}
         </p>
         <h2>What we do</h2>
         <p>
@@ -48,14 +53,17 @@ const crumbs = [
         </p>
         <ContactButtons wa="Hi, I want to visit your shop." placement="about" directions />
       </div>
-      <div class="stack">
-        <div class="media-frame">
-          <Photo name="cee-bee-enterprises-shop-interior-hazaribag" alt="Inside the Cee Bee Enterprises (CB Decor) shop near Bajrangi Chowk, Hazaribag" />
-        </div>
-        <div class="media-frame">
-          <Photo name="satish-bansal-cee-bee-enterprises-hazaribag" alt="Satish Bansal at Cee Bee Enterprises (CB Decor), Hazaribag" ratio="1 / 1" />
-        </div>
-      </div>
+      {
+        aboutPhotos.length > 0 && (
+          <div class="stack">
+            {aboutPhotos.map((p) => (
+              <div class="media-frame">
+                <Photo {...p} />
+              </div>
+            ))}
+          </div>
+        )
+      }
     </div>
   </section>
 

@@ -5,8 +5,9 @@
 // `file` name below (any of .jpg .jpeg .png .webp). Items without a picture
 // are hidden on the live site and shown as dashed placeholders in `npm run dev`.
 //
-// Awards: copy an award entry, give it a file name and the real award title
-// and year. Never add an award the shop has not actually received.
+// Awards: fill in the real title (award name, given by, year) and add the
+// picture. An award shows only when it has both. Never add an award the
+// shop has not actually received.
 
 export interface Certificate {
   file: string;
@@ -24,7 +25,7 @@ export const certificates: Certificate[] = [
   { file: 'pidilite-authorised-dealer-certificate', title: 'Pidilite — Authorised Dealer', kind: 'dealer' },
   { file: 'excel-authorised-dealer-certificate', title: 'Excel — Authorised Dealer', kind: 'dealer' },
   { file: 'king-koil-authorised-dealer-certificate', title: 'King Koil — Authorised Dealer', kind: 'dealer' },
-  { file: 'award-1', title: '{{FILL: award name, given by, year}}', kind: 'award' },
-  { file: 'award-2', title: '{{FILL: award name, given by, year}}', kind: 'award' },
-  { file: 'award-3', title: '{{FILL: award name, given by, year}}', kind: 'award' },
+  { file: 'award-1', title: '', kind: 'award' },
+  { file: 'award-2', title: '', kind: 'award' },
+  { file: 'award-3', title: '', kind: 'award' },
 ];

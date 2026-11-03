@@ -23,7 +23,7 @@ const find = (name: string) => Object.entries(files).find(([p]) => p.split('/').
 const items = await Promise.all(
   certificates
     .map((c) => ({ ...c, img: find(c.file) }))
-    .filter((c) => c.img || import.meta.env.DEV)
+    .filter((c) => (c.img && c.title) || import.meta.env.DEV)
     .map(async (c) => ({ ...c, full: c.img ? (await getImage({ src: c.img, width: 1600, format: 'webp' })).src : null })),
 );
 // Seconds per full loop: slow enough to read each card.
@@ -52,8 +52,8 @@ const duration = `${Math.max(items.length, 4) * 5}s`;
                   </a>
                 ) : (
                   <>
-                    <div class="cert-img">{`{{FILL: src/assets/certificates/${c.file}.jpg}}`}</div>
-                    <figcaption>{c.title}</figcaption>
+                    <div class="cert-img">{`TODO: src/assets/certificates/${c.file}.jpg`}</div>
+                    <figcaption>{c.title || 'TODO: award name, given by, year'}</figcaption>
                   </>
                 )}
               </figure>

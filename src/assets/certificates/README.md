@@ -14,7 +14,7 @@ from `src/data/certificates.ts`, for example:
 - `king-koil-authorised-dealer-certificate.jpg`
 
 **Awards:** name them `award-1.jpg`, `award-2.jpg`, … and replace the
-`{{FILL: award name, given by, year}}` title for each in
+empty `title` (award name, given by, year) for each in
 `src/data/certificates.ts` (or send the details and they'll be filled in).
 
 Only certificates with a picture appear on the live site. Photograph them flat,

@@ -447,3 +447,6 @@ a.brand-tile:hover { border-color: var(--teak); color: var(--red); }
 .section--dark .feature-list li::before { background-color: var(--brass); }
 .footer-hours { margin: 12px 0 8px; }
 .more-link { margin-top: 24px; }
+
+/* A two-column layout with only one child (e.g. no photo yet) uses one column. */
+.hero .wrap > :only-child, .split > :only-child { grid-column: 1 / -1; max-width: 820px; }

@@ -1,9 +1,14 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { SITE } from './src/config/site.ts';
+
+// The site's public address, used for canonical tags, sitemap and schema.
+// On Netlify, `URL` is set automatically to the site's primary address
+// (the free *.netlify.app one, or the custom domain once one is added).
+// SITE_URL overrides it; the fallback is used for local builds.
+const site = process.env.SITE_URL || process.env.URL || 'https://cbdecor.netlify.app';
 
 export default defineConfig({
-  site: SITE.url,
+  site,
   trailingSlash: 'always',
   build: { format: 'directory', inlineStylesheets: 'always' },
   integrations: [

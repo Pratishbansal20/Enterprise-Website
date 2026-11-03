@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0 — 2026-11-03 · Deploy-ready without placeholders
+
+- **No placeholders on the live site.** Photo frames, the hero photo column, the About photos, certificates and awards are left out until their files exist; layouts fall back to one column. The About story and Contact landmarks became code `TODO` comments. `npm run dev` still shows every missing item as a labelled `TODO` panel.
+- **`check:seo` now fails** if any `TODO` or `{{FILL}}` would be visible on a live page.
+- **Site address no longer hard-coded.** `cb-mirror.cc` is used by the shop's billing app, so the site launches on the free `cbdecor.netlify.app`. The address comes from Netlify's `URL` variable at build time (override with `SITE_URL`), so moving to a custom domain later needs no code change. `robots.txt` is now generated so its Sitemap line follows the address.
+- Optional config values (`geo`, `ga4Id`, `priceRange`) are now empty strings instead of `{{FILL}}` text.
+- Docs updated: deploy steps, launch checklist (post-launch to-do list, custom-domain move), Search Console URL-prefix property for the netlify.app address.
+
 ## 2.0.0 — 2026-11-02 · Full rebuild for local SEO and AI search
 
 ### Why

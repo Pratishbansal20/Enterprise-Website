@@ -1,4 +1,4 @@
-# Netlify build + hosting settings for cb-mirror.cc
+# Netlify build + hosting settings for the Cee Bee Enterprises (CB Decor) website
 
 [build]
   command = "npm run build"

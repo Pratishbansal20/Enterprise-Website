@@ -1,5 +1,6 @@
 // Post-build SEO checks over dist/. Run: npm run build && npm run check:seo
-// Fails (exit 1) on hard errors; prints {{FILL}} placeholders still visible.
+// Fails (exit 1) on hard errors, including any {{FILL}} / TODO placeholder
+// left visible on a page.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
@@ -35,7 +36,7 @@ for (const file of pages) {
   const h1s = html.match(/<h1[\s>]/g) ?? [];
   if (h1s.length !== 1) err(`${h1s.length} <h1> elements`);
 
-  if (!noindex && !/<link rel="canonical" href="https:\/\/cb-mirror\.cc\//.test(html)) err('missing canonical');
+  if (!noindex && !/<link rel="canonical" href="https:\/\//.test(html)) err('missing canonical');
 
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try {
@@ -61,14 +62,11 @@ for (const file of pages) {
   }
 
   const body = html.replace(/<script[\s\S]*?<\/script>/g, '');
-  for (const m of body.matchAll(/\{\{FILL:[^}]*\}\}/g)) fills.add(`${url}  ${m[0]}`);
+  for (const m of body.matchAll(/\{\{FILL:[^}]*\}\}|\bTODO\b[^<]*/g)) fills.add(`${url}  ${m[0]}`);
 }
 
 console.log(`Checked ${pages.length} pages.`);
-if (fills.size) {
-  console.log(`\n${fills.size} visible {{FILL}} placeholder(s):`);
-  for (const f of fills) console.log('  ' + f);
-}
+for (const f of fills) errors.push(`visible placeholder: ${f}`);
 if (errors.length) {
   console.error(`\n${errors.length} error(s):`);
   for (const e of errors) console.error('  ' + e);

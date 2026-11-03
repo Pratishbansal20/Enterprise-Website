@@ -54,10 +54,14 @@ Don't add "Building materials supplier": you don't sell building materials, and 
 Put this as the GBP website so GBP visits show up separately in Google Analytics:
 
 ```
-https://cb-mirror.cc/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing
+https://cbdecor.netlify.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing
 ```
 
-The page's canonical tag points to `https://cb-mirror.cc/`, so Google won't treat the tagged link as a duplicate page.
+The page's canonical tag points to `https://cbdecor.netlify.app/`, so Google won't treat the tagged link as a duplicate page.
+
+> All links in this file use the free Netlify address. If your Netlify site
+> name ends up different, or once you move to your own domain, replace
+> `https://cbdecor.netlify.app` everywhere in this file before pasting.
 
 ---
 
@@ -67,18 +71,18 @@ Add one product per category. Use a real photo of that shelf in your shop. Leave
 
 | Product name | Category in GBP | Description | Link |
 | --- | --- | --- | --- |
-| Plywood, Blockboard, MDF & Flush Doors | Boards | Century, Greenply and Royale Touche BWP, MR and commercial plywood, 3–25 mm; 19 mm blockboard; MDF; HDHMR; 30 mm flush doors. | https://cb-mirror.cc/products/plywood-shop-hazaribag/ |
-| Laminates & Veneers | Boards | Century, Merino and Royale Touche laminates, 0.7–1.5 mm, gloss, suede, matt, textured and acrylic; liners; veneer sheets. | https://cb-mirror.cc/products/laminate-shop-hazaribag/ |
-| Door Handles & Locks | Hardware | Godrej mortise locks and handle sets, cylinders, knobs, tower bolts, door closers and floor springs. | https://cb-mirror.cc/products/door-handles-locks-hazaribag/ |
-| Modular Kitchen Hardware | Hardware | Godrej and Ebco soft-close hinges, telescopic channels, SS baskets, gas lifts and profile handles. | https://cb-mirror.cc/products/modular-kitchen-hardware-hazaribag/ |
-| Furniture Fittings | Hardware | Handles, knobs, hydraulic bed fittings, sofa legs, sliding wardrobe fittings and stays. | https://cb-mirror.cc/products/furniture-fittings-hazaribag/ |
-| Fevicol & Adhesives | Hardware | Pidilite Fevicol SH, Araldite, Feviseal and Dr. Fixit, small packs to bulk tins. | https://cb-mirror.cc/products/adhesives-fevicol-hazaribag/ |
-| PVC & WPC Boards and Doors | Boards | PVC foam boards 5–19 mm, WPC boards 12–28 mm, WPC and PVC doors. | https://cb-mirror.cc/products/pvc-wpc-board-hazaribag/ |
-| ACP Sheets & Acrylic | Boards | 3 mm and 4 mm ACP in 8×4, 10×4, 12×4 ft; acrylic solid surface; acrylic sheets. | https://cb-mirror.cc/products/acrylic-acp-sheet-hazaribag/ |
-| Wall Panels & Louvers | Interiors | Interior and exterior louvers, charcoal panels, PVC and fluted panels with profiles. | https://cb-mirror.cc/products/wall-panels-louvers-hazaribag/ |
-| Gypsum False Ceiling Material | Interiors | Gypsum boards, ceiling tiles, PVC gypsum tiles, GI channels and grid. | https://cb-mirror.cc/products/gypsum-false-ceiling-hazaribag/ |
-| Wallpaper, Flooring & Blinds | Interiors | Excel wallpaper, flooring and blinds; curtain rods and brackets. | https://cb-mirror.cc/products/wallpaper-flooring-blinds-hazaribag/ |
-| King Koil Mattresses | Bedroom | Authorised King Koil dealer: mattresses and pillows. | https://cb-mirror.cc/products/king-koil-mattress-hazaribag/ |
+| Plywood, Blockboard, MDF & Flush Doors | Boards | Century, Greenply and Royale Touche BWP, MR and commercial plywood, 3–25 mm; 19 mm blockboard; MDF; HDHMR; 30 mm flush doors. | https://cbdecor.netlify.app/products/plywood-shop-hazaribag/ |
+| Laminates & Veneers | Boards | Century, Merino and Royale Touche laminates, 0.7–1.5 mm, gloss, suede, matt, textured and acrylic; liners; veneer sheets. | https://cbdecor.netlify.app/products/laminate-shop-hazaribag/ |
+| Door Handles & Locks | Hardware | Godrej mortise locks and handle sets, cylinders, knobs, tower bolts, door closers and floor springs. | https://cbdecor.netlify.app/products/door-handles-locks-hazaribag/ |
+| Modular Kitchen Hardware | Hardware | Godrej and Ebco soft-close hinges, telescopic channels, SS baskets, gas lifts and profile handles. | https://cbdecor.netlify.app/products/modular-kitchen-hardware-hazaribag/ |
+| Furniture Fittings | Hardware | Handles, knobs, hydraulic bed fittings, sofa legs, sliding wardrobe fittings and stays. | https://cbdecor.netlify.app/products/furniture-fittings-hazaribag/ |
+| Fevicol & Adhesives | Hardware | Pidilite Fevicol SH, Araldite, Feviseal and Dr. Fixit, small packs to bulk tins. | https://cbdecor.netlify.app/products/adhesives-fevicol-hazaribag/ |
+| PVC & WPC Boards and Doors | Boards | PVC foam boards 5–19 mm, WPC boards 12–28 mm, WPC and PVC doors. | https://cbdecor.netlify.app/products/pvc-wpc-board-hazaribag/ |
+| ACP Sheets & Acrylic | Boards | 3 mm and 4 mm ACP in 8×4, 10×4, 12×4 ft; acrylic solid surface; acrylic sheets. | https://cbdecor.netlify.app/products/acrylic-acp-sheet-hazaribag/ |
+| Wall Panels & Louvers | Interiors | Interior and exterior louvers, charcoal panels, PVC and fluted panels with profiles. | https://cbdecor.netlify.app/products/wall-panels-louvers-hazaribag/ |
+| Gypsum False Ceiling Material | Interiors | Gypsum boards, ceiling tiles, PVC gypsum tiles, GI channels and grid. | https://cbdecor.netlify.app/products/gypsum-false-ceiling-hazaribag/ |
+| Wallpaper, Flooring & Blinds | Interiors | Excel wallpaper, flooring and blinds; curtain rods and brackets. | https://cbdecor.netlify.app/products/wallpaper-flooring-blinds-hazaribag/ |
+| King Koil Mattresses | Bedroom | Authorised King Koil dealer: mattresses and pillows. | https://cbdecor.netlify.app/products/king-koil-mattress-hazaribag/ |
 
 ## 5. Services (GBP → Services)
 
@@ -94,19 +98,19 @@ Use a real photo with each post. Button: **Learn more** (or **Call now**).
 
 **Post 1: Send your list on WhatsApp**
 > Building or renovating? Send your carpenter's material list to Cee Bee Enterprises (CB Decor) on WhatsApp and we'll price plywood, laminates, hardware and fittings together in one quote. Delivery across Hazaribag district. Visit us at Bajrangi Chowk, Tuesday to Sunday, 9:30 AM–8 PM.
-> Link: `https://cb-mirror.cc/contractors/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
+> Link: `https://cbdecor.netlify.app/contractors/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
 
 **Post 2: BWP or MR plywood?**
 > Not sure which plywood to buy? Use BWP plywood in the kitchen and anywhere it can get wet, and MR plywood for wardrobes and beds in dry rooms. We're authorised dealers for Century, Greenply and Royale Touche. Read our simple guide or ask us at the shop.
-> Link: `https://cb-mirror.cc/guides/bwp-vs-mr-vs-commercial-plywood/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
+> Link: `https://cbdecor.netlify.app/guides/bwp-vs-mr-vs-commercial-plywood/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
 
 **Post 3: King Koil mattresses**
 > Cee Bee Enterprises is an authorised King Koil dealer in Hazaribag. Visit our showroom near Bajrangi Chowk to see King Koil mattresses and pillows, and get help choosing the right size for your bed.
-> Link: `https://cb-mirror.cc/products/king-koil-mattress-hazaribag/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
+> Link: `https://cbdecor.netlify.app/products/king-koil-mattress-hazaribag/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
 
 **Post 4: Modular kitchen hardware**
 > Planning a modular kitchen? We stock Godrej and Ebco soft-close hinges, telescopic channels from 10" to 24", stainless-steel baskets and gas lifts. Send us your kitchen list on WhatsApp for one price for everything.
-> Link: `https://cb-mirror.cc/products/modular-kitchen-hardware-hazaribag/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
+> Link: `https://cbdecor.netlify.app/products/modular-kitchen-hardware-hazaribag/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
 
 ---
 
