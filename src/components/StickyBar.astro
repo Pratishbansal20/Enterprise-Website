@@ -1,0 +1,19 @@
+---
+// Sticky mobile action bar: Call | WhatsApp | Directions. Hidden ≥ 900px.
+import { telHref, directionsUrl, waLink } from '../config/site';
+import { ui, type Lang } from '../lib/i18n';
+import { icons } from '../lib/icons';
+
+interface Props {
+  lang: Lang;
+  wa: string;
+}
+const { lang, wa } = Astro.props;
+const t = ui[lang];
+---
+
+<nav class="sticky-bar" aria-label="Quick contact">
+  <a href={telHref} data-track="call" data-placement="sticky"><Fragment set:html={icons.phone} />{t.call}</a>
+  <a class="wa" href={waLink(wa)} target="_blank" rel="noopener" data-track="whatsapp" data-placement="sticky"><Fragment set:html={icons.whatsapp} />{t.whatsapp}</a>
+  <a href={directionsUrl} target="_blank" rel="noopener" data-track="directions" data-placement="sticky"><Fragment set:html={icons.pin} />{t.directions}</a>
+</nav>

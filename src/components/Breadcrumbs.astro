@@ -1,0 +1,18 @@
+---
+// Visible breadcrumb trail. The matching BreadcrumbList JSON-LD is emitted
+// by the Base layout from the same `items`.
+interface Props {
+  items: { name: string; path: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    {
+      items.map((it, i) =>
+        i === items.length - 1 ? <li aria-current="page">{it.name}</li> : <li><a href={it.path}>{it.name}</a></li>,
+      )
+    }
+  </ol>
+</nav>

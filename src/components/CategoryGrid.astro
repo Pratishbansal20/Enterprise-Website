@@ -1,0 +1,32 @@
+---
+import { categories, groups, type Group } from '../data/categories';
+
+interface Props {
+  headingLevel?: 'h3' | 'h2';
+}
+const { headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
+const order: Group[] = ['boards', 'hardware', 'interiors', 'home'];
+---
+
+{
+  order.map((g) => (
+    <>
+      <div class="group-title">
+        <Heading>{groups[g].name}</Heading>
+        <span class="muted small">{groups[g].blurb}</span>
+      </div>
+      <div class="grid grid--3">
+        {categories
+          .filter((c) => c.group === g)
+          .map((c) => (
+            <a class="cat-card" href={`/products/${c.slug}/`}>
+              <strong>{c.name}</strong>
+              <span>{c.range.slice(0, 2).map((r) => r.items).join(' · ')}</span>
+              <em>See range →</em>
+            </a>
+          ))}
+      </div>
+    </>
+  ))
+}

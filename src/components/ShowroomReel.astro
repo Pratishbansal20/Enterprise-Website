@@ -1,0 +1,70 @@
+---
+// Vertical (9:16) showroom reel in a phone-shaped frame. Muted autoplay
+// loop, but the video file only downloads when the frame scrolls into view,
+// pauses when it leaves, and never auto-downloads on Data Saver or for
+// people who prefer reduced motion (they get a tap-to-play control instead).
+// Regenerate the file with `npm run media:video`.
+import { existsSync } from 'node:fs';
+import { REEL } from '../config/media';
+
+interface Props {
+  label?: string;
+}
+const { label = 'Showroom' } = Astro.props;
+const hasVideo = existsSync(`public${REEL.src}`);
+---
+
+<div class="reel-frame">
+  <span class="reel-badge">{label}</span>
+  {
+    hasVideo ? (
+      <video
+        class="reel"
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster={REEL.poster}
+        width={REEL.width}
+        height={REEL.height}
+        data-src={REEL.src}
+        aria-label="Video walk-through of the Cee Bee Enterprises (CB Decor) showroom near Bajrangi Chowk, Hazaribag"
+      />
+    ) : (
+      <div class="photo-slot" style="height:100%" aria-hidden="true">
+        {import.meta.env.DEV && <span>{`TODO: run npm run media:video`}</span>}
+      </div>
+    )
+  }
+</div>
+
+<script>
+  const video = document.querySelector<HTMLVideoElement>('video.reel[data-src]');
+  if (video) {
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    const manual = conn?.saveData || matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const attach = () => {
+      if (!video.getAttribute('src')) video.src = video.dataset.src!;
+    };
+    if (manual) {
+      // Tap to play; nothing downloads until then.
+      video.controls = true;
+      attach();
+    } else if ('IntersectionObserver' in window) {
+      new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            attach();
+            video.play().catch(() => (video.controls = true));
+          } else if (!video.paused) {
+            video.pause();
+          }
+        },
+        { rootMargin: '200px 0px' },
+      ).observe(video);
+    } else {
+      video.controls = true;
+      attach();
+    }
+  }
+</script>

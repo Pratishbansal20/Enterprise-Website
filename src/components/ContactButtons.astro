@@ -1,0 +1,40 @@
+---
+import { SITE, telHref, directionsUrl, waLink } from '../config/site';
+import { icons } from '../lib/icons';
+
+interface Props {
+  wa: string;
+  placement: string;
+  /** Label for the WhatsApp button. */
+  waLabel?: string;
+  callLabel?: string;
+  directionsLabel?: string;
+  directions?: boolean;
+  light?: boolean;
+}
+const {
+  wa,
+  placement,
+  waLabel = 'Ask price on WhatsApp',
+  callLabel = `Call ${SITE.phoneDisplay}`,
+  directionsLabel = 'Get directions',
+  directions = false,
+  light = false,
+} = Astro.props;
+---
+
+<div class="btn-row">
+  <a class="btn btn--wa" href={waLink(wa)} target="_blank" rel="noopener" data-track="whatsapp" data-placement={placement}>
+    <Fragment set:html={icons.whatsapp} />{waLabel}
+  </a>
+  <a class:list={['btn', light ? 'btn--ghost' : 'btn--primary']} href={telHref} data-track="call" data-placement={placement}>
+    <Fragment set:html={icons.phone} />{callLabel}
+  </a>
+  {
+    directions && (
+      <a class="btn btn--ghost" href={directionsUrl} target="_blank" rel="noopener" data-track="directions" data-placement={placement}>
+        <Fragment set:html={icons.pin} />{directionsLabel}
+      </a>
+    )
+  }
+</div>

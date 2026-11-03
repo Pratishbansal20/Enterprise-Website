@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactButtons from '../../components/ContactButtons.astro';
+import MapBlock from '../../components/MapBlock.astro';
+import { SITE, telHref } from '../../config/site';
+
+const crumbs = [
+  { name: 'होम', path: '/hi/' },
+  { name: 'संपर्क', path: '/hi/contact/' },
+];
+const wa = 'नमस्ते, मुझे इस सामान का रेट और उपलब्धता जाननी है: ';
+---
+
+<Base
+  title="संपर्क और पता | Cee Bee Enterprises, बजरंगी चौक, हजारीबाग"
+  description="Cee Bee Enterprises (CB Decor), Bajrangi Chowk, Hazaribag 825301। मंगलवार–रविवार सुबह 9:30 से रात 8 बजे तक। कॉल या व्हाट्सऐप: +91 94313 94626।"
+  path="/hi/contact/"
+  lang="hi"
+  alternates={{ en: '/contact/', hi: '/hi/contact/' }}
+  breadcrumbs={crumbs}
+  wa={wa}
+>
+  <PageHero crumbs={crumbs} h1="संपर्क करें: Cee Bee Enterprises, हजारीबाग" eyebrow="पता और समय">
+    <p class="lead">कॉल करें, व्हाट्सऐप करें या बजरंगी चौक पर दुकान आएँ। रेट के लिए व्हाट्सऐप सबसे जल्दी है: सामान, साइज़ और मात्रा भेजें।</p>
+    <ContactButtons wa={wa} placement="contact-hi" directions waLabel="व्हाट्सऐप करें" callLabel="कॉल करें" directionsLabel="रास्ता देखें" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap split" style="align-items:start">
+      <div class="stack">
+        <div class="card">
+          <h2 style="font-size:1.4rem">दुकान का पता</h2>
+          {/* NAP stays in English letters, exactly as on Google Business Profile. */}
+          <address class="nap" lang="en" style="font-style:normal">
+            <strong>{SITE.name}</strong><br />
+            {SITE.address.street}, {SITE.address.city},<br />
+            {SITE.address.region} {SITE.address.postalCode}
+          </address>
+          <p style="margin-top:10px">(बजरंगी चौक, हजारीबाग, झारखंड)</p>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.4rem">फ़ोन और व्हाट्सऐप</h2>
+          <p><a href={telHref} data-track="call" data-placement="contact-hi-card">{SITE.phoneDisplay}</a></p>
+          <p class="mb-0"><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.4rem">दुकान का समय</h2>
+          <table class="range">
+            <tbody>
+              <tr><th scope="row">मंगलवार – रविवार</th><td>सुबह 9:30 – रात 8:00</td></tr>
+              <tr><th scope="row">सोमवार</th><td>बंद</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <MapBlock live lang="hi" />
+    </div>
+  </section>
+</Base>

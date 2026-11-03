@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactButtons from '../components/ContactButtons.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import FaqList from '../components/FaqList.astro';
+import { brands } from '../data/brands';
+import { faqSchema } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'For Contractors', path: '/contractors/' },
+];
+const wa = 'Hi, I am a contractor. I want a bulk quote. My material list: ';
+const faqs = [
+  {
+    q: 'How do I get a bulk quote?',
+    a: 'Send your material list on WhatsApp, as a photo, PDF or typed list, with brands, sizes, quantities and site location. We reply with one combined quote.',
+  },
+  {
+    q: 'Do you deliver to building sites?',
+    a: 'Yes. We deliver to sites across Hazaribag district. Tell us the site location and order size for delivery details.',
+  },
+  {
+    q: 'Can architects and interior designers specify brands?',
+    a: `Yes. We are authorised dealers for ${brands.map((b) => b.name.replace(/ \(.*\)/, '')).join(', ')}, so you can specify these brands and we will supply them.`,
+  },
+];
+---
+
+<Base
+  title="Bulk Plywood & Hardware Supply for Contractors, Hazaribag"
+  description="Bulk plywood, laminates & hardware for contractors, builders & architects in Hazaribag. WhatsApp your material list for one quote with site delivery."
+  path="/contractors/"
+  breadcrumbs={crumbs}
+  schema={[faqSchema(faqs)]}
+  wa={wa}
+>
+  <PageHero crumbs={crumbs} h1="Bulk Supply for Contractors, Builders & Architects in Hazaribag" eyebrow="Trade & bulk">
+    <p class="lead">
+      Cee Bee Enterprises (CB Decor) supplies contractors, builders, carpenters, architects and interior designers in Hazaribag with plywood,
+      laminates, hardware, fittings and interior products in bulk. Send your material list on WhatsApp and get one quote for the whole site,
+      with delivery across Hazaribag district.
+    </p>
+    <ContactButtons wa={wa} placement="contractors-hero" waLabel="Send material list" />
+  </PageHero>
+
+  <section class="section">
+    <div class="wrap split" style="align-items:start">
+      <div class="prose">
+        <h2>How does a bulk order work?</h2>
+        <ol>
+          <li><strong>Send the list.</strong> WhatsApp a photo of your carpenter’s list or drawing, or use the form.</li>
+          <li><strong>Get one quote.</strong> We price everything together: boards, laminates, hardware and adhesives.</li>
+          <li><strong>Confirm and schedule.</strong> Pick it up from the shop or get it delivered to site.</li>
+        </ol>
+        <h2>What can we supply for a full site?</h2>
+        <ul>
+          <li>Plywood, blockboard, MDF, HDHMR and flush doors</li>
+          <li>Laminates, liners and veneers</li>
+          <li>Door locks, handles, closers and floor springs</li>
+          <li>Modular kitchen and furniture fittings</li>
+          <li>Fevicol and other Pidilite adhesives in site quantities</li>
+          <li>PVC/WPC boards, ACP, wall panels, louvers and false ceiling material</li>
+        </ul>
+        <h2>Why work with an authorised dealer?</h2>
+        <p>
+          We are authorised for {brands.length} brands, so what you specify is what reaches site, with a proper bill for the manufacturer’s
+          warranty.
+        </p>
+      </div>
+      <QuoteForm source="contractors" heading="Request a bulk quote" />
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap narrow">
+      <FaqList faqs={faqs} />
+    </div>
+  </section>
+</Base>

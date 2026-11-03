@@ -1,0 +1,25 @@
+---
+// FAQ block: question as a heading, direct answer right below, all in the
+// server-rendered HTML so search engines and AI crawlers can read it.
+// Pair with faqSchema() from lib/schema on the same page.
+interface Props {
+  faqs: { q: string; a: string }[];
+  heading?: string;
+  id?: string;
+}
+const { faqs, heading = 'Frequently asked questions', id = 'faq' } = Astro.props;
+---
+
+<section aria-labelledby={id}>
+  <h2 id={id}>{heading}</h2>
+  <div class="faq">
+    {
+      faqs.map((f) => (
+        <div class="faq-item">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

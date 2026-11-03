@@ -1,0 +1,42 @@
+---
+// Real-photo slot. Drop a photo into src/assets/photos/ named `<name>.jpg`
+// (or .jpeg/.png/.webp) and it appears here automatically, converted to
+// AVIF/WebP with explicit width/height. Until then the live site renders
+// nothing; `npm run dev` shows a labelled wood-texture panel as a reminder.
+// Wrap the slot in `showPhoto(name) && …` so its frame disappears too.
+import { Picture } from 'astro:assets';
+import { findPhoto } from '../lib/photos';
+
+interface Props {
+  name: string;
+  alt: string;
+  ratio?: string;
+  sizes?: string;
+  eager?: boolean;
+  class?: string;
+}
+const { name, alt, ratio = '4 / 3', sizes = '(min-width: 960px) 560px, 100vw', eager = false, class: cls } = Astro.props;
+const match = findPhoto(name);
+---
+
+{
+  match ? (
+    <Picture
+      src={match}
+      alt={alt}
+      formats={['avif', 'webp']}
+      widths={[400, 700, 1100]}
+      sizes={sizes}
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : undefined}
+      class:list={['photo', cls]}
+      style={`aspect-ratio:${ratio}`}
+    />
+  ) : (
+    import.meta.env.DEV && (
+      <div class:list={['photo-slot', cls]} style={`aspect-ratio:${ratio}`} aria-hidden="true">
+        <span>{`TODO photo: src/assets/photos/${name}.jpg`}</span>
+      </div>
+    )
+  )
+}
