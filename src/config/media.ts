@@ -1,7 +1,7 @@
 // Showroom reel produced by `npm run media:video` (tools/process-video.mjs).
 export const REEL = {
-  src: '/video/cee-bee-enterprises-showroom-hazaribag.mp4',
-  poster: '/video/cee-bee-enterprises-showroom-hazaribag-poster.webp',
+  src: '/video/cee-bee-enterprises-showroom-hazaribagh.mp4',
+  poster: '/video/cee-bee-enterprises-showroom-hazaribagh-poster.webp',
   width: 360,
   height: 640,
   /** ISO 8601 duration of the reel, for VideoObject schema. */

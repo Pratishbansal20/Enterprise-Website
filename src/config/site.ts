@@ -14,11 +14,12 @@ export const SITE = {
   brand: 'CB Decor',
 
   // ── Address ─────────────────────────────────────────────────────────────
-  // If your Google Business Profile shows a shop number, building or road
-  // before "Bajrangi Chowk", add it to `street` exactly as Google shows it.
+  // Same wording as the Google Business Profile, which shows
+  // "Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh, Jharkhand 825301"
+  // (only the capitalisation is tidied here).
   address: {
-    street: 'Bajrangi Chowk',
-    city: 'Hazaribag',
+    street: 'Bajrangi Chowk, Jai Prakash Marg, Kani Bazar',
+    city: 'Hazaribagh',
     region: 'Jharkhand',
     postalCode: '825301',
     country: 'IN',
@@ -32,13 +33,13 @@ export const SITE = {
   email: 'satish.hzb@gmail.com',
 
   // ── Hours ───────────────────────────────────────────────────────────────
-  hoursDisplay: 'Tuesday to Sunday, 9:30 AM – 8:00 PM. Closed on Monday.',
-  hoursShort: 'Tue–Sun 9:30 AM–8 PM · Mon closed',
+  hoursDisplay: 'Tuesday to Sunday, 9:30 AM – 7:30 PM. Closed on Monday.',
+  hoursShort: 'Tue–Sun 9:30 AM–7:30 PM · Mon closed',
   hours: [
     {
       days: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '09:30',
-      closes: '20:00',
+      closes: '19:30',
     },
   ],
   closedDays: ['Monday'],
@@ -50,19 +51,19 @@ export const SITE = {
   gstin: '', // intentionally not shown
 
   // ── Location / maps ─────────────────────────────────────────────────────
-  // Shop coordinates: in Google Maps, long-press the shop pin and copy the
-  // two numbers, e.g. lat '23.99xxxx', lng '85.36xxxx'.
+  // Pin position of the Google Business Profile listing.
   geo: {
-    lat: '',
-    lng: '',
+    lat: '23.9913656',
+    lng: '85.3528197',
   },
-  gbpUrl: 'https://share.google/lHSCm9gutzeIC0xpM',
-  mapsQuery: 'Cee Bee Enterprises, Bajrangi Chowk, Hazaribag, Jharkhand 825301',
+  // Permanent Google Maps link to the listing (its CID), used for hasMap/sameAs.
+  gbpUrl: 'https://www.google.com/maps?cid=1606472877273398140',
+  mapsQuery: 'Cee Bee Enterprises, Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301',
 
   // ── Service area ────────────────────────────────────────────────────────
-  areaServed: 'Hazaribag district',
+  areaServed: 'Hazaribagh district',
   deliveryTowns: [
-    'Hazaribag town',
+    'Hazaribagh town',
     'Barhi',
     'Barkagaon',
     'Barkatha',

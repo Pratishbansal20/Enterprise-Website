@@ -22,8 +22,8 @@ const wa = 'Hi, I want price and availability for some products.';
 const videoSchema = {
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
-  name: 'Inside the Cee Bee Enterprises (CB Decor) showroom, Hazaribag',
-  description: 'A walk through the Cee Bee Enterprises (CB Decor) hardware, plywood and interiors showroom near Bajrangi Chowk, Hazaribag.',
+  name: 'Inside the Cee Bee Enterprises (CB Decor) showroom, Hazaribagh',
+  description: 'A walk through the Cee Bee Enterprises (CB Decor) hardware, plywood and interiors showroom near Bajrangi Chowk, Hazaribagh.',
   thumbnailUrl: new URL(REEL.poster, SITE.url).href,
   contentUrl: new URL(REEL.src, SITE.url).href,
   uploadDate: REEL.uploadDate,
@@ -33,8 +33,8 @@ const videoSchema = {
 ---
 
 <Base
-  title="Hardware & Plywood Shop in Hazaribag | CB Decor"
-  description="Cee Bee Enterprises (CB Decor): hardware & plywood shop near Bajrangi Chowk, Hazaribag since 2001. Century, Godrej, Merino dealer. Call or WhatsApp today."
+  title="Hardware & Plywood Shop in Hazaribagh | CB Decor"
+  description="Cee Bee Enterprises (CB Decor): hardware & plywood shop near Bajrangi Chowk, Hazaribagh since 2001. Century, Godrej, Merino dealer. Call or WhatsApp today."
   path="/"
   alternates={{ en: '/', hi: '/hi/' }}
   schema={[organizationSchema(), websiteSchema(), faqSchema(homeFaqs), videoSchema]}
@@ -43,25 +43,25 @@ const videoSchema = {
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Bajrangi Chowk, Hazaribag · Since {SITE.foundingYear}</p>
-        <h1>Hardware & Plywood Shop in Hazaribag</h1>
+        <p class="eyebrow">Bajrangi Chowk, Hazaribagh · Since {SITE.foundingYear}</p>
+        <h1>Hardware & Plywood Shop in Hazaribagh</h1>
         <p class="lead">
-          Cee Bee Enterprises (CB Decor) is a family-run hardware store in Hazaribag, near Bajrangi Chowk. Since {SITE.foundingYear} we have
+          Cee Bee Enterprises (CB Decor) is a family-run hardware store in Hazaribagh, near Bajrangi Chowk. Since {SITE.foundingYear} we have
           supplied plywood, laminates, door and kitchen hardware, interior products and King Koil mattresses to homes, carpenters and contractors.
         </p>
         <ContactButtons wa={wa} placement="hero" light />
         <ul class="hero-facts">
           <li>Family-run since {SITE.foundingYear}</li>
           <li>Authorised dealer for {brands.length} brands</li>
-          <li>Delivery across Hazaribag district</li>
+          <li>Delivery across Hazaribagh district</li>
           <li>{SITE.hoursShort}</li>
         </ul>
       </div>
-      {showPhoto('cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag') && (
+      {showPhoto('cee-bee-enterprises-store-front-bajrangi-chowk-hazaribagh') && (
       <div class="hero-media">
         <Photo
-          name="cee-bee-enterprises-store-front-bajrangi-chowk-hazaribag"
-          alt="Cee Bee Enterprises (CB Decor) store front near Bajrangi Chowk, hardware and plywood shop in Hazaribag"
+          name="cee-bee-enterprises-store-front-bajrangi-chowk-hazaribagh"
+          alt="Cee Bee Enterprises (CB Decor) store front near Bajrangi Chowk, hardware and plywood shop in Hazaribagh"
           eager
           sizes="(min-width: 900px) 460px, 100vw"
         />
@@ -75,9 +75,9 @@ const videoSchema = {
       <p class="eyebrow">Our range</p>
       <h2 id="what">What can I buy at Cee Bee Enterprises?</h2>
       <p class="lead">
-        Everything to build and finish an interior, under one roof in Hazaribag (Hazaribagh), Jharkhand: plywood, blockboard, MDF and flush doors;
+        Everything to build and finish an interior, under one roof in Hazaribagh (also spelt Hazaribag), Jharkhand: plywood, blockboard, MDF and flush doors;
         laminates and veneers; door handles and locks; modular kitchen hardware; furniture fittings; Fevicol and adhesives; PVC, WPC, ACP and
-        acrylic sheets; wall panels, louvers and false ceiling material; wallpaper, flooring, blinds and curtain rods; and King Koil mattresses.
+        acrylic sheets; wall panels, louvers and false ceiling material; wallpaper, wall putty, flooring, blinds and curtain rods; chandeliers and decorative lights; and King Koil mattresses.
       </p>
       <CategoryGrid />
       <p class="more-link"><a href="/products/">See all products and how to choose →</a></p>
@@ -108,7 +108,7 @@ const videoSchema = {
       <p class="eyebrow">Authorised dealer</p>
       <h2 id="brands">Which brands is Cee Bee Enterprises an authorised dealer for?</h2>
       <p class="lead">
-        We are an authorised dealer in Hazaribag for {brands.map((b) => b.name.replace(/ \(.*\)/, '')).join(', ').replace(/, ([^,]*)$/, ' and $1')}.
+        We are an authorised dealer in Hazaribagh for {brands.map((b) => b.name.replace(/ \(.*\)/, '')).join(', ').replace(/, ([^,]*)$/, ' and $1')}.
       </p>
       <ul class="brand-tiles">
         {brands.map((b) => <li><a class="brand-tile" href={`/brands/#${b.id}`}>{b.name.replace(/ \(.*\)/, '')}</a></li>)}
@@ -122,12 +122,12 @@ const videoSchema = {
     <div class="wrap split">
       <div>
         <p class="eyebrow">Why us</p>
-        <h2 id="why">Why do customers in Hazaribag choose us?</h2>
+        <h2 id="why">Why do customers in Hazaribagh choose us?</h2>
         <ul class="feature-list">
-          <li><span><strong>Family-run for {yearsInBusiness()} years.</strong> Run by {SITE.owner} near Bajrangi Chowk, serving Hazaribag since {SITE.foundingYear}.</span></li>
+          <li><span><strong>Family-run for {yearsInBusiness()} years.</strong> Run by {SITE.owner} near Bajrangi Chowk, serving Hazaribagh since {SITE.foundingYear}.</span></li>
           <li><span><strong>Authorised for {brands.length} brands.</strong> Genuine Century, Greenply, Merino, Godrej, Ebco, Pidilite and more.</span></li>
           <li><span><strong>One shop for the whole job.</strong> Boards, laminates, hardware, interiors and mattresses, so you don’t run around town.</span></li>
-          <li><span><strong>Delivery across Hazaribag district</strong> for homes and sites.</span></li>
+          <li><span><strong>Delivery across Hazaribagh district</strong> for homes and sites.</span></li>
           <li><span><strong>Help finding a carpenter.</strong> Ask us and we can refer you to carpenters we know.</span></li>
         </ul>
       </div>

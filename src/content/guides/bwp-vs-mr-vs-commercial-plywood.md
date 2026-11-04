@@ -3,7 +3,7 @@ title: 'BWP vs MR vs Commercial Plywood: Which Should You Buy?'
 seoTitle: 'BWP vs MR vs Commercial Plywood: Which to Buy?'
 description: 'BWP, MR or commercial plywood? A plain-English guide to the grades, where each belongs in your home, and how to check the grade stamp.'
 published: 2026-11-02
-category: plywood-shop-hazaribag
+category: plywood-shop-hazaribagh
 wa: 'Hi, I need help choosing between BWP and MR plywood.'
 order: 1
 ---
@@ -25,9 +25,9 @@ BWP costs more than MR because of the phenolic resin and stricter testing. Marin
 
 - **Kitchen (base and sink units):** BWP. Water spills, steam and wet mopping reach the bottom of base cabinets every day.
 - **Kitchen wall units:** BWP is safest; MR works if the units are well away from the sink and hob.
-- **Bathroom vanity:** BWP, or consider [PVC or WPC boards](/products/pvc-wpc-board-hazaribag/) which don’t absorb water at all.
+- **Bathroom vanity:** BWP, or consider [PVC or WPC boards](/products/pvc-wpc-board-hazaribagh/) which don’t absorb water at all.
 - **Wardrobes, beds, TV units:** MR is fine in a dry room. Choose BWP for a wardrobe on a wall that gets damp in the monsoon.
-- **Main door frame and shutters on an outside wall:** BWP, or a ready [flush door](/products/plywood-shop-hazaribag/).
+- **Main door frame and shutters on an outside wall:** BWP, or a ready [flush door](/products/plywood-shop-hazaribagh/).
 
 ## How do I check the grade when I buy?
 
@@ -45,6 +45,6 @@ At Cee Bee Enterprises we are authorised dealers for Century, Greenply and Royal
 
 ## What thickness should I buy?
 
-For cabinet bodies and shutters, 18 mm or 19 mm is standard. Use 12 mm for light shelves and drawer sides, and 6 mm or 9 mm for backs and drawer bottoms. Our [plywood page](/products/plywood-shop-hazaribag/) lists every thickness and sheet size we stock.
+For cabinet bodies and shutters, 18 mm or 19 mm is standard. Use 12 mm for light shelves and drawer sides, and 6 mm or 9 mm for backs and drawer bottoms. Our [plywood page](/products/plywood-shop-hazaribagh/) lists every thickness and sheet size we stock.
 
 Need help working out quantities? Read [how much plywood a 2BHK interior needs](/guides/how-much-plywood-for-2bhk/), or WhatsApp us your carpenter’s list.

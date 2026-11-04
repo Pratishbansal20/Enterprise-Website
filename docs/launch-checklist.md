@@ -1,24 +1,23 @@
 # Launch checklist
 
-The site is deploy-ready **without** the items in section E. Every missing
-photo, certificate and story is simply left out of the live site. In
-`npm run dev` each one shows as a labelled `TODO`, so you can see what's
-still missing while working locally. `npm run check:seo` fails if a `TODO`
-or `{{FILL}}` ever reaches a live page.
+Status as of 4 Nov 2026. Missing photos, certificates and text are left out
+of the live site; in `npm run dev` each shows as a labelled `TODO`.
+`npm run check:seo` fails if a `TODO` or `{{FILL}}` would reach a live page.
 
-## A. Deploy (see README for click-by-click)
+## A. Deploy
 
-- [ ] Merge the PR into `main` (or deploy the branch first as a preview).
-- [ ] Netlify → *Add new site* → *Import from GitHub* → pick the repo (build settings come from `netlify.toml`).
-- [ ] Netlify → *Site configuration → Change site name* → `cbdecor` (→ `https://cbdecor.netlify.app`). If taken, pick another, e.g. `cbdecor-hazaribag`. Canonicals, sitemap and robots.txt follow automatically.
-- [ ] Netlify → *Forms* → enable form detection → redeploy → *Notifications* → email to satish.hzb@gmail.com. Send a test quote **with a file attached** and check it arrives.
+- [x] Site rebuilt and merged into `main` (PR #1).
+- [x] Netlify site created from the GitHub repo and named `ceebee-enterprises`, giving https://ceebee-enterprises.netlify.app. Every push to `main` redeploys. The address comes from Netlify's `URL` variable, so canonicals, sitemap and robots.txt follow it.
+- [ ] **Make the site public.** Netlify → *Site configuration → Access & security → Visitor access / Site protection* → off. Until then everyone, Google included, gets a Netlify login page (HTTP 401). Confirm in a private/incognito window.
+- [ ] **Merge the Google-listing fixes** (branch `fix/gbp-alignment`: Hazaribagh URLs, 7:30 PM hours, exact address). The branch is committed but not yet pushed to GitHub.
+- [ ] **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Form notifications* → email to satish.hzb@gmail.com. Send a test quote with a file attached (max 8 MB) and check it arrives.
 
 ## B. After it's live
 
 - [ ] Open the site on a cheap Android phone on mobile data: tap Call, WhatsApp and Directions in the sticky bar.
 - [ ] PageSpeed Insights (mobile) on home, one category page and one guide. Targets: LCP < 2.5 s, INP < 200 ms, CLS < 0.1.
 - [ ] Rich Results Test and schema.org validator on home, a category page and a guide.
-- [ ] Google Search Console → *URL prefix* property `https://cbdecor.netlify.app/` → submit `sitemap-index.xml`.
+- [ ] Google Search Console → *URL prefix* property `https://ceebee-enterprises.netlify.app/` → submit `sitemap-index.xml`.
 - [ ] Bing Webmaster Tools → import from Search Console → submit sitemap.
 - [ ] Claim **Bing Places** and **Apple Business Connect**.
 - [ ] Update GBP: website link with UTM, description, categories, products, services, 4 posts (all in `docs/google-business-profile.md`).
@@ -29,7 +28,7 @@ or `{{FILL}}` ever reaches a live page.
 
 When you buy a domain that matches the brand (e.g. `cbdecor.in`):
 
-1. Netlify → *Domain management* → *Add a domain* → set it as **primary**. Netlify then redirects `cbdecor.netlify.app` to it automatically, and the next build uses it for canonicals, sitemap and robots.txt (from Netlify's `URL` variable).
+1. Netlify → *Domain management* → *Add a domain* → set it as **primary**. Netlify then redirects `ceebee-enterprises.netlify.app` to it automatically, and the next build uses it for canonicals, sitemap and robots.txt (from Netlify's `URL` variable).
 2. Point the domain's DNS at Netlify as Netlify's domain screen shows (usually an `A` record for the root and a `CNAME` for `www`), and wait for HTTPS.
 3. Search Console → add the new domain → *Settings → Change of address* from the netlify.app property.
 4. Update the website link on GBP, Justdial, Facebook, Instagram, Bing and Apple (`docs/citation-nap.md`) and in `docs/google-business-profile.md`.
@@ -52,16 +51,15 @@ Nothing here blocks launch. Each item appears on the live site as soon as it's a
 | 3 | `src/assets/photos/` | 21 real photos, named as in `src/assets/photos/README.md` | Photo frames are left out; layouts go single-column |
 | 4 | `src/assets/certificates/` | 9 dealer certificates (+ award photos) | Certificate strip hidden |
 | 5 | `src/data/certificates.ts` | Award name, given by, year for each award photo | Award hidden |
-| 6 | `src/config/site.ts` → `geo.lat` / `geo.lng` | Shop coordinates (Google Maps → long-press the pin) | Left out of schema |
+| 6 | `src/data/categories.ts` | Types and brands of chandeliers / decorative lights you stock, to give lighting its own page | Mentioned in product lists only |
 | 7 | `src/config/site.ts` → `ga4Id` | GA4 measurement ID (section D) | No analytics |
 | 8 | `src/config/site.ts` → `priceRange` | Optional, e.g. `₹₹` | Left out of schema |
-| 9 | `src/config/site.ts` → `address.street` | Only if Google shows a shop number / building / road before "Bajrangi Chowk" | "Bajrangi Chowk" |
-| 10 | `src/config/site.ts` → `social.indiamart` | IndiaMART URL, if you create a listing | Not linked |
+| 9 | `src/config/site.ts` → `social.indiamart` | IndiaMART URL, if you create a listing | Not linked |
 
 **Questions for you (answers change the site):**
 
 - Is **"CB Decor"** on the shop signboard? This decides whether GBP can use "Cee Bee Enterprises (CB Decor)" (see `docs/google-business-profile.md`).
-- Besides Hazaribag district, **which nearby towns** do you deliver to?
+- Besides Hazaribagh district, **which nearby towns** do you deliver to?
 - The stock list also shows **Greenlam, Hettich, Amulya, Vivre, Alstar, Krayon, Saint-Gobain and Abhiyan**. Should any be named on category pages as "also in stock"?
 - The stock list has **aluminium and stainless-steel ladders**. Should they appear on the site?
 - Please have someone fluent **read the three Hindi pages** and correct any wording.

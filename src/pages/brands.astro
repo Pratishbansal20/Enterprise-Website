@@ -15,15 +15,15 @@ const wa = 'Hi, I want to check availability of a brand.';
 ---
 
 <Base
-  title="Authorised Dealer in Hazaribag | Century, Godrej, Merino"
-  description="Authorised dealer in Hazaribag for Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel & King Koil. Ask stock on WhatsApp."
+  title="Authorised Dealer in Hazaribagh | Century, Godrej, Merino"
+  description="Authorised dealer in Hazaribagh for Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel & King Koil. Ask stock on WhatsApp."
   path="/brands/"
   breadcrumbs={crumbs}
   wa={wa}
 >
-  <PageHero crumbs={crumbs} h1="Authorised Dealer for Leading Brands in Hazaribag" eyebrow="Brands">
+  <PageHero crumbs={crumbs} h1="Authorised Dealer for Leading Brands in Hazaribagh" eyebrow="Brands">
     <p class="lead">
-      Cee Bee Enterprises (CB Decor), near Bajrangi Chowk, is an authorised dealer in Hazaribag for {brands.length} brands:
+      Cee Bee Enterprises (CB Decor), near Bajrangi Chowk, is an authorised dealer in Hazaribagh for {brands.length} brands:
       {' '}{brands.map((b) => short(b.name)).join(', ').replace(/, ([^,]*)$/, ' and $1')}. Buying from an authorised dealer means genuine products and
       a proper bill for the manufacturer’s warranty.
     </p>
@@ -36,7 +36,7 @@ const wa = 'Hi, I want to check availability of a brand.';
         {
           brands.map((b) => (
             <article class="card" id={b.id}>
-              <h2 style="font-size:1.5rem">{short(b.name)} dealer in Hazaribag</h2>
+              <h2 style="font-size:1.5rem">{short(b.name)} dealer in Hazaribagh</h2>
               <p class="muted">Known for {b.makes}.</p>
               <p>
                 <strong>What we sell:</strong> {b.weStock}

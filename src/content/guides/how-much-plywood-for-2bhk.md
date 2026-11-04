@@ -3,7 +3,7 @@ title: 'How Much Plywood Does a 2BHK Interior Need? (Worked Example)'
 seoTitle: 'How Much Plywood for a 2BHK Interior? Worked Example'
 description: 'A worked estimate of plywood sheets for a 2BHK: wardrobes, beds, kitchen and TV unit, with the maths shown, so you can budget before visiting the shop.'
 published: 2026-11-02
-category: plywood-shop-hazaribag
+category: plywood-shop-hazaribagh
 wa: 'Hi, I want an estimate of plywood for my home interior.'
 order: 4
 ---
@@ -79,4 +79,4 @@ Plywood is only part of the bill. You will also need laminates (outer and liner)
 
 ## Get an exact count
 
-Ask your carpenter for a cutting list and send it to us on WhatsApp. We will count the sheets for each thickness and grade and send one quote for plywood, laminates and hardware together, with delivery anywhere in Hazaribag district. See our [plywood range](/products/plywood-shop-hazaribag/).
+Ask your carpenter for a cutting list and send it to us on WhatsApp. We will count the sheets for each thickness and grade and send one quote for plywood, laminates and hardware together, with delivery anywhere in Hazaribagh district. See our [plywood range](/products/plywood-shop-hazaribagh/).

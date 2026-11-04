@@ -67,7 +67,7 @@ const og = `
     <text x="420" y="292" font-size="40" fill="#d6a24e">(CB Decor)</text>
   </g>
   <g font-family="Segoe UI, Arial, sans-serif" fill="#eadcc6">
-    <text x="420" y="370" font-size="34" font-weight="600">Hardware &amp; Plywood Shop in Hazaribag</text>
+    <text x="420" y="370" font-size="34" font-weight="600">Hardware &amp; Plywood Shop in Hazaribagh</text>
     <text x="420" y="420" font-size="28">Bajrangi Chowk · Since 2001 · +91 94313 94626</text>
     <text x="420" y="470" font-size="24" fill="#bfae95">Plywood · Laminates · Locks · Kitchen hardware · Interiors · King Koil</text>
   </g>
