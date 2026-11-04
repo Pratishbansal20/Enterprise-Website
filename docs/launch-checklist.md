@@ -1,18 +1,16 @@
 # Launch checklist
 
-The site is deploy-ready **without** the items in section E. Every missing
-photo, certificate and story is simply left out of the live site. In
-`npm run dev` each one shows as a labelled `TODO`, so you can see what's
-still missing while working locally. `npm run check:seo` fails if a `TODO`
-or `{{FILL}}` ever reaches a live page.
+Status as of 4 Nov 2026. Missing photos, certificates and text are left out
+of the live site; in `npm run dev` each shows as a labelled `TODO`.
+`npm run check:seo` fails if a `TODO` or `{{FILL}}` would reach a live page.
 
-## A. Deploy (see README for click-by-click)
+## A. Deploy
 
-- [ ] Merge the PR into `main` (or deploy the branch first as a preview).
-- [ ] Netlify → *Add new site* → *Import from GitHub* → pick the repo (build settings come from `netlify.toml`).
-- [ ] Netlify → *Site configuration → Change site name* → `ceebee-enterprises` (→ `https://ceebee-enterprises.netlify.app`). Done. Canonicals, sitemap and robots.txt follow the site name automatically.
-- [ ] **Make the site public:** Netlify → *Site configuration → Access & security → Visitor access / Site protection* → off. Until then everyone (and Google) gets a Netlify login page. Check in a private/incognito window.
-- [ ] Netlify → *Forms* → enable form detection → redeploy → *Notifications* → email to satish.hzb@gmail.com. Send a test quote **with a file attached** and check it arrives.
+- [x] Site rebuilt and merged into `main` (PR #1).
+- [x] Netlify site created from the GitHub repo and named `ceebee-enterprises`, giving https://ceebee-enterprises.netlify.app. Every push to `main` redeploys. The address comes from Netlify's `URL` variable, so canonicals, sitemap and robots.txt follow it.
+- [ ] **Make the site public.** Netlify → *Site configuration → Access & security → Visitor access / Site protection* → off. Until then everyone, Google included, gets a Netlify login page (HTTP 401). Confirm in a private/incognito window.
+- [ ] **Merge the Google-listing fixes** (branch `fix/gbp-alignment`: Hazaribagh URLs, 7:30 PM hours, exact address). The branch is committed but not yet pushed to GitHub.
+- [ ] **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Form notifications* → email to satish.hzb@gmail.com. Send a test quote with a file attached (max 8 MB) and check it arrives.
 
 ## B. After it's live
 

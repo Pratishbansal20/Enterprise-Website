@@ -10,6 +10,7 @@ From an audit of the live Google listing (see `docs/google-business-profile.md`)
 - **Chandeliers, decorative lights and wall putty** added to the product lists; paints, tools and plumbing listed as not sold in `llms.txt` (Google's AI summary claimed them).
 - Live address is `ceebee-enterprises.netlify.app`; docs and the build fallback updated.
 - New GBP audit and change list; citation block updated with the fixes for Justdial (two listings), Facebook (personal phone number) and Instagram (different landmark).
+- **README trimmed** to what the project is, live URL, tech stack, pages, structure, local commands and a docs index. Deploy steps and editing rules removed; deploy status now lives in `docs/launch-checklist.md`.
 
 ## 2.1.0 — 2026-11-03 · Deploy-ready without placeholders
 
