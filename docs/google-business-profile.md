@@ -15,9 +15,9 @@ and no posts, so check those two in the dashboard.
 | Name | Cee Bee Enterprises | same | ✅ Don't add keywords (see 2.5) |
 | Hindi name (auto) | की बी एंटरप्राइजेज | same | ⚠️ "की" should be "सी" (2.9, low priority) |
 | Rating | 4.8 ★, 70 reviews | **4.9 ★, 115 reviews** | ✅ Growing well |
-| Primary category | Plywood supplier | same | ⚠️ Still to decide (1.2) |
+| Categories | Plywood supplier (primary; secondaries not visible publicly) | Primary Plywood supplier plus 9 secondaries incl. Hardware Shop (seen in dashboard) | ✅ Set. Only open question is which is primary (1.2) |
 | Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh 825301 | same | ✅ Website matches |
-| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | **23.9915308, 85.3528508 · X9R3+J4** | ✅ Pin moved ~18 m; website schema updated to match |
+| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | **23.9915308, 85.3528508 · X9R3+J4** | ✅ Owner moved the pin ~2 houses to the shop's true spot (~9 Nov). Listing still live and normal on 11 Nov; website schema matches. No more location edits until ~23 Nov |
 | Phone | 094313 94626 | same | ✅ |
 | Hours | Tue–Sun 9:30–7:30, Mon closed | same, with "Diwali might affect these hours" | ⚠️ Set holiday hours (1.3) |
 | Website | none | **ceebee-enterprises.netlify.app with UTM** | ✅ Done (1.1) |
@@ -26,6 +26,22 @@ and no posts, so check those two in the dashboard.
 | Photos | 31 | **69** | ✅ Keep adding; add a video (2.1) |
 | Owner replies to reviews | none visible | none on the 3 reviews shown publicly | ❌ Check the dashboard and reply to all (1.4) |
 | Posts | none visible | none visible | ❌ Start weekly posts (1.6) |
+
+Google's internal *Street address* field reads "Jay Prakash Marg, Bajrangi Chowk". Google displays it as "Bajrangi Chowk, Jai Prakash Marg, Kani bazar". Both are fine; leave the address alone.
+
+### Where the shop ranks on Maps (11 Nov 2026 snapshot)
+
+Checked from outside Hazaribagh with the map centred on the shop. Real positions depend on where each customer searches from, so use this only as a rough baseline.
+
+| Search | Position | Top results |
+| --- | --- | --- |
+| plywood shop in Hazaribagh | **7th** (not in the top 3 shown on Google Search) | Laxmi ply home, Amit Ply, Pankaj ply, Allied Agencies, Shree Ram Sales |
+| hardware shop in Hazaribagh | **not in top 10** | Vijeta Hardware, Guru Hardware Store, Amit Hardware Store, Siddhi Dhata, Laxmi ply home |
+
+- **After the pin move (~9 Nov):** Google re-checks a listing after a location edit, and positions can wobble for a week or two. A move of about two houses doesn't normally trigger re-verification. If it does, a *Verify* banner appears in the dashboard and Google sends an email. The listing showed no such sign on 11 Nov. Don't move the pin back: the correct spot gives customers accurate directions.
+- **The hardware gap:** "Hardware Shop" is already a secondary category, but the **primary** category (Plywood supplier) carries the most weight in local ranking. That's why the shop shows for plywood searches but not hardware ones. Whether to swap the primary is in section 1.2; decide after the edit pause.
+- **Track it properly:** a single search isn't reliable, because results change with the searcher's location and history. Use the dashboard's *Performance* report (searches, calls, direction requests, website clicks) week by week, and compare across a month.
+- **Competitor breaking the rules:** "Greenply Plywood (Hind Ply Mart) - Best Plywood Shop And Dealer In Okni Hazaribagh" has keywords stuffed into its name, which Google's guidelines forbid. On Google Maps, open that listing → *Suggest an edit* → *Change name or other details* → correct the name. Optional, but fair, and it can help you.
 
 ### What Google's AI says about you (and why)
 
@@ -52,26 +68,21 @@ The UTM part lets analytics show GBP visitors separately once GA4 is on. The pag
 
 ### 1.2 Categories
 
-GBP → *Edit profile* → *Business category*. Type each name and use it **only if it appears in Google's dropdown exactly**.
+**Current setup (from the dashboard, 11 Nov 2026), all 10 slots used:**
 
-**Primary: `Hardware store`**, with `Plywood supplier` moved to secondary.
-Why: "Plywood supplier" makes you eligible mainly for plywood searches. "Hardware store" covers locks, handles, kitchen fittings, adhesives and more, matching "hardware shop in Hazaribagh" searches and the website's home page. Rankings can wobble for a week or two after a primary-category change. **If plywood is clearly your biggest seller, keeping `Plywood supplier` as primary is also a reasonable choice.** Either way, keep both.
-
-**Secondary (up to 9):**
-
-| Category | Covers |
+| | Category |
 | --- | --- |
-| `Plywood supplier` | Plywood, blockboard, MDF, flush doors |
-| `Home improvement store` | The broad interiors range |
-| `Lock store` | Godrej locks, door hardware |
-| `Kitchen supply store` | Modular kitchen hardware |
-| `Furniture accessories` | Handles, bed and sofa fittings |
-| `Lighting store` | Chandeliers and decorative lights |
-| `Wallpaper store` | Excel wallpaper |
-| `Window treatment store` | Blinds, curtain rods |
-| `Mattress store` | King Koil |
+| **Primary** | Plywood supplier |
+| Secondary | Lock Store, Acrylic Dealer, Hardware Shop, Lighting Shop, Mattress Shop, Wallpaper Shop, Kitchen supply shop, Home improvement shop, Furniture accessories supplier |
 
-If one isn't in the dropdown, use `Flooring store` instead. Don't add `Building materials supplier`, `Paint store` or `Tool store`: you don't sell those, and wrong categories show you for the wrong searches.
+The secondary list is good and covers what you sell; leave it. Don't add `Building materials supplier`, `Paint store` or `Tool store`.
+
+**The one open decision: which category is primary.** It carries the most weight. With *Plywood supplier* as primary the shop ranks for plywood searches (7th on 11 Nov) but not "hardware shop" (outside the top 10), even though Hardware Shop is listed as secondary.
+
+- **Option A: keep Plywood supplier as primary.** Safest. Best if plywood and boards are the biggest share of sales.
+- **Option B: make Hardware Shop primary** and move Plywood supplier into its secondary slot. Targets the broader "hardware shop in Hazaribagh" searches. Positions for plywood searches may dip for a week or two while Google re-evaluates.
+
+**Whichever you choose, do it only after the edit pause (~23 Nov)**, and change only this one thing that week, so any change in *Performance* can be traced to it. GBP → *Edit profile* → *Business category* → pencil → set the primary.
 
 ### 1.3 Holiday hours
 

@@ -25,7 +25,7 @@ the full record of launch steps and status.
 - [x] Bing Webmaster Tools: site imported from Search Console (11 Nov). Check in about a week that pages appear for `site:ceebee-enterprises.netlify.app` on bing.com.
 - [ ] **Bing Places:** blocked. The Google import reports "address line 1 missing" and the address can't be edited ("required permission"). Way out in `docs/todo.md` (step 6B).
 - [ ] Claim **Apple Business Connect**.
-- [ ] Update GBP (see `docs/google-business-profile.md`). Done by 11 Nov: website link with UTM, description, plywood products, 69 photos, 115 reviews. Still to do: primary category, holiday hours, review replies, product name fixes and remaining products, services, posts.
+- [ ] Update GBP (see `docs/google-business-profile.md`). Done by 11 Nov: website link with UTM, description, all 10 categories, plywood products, 69 photos, 115 reviews, pin moved to the correct spot (~9 Nov; edit pause until ~23 Nov). Still to do: primary-category decision after the pause, holiday hours, review replies, product name fixes and remaining products, services, posts.
 - [ ] Make Justdial, Facebook and Instagram match the NAP block in `docs/citation-nap.md` exactly.
 - [x] `/robots.txt`, `/llms.txt` and `/sitemap-index.xml` open (checked 11 Nov).
 
