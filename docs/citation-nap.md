@@ -34,13 +34,13 @@ steel, sand), curtain fabric, glass and mirrors.
 
 ## What to fix where
 
-| Directory | Found on 3 Nov 2026 | Action |
+| Directory | Found (3 Nov, re-checked 11 Nov 2026) | Action |
 | --- | --- | --- |
-| Google Business Profile | No website; see the full list in `google-business-profile.md` | Follow that file |
-| Justdial (listing 1) | "Jhanda Chowk", 4.9 ★ (79) | Address → block above; remove paints/tools/plumbing; add website and hours |
+| Google Business Profile | 11 Nov: website, description and products added; 4.9 ★ from 115 reviews | Remaining items in `google-business-profile.md` |
+| Justdial (listing 1) | "Jhanda Chowk", 4.9 ★ (79); still lists tools and plumbing on 11 Nov | Address → block above; remove paints/tools/plumbing; add website and hours |
 | Justdial (listing 2) | "Cee Bee Enterprises & CB Decor, Bottom Bazar Road", 4.7 ★ (84) | Ask Justdial to merge it into one listing; same fixes |
-| Facebook page | Phone +91 70045 07988 (personal) | Phone → +91 94313 94626; add address, hours, website |
-| Instagram | Bio landmark "Mahesh Soni Chowk" | Address → "Bajrangi Chowk, Hazaribagh"; website link in bio |
+| Facebook page | Phone +91 70045 07988 (personal); unchanged in Google results on 11 Nov | Phone → +91 94313 94626; add address, hours, website |
+| Instagram | Bio landmark "Mahesh Soni Chowk"; unchanged in Google results on 11 Nov | Address → "Bajrangi Chowk, Hazaribagh"; website link in bio |
 | Bing Places | Not checked | bingplaces.com → *Import from Google Business Profile* |
 | Apple Business Connect | Not checked | businessconnect.apple.com → claim the place |
 | IndiaMART | None | Optional; then add the URL to `SITE.social.indiamart` in `src/config/site.ts` |

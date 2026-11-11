@@ -1,28 +1,31 @@
 # Google Business Profile — audit and change list
 
 Listing: **Cee Bee Enterprises**, https://www.google.com/maps?cid=1606472877273398140
-Checked from the public listing on 3 Nov 2026. Edit it at business.google.com,
-or search "Cee Bee Enterprises" on Google while signed in → *Edit profile*.
+First audited 3 Nov 2026; re-checked from the public listing on 11 Nov 2026.
+Edit it at business.google.com, or search "Cee Bee Enterprises" on Google
+while signed in → *Edit profile*. The public view shows only a few reviews
+and no posts, so check those two in the dashboard.
 
 ---
 
-## 0. What the listing shows today
+## 0. What the listing shows (11 Nov 2026)
 
-| Field | Now on Google | Verdict |
-| --- | --- | --- |
-| Name | Cee Bee Enterprises | ✅ OK. Don't add keywords (see 2.5) |
-| Hindi name (auto) | की बी एंटरप्राइजेज | ⚠️ Google's own transliteration; "की" is wrong (should be "सी") |
-| Rating | 4.8 ★ from 70 reviews | ✅ Strong |
-| Primary category | Plywood supplier | ⚠️ Narrower than what you sell (see 1.2) |
-| Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh, Jharkhand 825301 | ✅ Website now matches this |
-| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | ✅ Now in the website's schema |
-| Phone | 094313 94626 | ✅ Matches website |
-| Hours | Tue–Sun 9:30 AM–7:30 PM, Mon closed | ✅ Website now matches. ⚠️ No holiday hours, so Google shows "Hours might differ" around Diwali |
-| **Website** | **None** ("Add website") | ❌ Biggest gap (see 1.1) |
-| Photos | 31 | ⚠️ OK, but needs regular additions and a video |
-| Owner replies to reviews | None on the reviews Google shows publicly | ❌ (see 1.4) |
-| Products / Updates (posts) | None visible | ❌ (see 1.5, 1.6) |
-| Description | Not visible in the public view | Paste the one in section 3 |
+| Field | 3 Nov | 11 Nov | Status |
+| --- | --- | --- | --- |
+| Name | Cee Bee Enterprises | same | ✅ Don't add keywords (see 2.5) |
+| Hindi name (auto) | की बी एंटरप्राइजेज | same | ⚠️ "की" should be "सी" (2.9, low priority) |
+| Rating | 4.8 ★, 70 reviews | **4.9 ★, 115 reviews** | ✅ Growing well |
+| Primary category | Plywood supplier | same | ⚠️ Still to decide (1.2) |
+| Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh 825301 | same | ✅ Website matches |
+| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | **23.9915308, 85.3528508 · X9R3+J4** | ✅ Pin moved ~18 m; website schema updated to match |
+| Phone | 094313 94626 | same | ✅ |
+| Hours | Tue–Sun 9:30–7:30, Mon closed | same, with "Diwali might affect these hours" | ⚠️ Set holiday hours (1.3) |
+| Website | none | **ceebee-enterprises.netlify.app with UTM** | ✅ Done (1.1) |
+| Description | not visible | **added** | ✅ Done (section 3) |
+| Products | none | **added**: Century, Royale Touche and Greenply plywood | ⚠️ Fix names: "Green" → "Greenply", "Royal Touche" → "Royale Touche"; add the other categories (1.5) |
+| Photos | 31 | **69** | ✅ Keep adding; add a video (2.1) |
+| Owner replies to reviews | none visible | none on the 3 reviews shown publicly | ❌ Check the dashboard and reply to all (1.4) |
+| Posts | none visible | none visible | ❌ Start weekly posts (1.6) |
 
 ### What Google's AI says about you (and why)
 
@@ -37,17 +40,15 @@ AI tools trust the sources that agree with each other. Adding the website to the
 
 ## 1. Do these first (highest impact)
 
-### 1.1 Add the website — after one Netlify fix
+### 1.1 Website ✅ done
 
-**Yes, add it**, but first turn off Netlify's visitor protection. Right now `https://ceebee-enterprises.netlify.app` returns a Netlify login page (HTTP 401) to everyone who isn't signed in to your Netlify account, including Google. Fix: Netlify → your site → *Site configuration* → *Access & security* (or *Access control*) → *Visitor access* / *Site protection* → set to **public / no protection**, then open the site in a private/incognito window to confirm. If it's a team-wide default, also check *Team settings → Access & security*.
-
-Then GBP → *Edit profile* → *Contact* → *Website*:
+The listing links to:
 
 ```
 https://ceebee-enterprises.netlify.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing
 ```
 
-The UTM part lets you see GBP visitors separately in analytics. The page's canonical tag points to the clean address, so Google won't treat the tagged link as a duplicate.
+The UTM part lets analytics show GBP visitors separately once GA4 is on. The page's canonical tag points to the clean address, so Google won't treat the tagged link as a duplicate. If you move to your own domain, update this link.
 
 ### 1.2 Categories
 
@@ -74,11 +75,11 @@ If one isn't in the dropdown, use `Flooring store` instead. Don't add `Building 
 
 ### 1.3 Holiday hours
 
-Google already flags Diwali dates as "Hours might differ". GBP → *Edit profile* → *Hours* → *Special hours*: add every festival day you close or change times (Diwali, Govardhan Puja, Bhai Dooj, Chhath, Holi, Eid, etc.). Doing this before each festival keeps the "Hours might differ" warning away, and Google treats it as a sign the listing is actively managed.
+Google still flags festival dates ("Diwali might affect these hours", seen 11 Nov). GBP → *Edit profile* → *Hours* → *Special hours*: add every festival day you close or change times (Diwali, Govardhan Puja, Bhai Dooj, Chhath, Holi, Eid, etc.). Doing this before each festival keeps the "Hours might differ" warning away, and Google treats it as a sign the listing is actively managed.
 
 ### 1.4 Reply to every review
 
-None of the reviews Google shows publicly has an owner reply. Reply to all 70, newest first (10 a day is fine), and then to each new one within a few days. Keep replies short and personal, mention the product, and never copy-paste the same text.
+None of the reviews Google shows publicly has an owner reply (checked 11 Nov; the public view only shows 3 of the 115). In the dashboard, reply to every review still without one, newest first (10 a day is fine), and then to each new one within a few days. Keep replies short and personal, mention the product, and never copy-paste the same text.
 
 > *Thank you, Abhishek ji! Glad you found everything for your house in one place. See you again at Bajrangi Chowk. — Satish Bansal, Cee Bee Enterprises*
 
@@ -86,7 +87,9 @@ For a negative review: thank them, apologise for the experience, give the shop n
 
 **Getting more reviews:** GBP → *Ask for reviews* gives a short link. Print it as a QR code at the counter and send it on WhatsApp after a sale. Never offer discounts or gifts for reviews (against Google policy) and never post reviews yourself.
 
-### 1.5 Add products
+### 1.5 Add products ⚠️ started
+
+Plywood products from Century, Royale Touche and Greenply are live (11 Nov). Fix two names: "Green" → **Greenply**, "Royal Touche" → **Royale Touche**. Then add the remaining categories from section 4.
 
 GBP → *Edit profile* → *Products* (or *Products* tab) → *Add product*. One per category, each with a **real photo of that shelf**, no price, button **Learn more** with the link. The table is in section 4.
 
@@ -103,8 +106,8 @@ GBP → *Add update*. Aim for one post a week. Four ready-made posts are in sect
 - Add photos of the exterior (so people recognise the shop from the road), the interior, each product section, the team, and deliveries being loaded. Add 3–5 new ones every month; listings with fresh photos tend to get more calls and direction requests.
 - **Video:** GBP accepts videos of up to 30 seconds at 720p or higher. The website reel is 360×640, below that. Export a 20–30 second clip of the showroom from the **original phone file** at 720p or more and upload it.
 
-### 2.2 Description
-Paste the text in section 3. No URLs, phone numbers or offers.
+### 2.2 Description ✅ done
+The section 3 text is live (seen 11 Nov).
 
 ### 2.3 Opening date
 GBP → *Edit profile* → *About* → *Opening date* → **2001**.
@@ -190,6 +193,8 @@ Good follow-up post ideas: a new laminate or wallpaper collection (with photos),
 ---
 
 ## 7. Fix the other listings (they feed Google's AI)
+
+**Status 11 Nov:** Google's search results still show the old details for all three (Facebook's personal number, Instagram's "Mahesh Soni Chowk", Justdial's two addresses and tools/plumbing). Search snippets can lag a week or two behind edits, so if you've already changed them, give it time.
 
 Use the exact block in `docs/citation-nap.md` everywhere.
 
