@@ -32,7 +32,9 @@ text for the Google listing are in `docs/google-business-profile.md`.
   - Add the remaining products: laminates, door hardware, kitchen hardware, furniture fittings, adhesives, PVC/WPC, ACP, wall panels, false ceiling, wallpaper and blinds, lights, King Koil (section 4).
   - Decide the main category: suggested **Hardware store**, keeping Plywood supplier as a second category (section 1.2).
   - Add services (section 5) and start weekly posts (section 6).
-- [ ] **6. Get on Bing, and with it ChatGPT search and Copilot.** Bing has no pages of the site yet. Steps below.
+- [ ] **6. Get on Bing, and with it ChatGPT search and Copilot.** Steps below.
+  - [x] **6A. Bing Webmaster Tools:** done 11 Nov (site imported from Search Console). This is the part that feeds ChatGPT search and Copilot.
+  - [ ] **6B. Bing Places:** blocked. The import from Google says "address line 1 missing", so Bing won't verify, and editing the address gives "you don't have the required permission". See *If Bing Places is stuck* below.
 - [ ] **7. Fix the other listings** so they match `docs/citation-nap.md`.
   - **Facebook:** replace the personal number +91 70045 07988 with +91 94313 94626; add address, hours, website.
   - **Instagram:** change the landmark to Bajrangi Chowk, Hazaribagh; put the website in the bio.
@@ -87,3 +89,15 @@ Bing's index is used by **ChatGPT search, Microsoft Copilot and DuckDuckGo**, so
 6. Changes usually show on Bing Maps within a few days.
 
 **Done when:** the site shows in Bing Webmaster Tools with the sitemap processed, Bing Places shows the listing as published, and `site:ceebee-enterprises.netlify.app` on bing.com lists pages.
+
+### If Bing Places is stuck ("address line 1 missing" + "required permission")
+
+**Why it happens:** a listing imported from Google stays synced to Google, and Bing makes its synced fields read-only. You're expected to fix them on Google and let the next sync carry the change over. Google shows the address as "Bajrangi chowk, Jai Prakash Marg, Kani bazar", but its separate *street address* field is probably empty or split differently, so Bing finds no "line 1". (This comes from community reports; Microsoft has no official page on this exact error.)
+
+**Don't change the Google address just for Bing.** Editing the address on Google can trigger re-verification of a listing with 115 reviews, and Bing Maps brings far fewer customers than Google. Instead, in this order:
+
+1. **Look only.** Google listing → *Edit profile* → *Location* → *Business location*. Note what is in *Street address* without saving anything. If it's genuinely empty, ask Claude before changing it.
+2. **Ask Bing Places support** (from the Bing Places dashboard: *Help* / *Support* → *Contact us*). Say the listing was imported from Google Business Profile, give the full address *Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301*, and say you can't edit address line 1 or verify. Attach screenshots of both errors.
+3. **If support doesn't help in ~2 weeks:** in Bing Places, turn off Google sync (look under *Settings* / *Preferences* → *Google Business Profile sync*; the menu names change often), or delete the imported listing. Then **add the business manually** with the full address from `docs/citation-nap.md` and verify by phone or post. Claim an existing listing rather than creating a duplicate.
+
+Bing Webmaster Tools (6A) is already done, so ChatGPT search and Copilot can find the website either way. Bing Places only adds the Bing Maps pin.

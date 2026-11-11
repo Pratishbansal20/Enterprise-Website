@@ -22,8 +22,9 @@ the full record of launch steps and status.
 - [ ] Rich Results Test and schema.org validator on home, a category page and a guide.
 - [x] Google Search Console: *URL prefix* property `https://ceebee-enterprises.netlify.app/`, verified by the HTML file `public/google678c51c84924c368.html` (keep it). `sitemap-index.xml` submitted 11 Nov 2026 with status Success; Google has discovered all 28 pages. Next, watch *Pages* → *Indexed* (discovered ≠ indexed) and, after 2–4 weeks, *Performance* for the searches that show the site.
 - [ ] Search Console → *URL inspection* → *Request indexing*: **home page first**, because on 11 Nov it was the only page in Google and still showed the old "Hazaribag" / "8 PM" text. Then the main category pages (plywood, laminates, door hardware, kitchen hardware), a few a day.
-- [ ] Bing Webmaster Tools → import from Search Console → submit sitemap. On 11 Nov, Bing had no pages of the site, so ChatGPT search and Copilot can’t find it yet.
-- [ ] Claim **Bing Places** and **Apple Business Connect**.
+- [x] Bing Webmaster Tools: site imported from Search Console (11 Nov). Check in about a week that pages appear for `site:ceebee-enterprises.netlify.app` on bing.com.
+- [ ] **Bing Places:** blocked. The Google import reports "address line 1 missing" and the address can't be edited ("required permission"). Way out in `docs/todo.md` (step 6B).
+- [ ] Claim **Apple Business Connect**.
 - [ ] Update GBP (see `docs/google-business-profile.md`). Done by 11 Nov: website link with UTM, description, plywood products, 69 photos, 115 reviews. Still to do: primary category, holiday hours, review replies, product name fixes and remaining products, services, posts.
 - [ ] Make Justdial, Facebook and Instagram match the NAP block in `docs/citation-nap.md` exactly.
 - [x] `/robots.txt`, `/llms.txt` and `/sitemap-index.xml` open (checked 11 Nov).
