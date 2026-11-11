@@ -113,7 +113,8 @@ GBP → *Add update*. Aim for one post a week. Four ready-made posts are in sect
 ## 2. Then these
 
 ### 2.1 Photos and video
-- **Cover photo:** the shop front with the signboard readable. **Logo:** the CB logo (`src/assets/brand/cb-decor-logo.png`).
+- **Cover photo:** the shop front with the signboard readable.
+- **Logo:** upload `docs/brand/cb-decor-logo-google-720.png`: the CB logo at Google's recommended 720×720, filling the square on white so it shows well in Google's round frame. GBP → *Edit profile* → *Photos* (or *Add photo*) → **Logo**. Safe to do during the edit pause. If the designer's original (AI/SVG/large PNG) turns up, re-export from that for a sharper logo; the current source is only 340 px across.
 - Add photos of the exterior (so people recognise the shop from the road), the interior, each product section, the team, and deliveries being loaded. Add 3–5 new ones every month; listings with fresh photos tend to get more calls and direction requests.
 - **Video:** GBP accepts videos of up to 30 seconds at 720p or higher. The website reel is 360×640, below that. Export a 20–30 second clip of the showroom from the **original phone file** at 720p or more and upload it.
 

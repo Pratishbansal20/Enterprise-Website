@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.3 — 2026-11-11 · Logo for Google Business Profile
+
+- Added `docs/brand/cb-decor-logo-google-720.png`, a 720×720 copy of the CB logo filling the square on white, for the Google listing. `docs/google-business-profile.md` points to it.
+
 ## 2.2.2 — 2026-11-11 · Follow the Google listing's new map pin
 
 - The Google Business Profile pin moved about 18 m (plus code X9R3+G4 → X9R3+J4), so the schema coordinates in `src/config/site.ts` now match: 23.9915308, 85.3528508.
