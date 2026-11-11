@@ -17,7 +17,7 @@ of the live site; in `npm run dev` each shows as a labelled `TODO`.
 - [ ] Open the site on a cheap Android phone on mobile data: tap Call, WhatsApp and Directions in the sticky bar.
 - [ ] PageSpeed Insights (mobile) on home, one category page and one guide. Targets: LCP < 2.5 s, INP < 200 ms, CLS < 0.1.
 - [ ] Rich Results Test and schema.org validator on home, a category page and a guide.
-- [x] Google Search Console: *URL prefix* property `https://ceebee-enterprises.netlify.app/`, verified by the HTML file `public/google678c51c84924c368.html` (keep it). `sitemap-index.xml` submitted 11 Nov 2026 with status Success; its sitemap `sitemap-0.xml` lists 28 pages. "Discovered pages" shows 0 until Google processes that child sitemap, usually within a few days.
+- [x] Google Search Console: *URL prefix* property `https://ceebee-enterprises.netlify.app/`, verified by the HTML file `public/google678c51c84924c368.html` (keep it). `sitemap-index.xml` submitted 11 Nov 2026 with status Success; Google has discovered all 28 pages. Next, watch *Pages* → *Indexed* (discovered ≠ indexed) and, after 2–4 weeks, *Performance* for the searches that show the site.
 - [ ] Search Console → *URL inspection* → *Request indexing* for the home page and the main category pages (plywood, laminates, door hardware, kitchen hardware), a few a day.
 - [ ] Bing Webmaster Tools → import from Search Console → submit sitemap.
 - [ ] Claim **Bing Places** and **Apple Business Connect**.
