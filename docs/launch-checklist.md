@@ -1,6 +1,6 @@
 # Launch checklist
 
-Status as of 4 Nov 2026. Missing photos, certificates and text are left out
+Status as of 11 Nov 2026. Missing photos, certificates and text are left out
 of the live site; in `npm run dev` each shows as a labelled `TODO`.
 `npm run check:seo` fails if a `TODO` or `{{FILL}}` would reach a live page.
 
@@ -8,8 +8,8 @@ of the live site; in `npm run dev` each shows as a labelled `TODO`.
 
 - [x] Site rebuilt and merged into `main` (PR #1).
 - [x] Netlify site created from the GitHub repo and named `ceebee-enterprises`, giving https://ceebee-enterprises.netlify.app. Every push to `main` redeploys. The address comes from Netlify's `URL` variable, so canonicals, sitemap and robots.txt follow it.
-- [ ] **Make the site public.** Netlify → *Site configuration → Access & security → Visitor access / Site protection* → off. Until then everyone, Google included, gets a Netlify login page (HTTP 401). Confirm in a private/incognito window.
-- [ ] **Merge the Google-listing fixes** (branch `fix/gbp-alignment`: Hazaribagh URLs, 7:30 PM hours, exact address). The branch is committed but not yet pushed to GitHub.
+- [x] Site is public: visitor protection is off and every page returns 200 (checked 11 Nov 2026).
+- [x] Google-listing fixes merged (PR #2): Hazaribagh URLs, 7:30 PM hours, exact address.
 - [ ] **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Form notifications* → email to satish.hzb@gmail.com. Send a test quote with a file attached (max 8 MB) and check it arrives.
 
 ## B. After it's live
