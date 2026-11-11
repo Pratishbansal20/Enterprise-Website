@@ -36,7 +36,7 @@ To block AI training while staying in AI search, change `GPTBot` to `Disallow: /
 
 ## Submit the site (do this in launch week)
 
-- [ ] **Google Search Console:** add `https://ceebee-enterprises.netlify.app/` as a *URL prefix* property (verify with the HTML-tag method; a free `netlify.app` address can't use the DNS method), then submit `https://ceebee-enterprises.netlify.app/sitemap-index.xml`. When you move to your own domain, add it as a *Domain* property and use Search Console's *Change of address* tool.
+- [ ] **Google Search Console:** add `https://ceebee-enterprises.netlify.app/` as a *URL prefix* property, verified with the HTML-file method: the file `public/google678c51c84924c368.html` is served at the site root. Keep that file in place, because removing it un-verifies the site. A free `netlify.app` address can't use the DNS method. Then submit `https://ceebee-enterprises.netlify.app/sitemap-index.xml`. When you move to your own domain, add it as a *Domain* property and use Search Console's *Change of address* tool.
 - [ ] **Bing Webmaster Tools:** sign in, choose *Import from Google Search Console* (one click), and submit the sitemap. This is what ChatGPT search draws on.
 - [ ] **Bing Places for Business:** claim the listing (import from GBP).
 - [ ] **Apple Business Connect:** claim the Apple Maps listing.

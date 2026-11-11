@@ -17,7 +17,7 @@ of the live site; in `npm run dev` each shows as a labelled `TODO`.
 - [ ] Open the site on a cheap Android phone on mobile data: tap Call, WhatsApp and Directions in the sticky bar.
 - [ ] PageSpeed Insights (mobile) on home, one category page and one guide. Targets: LCP < 2.5 s, INP < 200 ms, CLS < 0.1.
 - [ ] Rich Results Test and schema.org validator on home, a category page and a guide.
-- [ ] Google Search Console → *URL prefix* property `https://ceebee-enterprises.netlify.app/` → submit `sitemap-index.xml`.
+- [ ] Google Search Console → *URL prefix* property `https://ceebee-enterprises.netlify.app/` → verify (HTML file `public/google678c51c84924c368.html`, added 11 Nov 2026; click *Verify* once it's live) → submit `sitemap-index.xml`.
 - [ ] Bing Webmaster Tools → import from Search Console → submit sitemap.
 - [ ] Claim **Bing Places** and **Apple Business Connect**.
 - [ ] Update GBP: website link with UTM, description, categories, products, services, 4 posts (all in `docs/google-business-profile.md`).

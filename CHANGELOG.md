@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.1 — 2026-11-11 · Google Search Console verification
+
+- Added the Search Console ownership file `public/google678c51c84924c368.html`, served at the site root. It must stay in place to keep the site verified.
+- `check:seo` now skips search-engine verification files, which aren't pages.
+
 ## 2.2.0 — 2026-11-03 · Match the Google Business Profile
 
 From an audit of the live Google listing (see `docs/google-business-profile.md`):
