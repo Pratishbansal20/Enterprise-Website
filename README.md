@@ -71,6 +71,7 @@ Opens at http://localhost:4321. In dev mode, missing photos, certificates and aw
 
 ## Docs
 
+- [docs/todo.md](docs/todo.md): current to-do list, most valuable first
 - [CHANGELOG.md](CHANGELOG.md): what changed and why
 - [docs/audit.md](docs/audit.md): problems with the old site
 - [docs/google-business-profile.md](docs/google-business-profile.md): Google Business Profile audit and change list

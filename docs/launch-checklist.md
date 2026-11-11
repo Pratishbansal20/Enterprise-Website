@@ -4,6 +4,9 @@ Status as of 11 Nov 2026. Missing photos, certificates and text are left out
 of the live site; in `npm run dev` each shows as a labelled `TODO`.
 `npm run check:seo` fails if a `TODO` or `{{FILL}}` would reach a live page.
 
+**What to do next, in order: see [`docs/todo.md`](todo.md).** This file is
+the full record of launch steps and status.
+
 ## A. Deploy
 
 - [x] Site rebuilt and merged into `main` (PR #1).
