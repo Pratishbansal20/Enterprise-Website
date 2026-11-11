@@ -1,28 +1,47 @@
 # Google Business Profile — audit and change list
 
 Listing: **Cee Bee Enterprises**, https://www.google.com/maps?cid=1606472877273398140
-Checked from the public listing on 3 Nov 2026. Edit it at business.google.com,
-or search "Cee Bee Enterprises" on Google while signed in → *Edit profile*.
+First audited 3 Nov 2026; re-checked from the public listing on 11 Nov 2026.
+Edit it at business.google.com, or search "Cee Bee Enterprises" on Google
+while signed in → *Edit profile*. The public view shows only a few reviews
+and no posts, so check those two in the dashboard.
 
 ---
 
-## 0. What the listing shows today
+## 0. What the listing shows (11 Nov 2026)
 
-| Field | Now on Google | Verdict |
+| Field | 3 Nov | 11 Nov | Status |
+| --- | --- | --- | --- |
+| Name | Cee Bee Enterprises | same | ✅ Don't add keywords (see 2.5) |
+| Hindi name (auto) | की बी एंटरप्राइजेज | same | ⚠️ "की" should be "सी" (2.9, low priority) |
+| Rating | 4.8 ★, 70 reviews | **4.9 ★, 115 reviews** | ✅ Growing well |
+| Categories | Plywood supplier (primary; secondaries not visible publicly) | Primary Plywood supplier plus 9 secondaries incl. Hardware Shop (seen in dashboard) | ✅ Set. Only open question is which is primary (1.2) |
+| Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh 825301 | same | ✅ Website matches |
+| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | **23.9915308, 85.3528508 · X9R3+J4** | ✅ Owner moved the pin ~2 houses to the shop's true spot (~9 Nov). Listing still live and normal on 11 Nov; website schema matches. No more location edits until ~23 Nov |
+| Phone | 094313 94626 | same | ✅ |
+| Hours | Tue–Sun 9:30–7:30, Mon closed | same, with "Diwali might affect these hours" | ⚠️ Set holiday hours (1.3) |
+| Website | none | **ceebee-enterprises.netlify.app with UTM** | ✅ Done (1.1) |
+| Description | not visible | **added** | ✅ Done (section 3) |
+| Products | none | **added**: Century, Royale Touche and Greenply plywood | ⚠️ Fix names: "Green" → "Greenply", "Royal Touche" → "Royale Touche"; add the other categories (1.5) |
+| Photos | 31 | **69** | ✅ Keep adding; add a video (2.1) |
+| Owner replies to reviews | none visible | none on the 3 reviews shown publicly | ❌ Check the dashboard and reply to all (1.4) |
+| Posts | none visible | none visible | ❌ Start weekly posts (1.6) |
+
+Google's internal *Street address* field reads "Jay Prakash Marg, Bajrangi Chowk". Google displays it as "Bajrangi Chowk, Jai Prakash Marg, Kani bazar". Both are fine; leave the address alone.
+
+### Where the shop ranks on Maps (11 Nov 2026 snapshot)
+
+Checked from outside Hazaribagh with the map centred on the shop. Real positions depend on where each customer searches from, so use this only as a rough baseline.
+
+| Search | Position | Top results |
 | --- | --- | --- |
-| Name | Cee Bee Enterprises | ✅ OK. Don't add keywords (see 2.5) |
-| Hindi name (auto) | की बी एंटरप्राइजेज | ⚠️ Google's own transliteration; "की" is wrong (should be "सी") |
-| Rating | 4.8 ★ from 70 reviews | ✅ Strong |
-| Primary category | Plywood supplier | ⚠️ Narrower than what you sell (see 1.2) |
-| Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh, Jharkhand 825301 | ✅ Website now matches this |
-| Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | ✅ Now in the website's schema |
-| Phone | 094313 94626 | ✅ Matches website |
-| Hours | Tue–Sun 9:30 AM–7:30 PM, Mon closed | ✅ Website now matches. ⚠️ No holiday hours, so Google shows "Hours might differ" around Diwali |
-| **Website** | **None** ("Add website") | ❌ Biggest gap (see 1.1) |
-| Photos | 31 | ⚠️ OK, but needs regular additions and a video |
-| Owner replies to reviews | None on the reviews Google shows publicly | ❌ (see 1.4) |
-| Products / Updates (posts) | None visible | ❌ (see 1.5, 1.6) |
-| Description | Not visible in the public view | Paste the one in section 3 |
+| plywood shop in Hazaribagh | **7th** (not in the top 3 shown on Google Search) | Laxmi ply home, Amit Ply, Pankaj ply, Allied Agencies, Shree Ram Sales |
+| hardware shop in Hazaribagh | **not in top 10** | Vijeta Hardware, Guru Hardware Store, Amit Hardware Store, Siddhi Dhata, Laxmi ply home |
+
+- **After the pin move (~9 Nov):** Google re-checks a listing after a location edit, and positions can wobble for a week or two. A move of about two houses doesn't normally trigger re-verification. If it does, a *Verify* banner appears in the dashboard and Google sends an email. The listing showed no such sign on 11 Nov. Don't move the pin back: the correct spot gives customers accurate directions.
+- **The hardware gap:** "Hardware Shop" is already a secondary category, but the **primary** category (Plywood supplier) carries the most weight in local ranking. That's why the shop shows for plywood searches but not hardware ones. Whether to swap the primary is in section 1.2; decide after the edit pause.
+- **Track it properly:** a single search isn't reliable, because results change with the searcher's location and history. Use the dashboard's *Performance* report (searches, calls, direction requests, website clicks) week by week, and compare across a month.
+- **Competitor breaking the rules:** "Greenply Plywood (Hind Ply Mart) - Best Plywood Shop And Dealer In Okni Hazaribagh" has keywords stuffed into its name, which Google's guidelines forbid. On Google Maps, open that listing → *Suggest an edit* → *Change name or other details* → correct the name. Optional, but fair, and it can help you.
 
 ### What Google's AI says about you (and why)
 
@@ -37,48 +56,41 @@ AI tools trust the sources that agree with each other. Adding the website to the
 
 ## 1. Do these first (highest impact)
 
-### 1.1 Add the website — after one Netlify fix
+### 1.1 Website ✅ done
 
-**Yes, add it**, but first turn off Netlify's visitor protection. Right now `https://ceebee-enterprises.netlify.app` returns a Netlify login page (HTTP 401) to everyone who isn't signed in to your Netlify account, including Google. Fix: Netlify → your site → *Site configuration* → *Access & security* (or *Access control*) → *Visitor access* / *Site protection* → set to **public / no protection**, then open the site in a private/incognito window to confirm. If it's a team-wide default, also check *Team settings → Access & security*.
-
-Then GBP → *Edit profile* → *Contact* → *Website*:
+The listing links to:
 
 ```
 https://ceebee-enterprises.netlify.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing
 ```
 
-The UTM part lets you see GBP visitors separately in analytics. The page's canonical tag points to the clean address, so Google won't treat the tagged link as a duplicate.
+The UTM part lets analytics show GBP visitors separately once GA4 is on. The page's canonical tag points to the clean address, so Google won't treat the tagged link as a duplicate. If you move to your own domain, update this link.
 
 ### 1.2 Categories
 
-GBP → *Edit profile* → *Business category*. Type each name and use it **only if it appears in Google's dropdown exactly**.
+**Current setup (from the dashboard, 11 Nov 2026), all 10 slots used:**
 
-**Primary: `Hardware store`**, with `Plywood supplier` moved to secondary.
-Why: "Plywood supplier" makes you eligible mainly for plywood searches. "Hardware store" covers locks, handles, kitchen fittings, adhesives and more, matching "hardware shop in Hazaribagh" searches and the website's home page. Rankings can wobble for a week or two after a primary-category change. **If plywood is clearly your biggest seller, keeping `Plywood supplier` as primary is also a reasonable choice.** Either way, keep both.
-
-**Secondary (up to 9):**
-
-| Category | Covers |
+| | Category |
 | --- | --- |
-| `Plywood supplier` | Plywood, blockboard, MDF, flush doors |
-| `Home improvement store` | The broad interiors range |
-| `Lock store` | Godrej locks, door hardware |
-| `Kitchen supply store` | Modular kitchen hardware |
-| `Furniture accessories` | Handles, bed and sofa fittings |
-| `Lighting store` | Chandeliers and decorative lights |
-| `Wallpaper store` | Excel wallpaper |
-| `Window treatment store` | Blinds, curtain rods |
-| `Mattress store` | King Koil |
+| **Primary** | Plywood supplier |
+| Secondary | Lock Store, Acrylic Dealer, Hardware Shop, Lighting Shop, Mattress Shop, Wallpaper Shop, Kitchen supply shop, Home improvement shop, Furniture accessories supplier |
 
-If one isn't in the dropdown, use `Flooring store` instead. Don't add `Building materials supplier`, `Paint store` or `Tool store`: you don't sell those, and wrong categories show you for the wrong searches.
+The secondary list is good and covers what you sell; leave it. Don't add `Building materials supplier`, `Paint store` or `Tool store`.
+
+**The one open decision: which category is primary.** It carries the most weight. With *Plywood supplier* as primary the shop ranks for plywood searches (7th on 11 Nov) but not "hardware shop" (outside the top 10), even though Hardware Shop is listed as secondary.
+
+- **Option A: keep Plywood supplier as primary.** Safest. Best if plywood and boards are the biggest share of sales.
+- **Option B: make Hardware Shop primary** and move Plywood supplier into its secondary slot. Targets the broader "hardware shop in Hazaribagh" searches. Positions for plywood searches may dip for a week or two while Google re-evaluates.
+
+**Whichever you choose, do it only after the edit pause (~23 Nov)**, and change only this one thing that week, so any change in *Performance* can be traced to it. GBP → *Edit profile* → *Business category* → pencil → set the primary.
 
 ### 1.3 Holiday hours
 
-Google already flags Diwali dates as "Hours might differ". GBP → *Edit profile* → *Hours* → *Special hours*: add every festival day you close or change times (Diwali, Govardhan Puja, Bhai Dooj, Chhath, Holi, Eid, etc.). Doing this before each festival keeps the "Hours might differ" warning away, and Google treats it as a sign the listing is actively managed.
+Google still flags festival dates ("Diwali might affect these hours", seen 11 Nov). GBP → *Edit profile* → *Hours* → *Special hours*: add every festival day you close or change times (Diwali, Govardhan Puja, Bhai Dooj, Chhath, Holi, Eid, etc.). Doing this before each festival keeps the "Hours might differ" warning away, and Google treats it as a sign the listing is actively managed.
 
 ### 1.4 Reply to every review
 
-None of the reviews Google shows publicly has an owner reply. Reply to all 70, newest first (10 a day is fine), and then to each new one within a few days. Keep replies short and personal, mention the product, and never copy-paste the same text.
+None of the reviews Google shows publicly has an owner reply (checked 11 Nov; the public view only shows 3 of the 115). In the dashboard, reply to every review still without one, newest first (10 a day is fine), and then to each new one within a few days. Keep replies short and personal, mention the product, and never copy-paste the same text.
 
 > *Thank you, Abhishek ji! Glad you found everything for your house in one place. See you again at Bajrangi Chowk. — Satish Bansal, Cee Bee Enterprises*
 
@@ -86,7 +98,9 @@ For a negative review: thank them, apologise for the experience, give the shop n
 
 **Getting more reviews:** GBP → *Ask for reviews* gives a short link. Print it as a QR code at the counter and send it on WhatsApp after a sale. Never offer discounts or gifts for reviews (against Google policy) and never post reviews yourself.
 
-### 1.5 Add products
+### 1.5 Add products ⚠️ started
+
+Plywood products from Century, Royale Touche and Greenply are live (11 Nov). Fix two names: "Green" → **Greenply**, "Royal Touche" → **Royale Touche**. Then add the remaining categories from section 4.
 
 GBP → *Edit profile* → *Products* (or *Products* tab) → *Add product*. One per category, each with a **real photo of that shelf**, no price, button **Learn more** with the link. The table is in section 4.
 
@@ -103,8 +117,8 @@ GBP → *Add update*. Aim for one post a week. Four ready-made posts are in sect
 - Add photos of the exterior (so people recognise the shop from the road), the interior, each product section, the team, and deliveries being loaded. Add 3–5 new ones every month; listings with fresh photos tend to get more calls and direction requests.
 - **Video:** GBP accepts videos of up to 30 seconds at 720p or higher. The website reel is 360×640, below that. Export a 20–30 second clip of the showroom from the **original phone file** at 720p or more and upload it.
 
-### 2.2 Description
-Paste the text in section 3. No URLs, phone numbers or offers.
+### 2.2 Description ✅ done
+The section 3 text is live (seen 11 Nov).
 
 ### 2.3 Opening date
 GBP → *Edit profile* → *About* → *Opening date* → **2001**.
@@ -190,6 +204,8 @@ Good follow-up post ideas: a new laminate or wallpaper collection (with photos),
 ---
 
 ## 7. Fix the other listings (they feed Google's AI)
+
+**Status 11 Nov:** Google's search results still show the old details for all three (Facebook's personal number, Instagram's "Mahesh Soni Chowk", Justdial's two addresses and tools/plumbing). Search snippets can lag a week or two behind edits, so if you've already changed them, give it time.
 
 Use the exact block in `docs/citation-nap.md` everywhere.
 

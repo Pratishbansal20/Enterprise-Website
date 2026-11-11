@@ -53,8 +53,8 @@ export const SITE = {
   // ── Location / maps ─────────────────────────────────────────────────────
   // Pin position of the Google Business Profile listing.
   geo: {
-    lat: '23.9913656',
-    lng: '85.3528197',
+    lat: '23.9915308',
+    lng: '85.3528508',
   },
   // Permanent Google Maps link to the listing (its CID), used for hasMap/sameAs.
   gbpUrl: 'https://www.google.com/maps?cid=1606472877273398140',

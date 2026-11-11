@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.2 — 2026-11-11 · Follow the Google listing's new map pin
+
+- The Google Business Profile pin moved about 18 m (plus code X9R3+G4 → X9R3+J4), so the schema coordinates in `src/config/site.ts` now match: 23.9915308, 85.3528508.
+- New `docs/todo.md`: the current to-do list in priority order, with full Bing Webmaster Tools and Bing Places steps.
+- Bing Webmaster Tools marked done; Bing Places marked blocked (Google import missing address line 1, address read-only), with the workaround in `docs/todo.md`.
+- Google listing pin was moved by the owner to the correct spot (~9 Nov): docs add an edit pause until ~23 Nov, a Maps ranking snapshot (7th for plywood, outside top 10 for hardware), the full category setup (Plywood supplier primary + 9 secondaries), and the primary-category decision for after the pause.
+- Docs re-checked against the live listing: 115 reviews (4.9 ★), 69 photos, website, description and plywood products now on Google; Search Console verified with all 28 pages discovered; Bing not indexed yet.
+
 ## 2.2.1 — 2026-11-11 · Google Search Console verification
 
 - Added the Search Console ownership file `public/google678c51c84924c368.html`, served at the site root. It must stay in place to keep the site verified.
