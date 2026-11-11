@@ -10,7 +10,8 @@ const pages = [];
   for (const f of readdirSync(dir)) {
     const p = join(dir, f);
     if (statSync(p).isDirectory()) walk(p);
-    else if (f.endsWith('.html')) pages.push(p);
+    // Skip search-engine ownership files (e.g. google1234abcd.html): not pages.
+    else if (f.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(f)) pages.push(p);
   }
 })(DIST);
 
