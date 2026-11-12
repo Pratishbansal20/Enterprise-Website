@@ -1,6 +1,6 @@
-# Cee Bee Enterprises (CB Decor) — website
+# Cee Bee Enterprises & CB Decor — website
 
-Website for **Cee Bee Enterprises (CB Decor)**, a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, Jharkhand.
+Website for **Cee Bee Enterprises & CB Decor**, a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, Jharkhand.
 
 **Live:** https://ceebee-enterprises.netlify.app
 
@@ -42,7 +42,7 @@ Static site built for local search and AI search: every page is plain server-ren
 | Page templates | `src/pages/`, `src/components/`, `src/layouts/` |
 | Showroom video | `public/video/` (made by `npm run media:video`) |
 
-Also in the repo: `tools/` (media and SEO-check scripts), `reference/stock-items.json` (the shop's stock export, used to write the category pages and not shipped), and `docs/`.
+Also in the repo: `tools/` (media and SEO-check scripts), `reference/stock-items.json` (the shop's stock export, used to write the category pages and not shipped), and `docs/` (including `docs/brand/`, the logo prepared for the Google listing).
 
 ## Run locally
 

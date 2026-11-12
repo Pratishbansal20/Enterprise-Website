@@ -1,8 +1,8 @@
 # To-do
 
 Current to-do list for the website and online listings, most valuable first.
-Last checked against the live Google listing, Search Console and Bing on
-**11 Nov 2026**. Tick items as you finish them. Background and copy-paste
+Last checked against the live Google listing, Google and Bing results on
+**12 Nov 2026**. Tick items as you finish them. Background and copy-paste
 text for the Google listing are in `docs/google-business-profile.md`.
 
 > **Google listing: edit pause until about 23 Nov 2026.** The map pin was moved
@@ -15,33 +15,32 @@ text for the Google listing are in `docs/google-business-profile.md`.
 
 ## This week
 
-- [ ] **1. Get Google to re-read the site.** Only the home page is in Google, and it's an old copy that still says "Hazaribag" and "8 PM".
-  - Search Console → paste `https://ceebee-enterprises.netlify.app/` into the inspection bar at the top → **Request indexing**.
-  - Over the next days, do the same for (a few per day):
+- [ ] **1. Get Google to read every page.** Only the home page is in Google so far.
+  - [x] Home page re-indexed: Google shows the new "Hazaribagh" text (12 Nov).
+  - [ ] Search Console → inspection bar → **Request indexing** for these, a few per day:
     - `/products/plywood-shop-hazaribagh/`
     - `/products/laminate-shop-hazaribagh/`
     - `/products/door-handles-locks-hazaribagh/`
     - `/products/modular-kitchen-hardware-hazaribagh/`
-- [ ] **2. Turn on quote-form emails.** Without this, quote requests from the website reach nobody.
-  - Netlify → your site → *Forms*. If it asks, turn on form detection and redeploy.
-  - *Forms* → **quote** → *Form notifications* → *Add notification* → *Email* → `satish.hzb@gmail.com`.
-  - Send a test from the contact page with a file attached and check it arrives.
-- [ ] **3. Reply to Google reviews.** 115 reviews; none of the ones shown publicly has a reply.
+- [x] **2. Quote-form emails.** Done (12 Nov): quote requests from the website are emailed to the shop.
+- [ ] **3. Reply to Google reviews.** 115 reviews; still no reply on the reviews Google shows publicly (12 Nov).
   - In the Google Business dashboard → *Reviews*, list the reviews with no reply.
   - Send them to Claude for personal reply drafts, then post them (10 a day is fine).
   - From now on, reply to each new review within a few days.
-- [ ] **4. Set holiday hours.** Google still shows "Diwali might affect these hours".
-  - Google listing → *Edit profile* → *Hours* → *Special hours*. Add Chhath and every other festival day you close or change times.
+- [x] **4. Holiday hours.** The "Diwali might affect these hours" warning is gone (12 Nov).
+  - Keep doing it before every festival: Google listing → *Edit profile* → *Hours* → *Special hours* (Chhath, Holi, Eid, etc.).
 
 ## Next
 
 - [ ] **5. Finish the Google listing** (details in `docs/google-business-profile.md`).
+  - **Paste the new description** (section 3): it now uses the full name *Cee Bee Enterprises & CB Decor*.
+  - **After the pause (from ~23 Nov):** if the signboard and bills say "Cee Bee Enterprises & CB Decor", change the Google name to match (section 2.5). Do it in a different week from any category change.
   - Fix product names: "Green" → **Greenply**, "Royal Touche" → **Royale Touche**.
   - Add the remaining products: laminates, door hardware, kitchen hardware, furniture fittings, adhesives, PVC/WPC, ACP, wall panels, false ceiling, wallpaper and blinds, lights, King Koil (section 4).
-  - **After the pause (from ~23 Nov): decide the primary category.** All 10 category slots are already set well (Plywood supplier primary, Hardware Shop and 8 others secondary). On 11 Nov the shop came 7th on Maps for "plywood shop in Hazaribagh" but wasn't in the top 10 for "hardware shop in Hazaribagh", because the primary category counts most. Keep Plywood supplier primary (safer), or swap Hardware Shop in as primary to target hardware searches. Change only that one thing that week (section 1.2).
+  - **After the pause (from ~23 Nov): decide the primary category.** All 10 category slots are already set well (Plywood supplier primary, Hardware Shop and 8 others secondary). Positions are moving while the pin change settles (see *Rankings* in `docs/google-business-profile.md`): plywood is strong, hardware lags, because the primary category counts most. Keep Plywood supplier primary (safer), or swap Hardware Shop in as primary to target hardware searches. Change only that one thing that week (section 1.2).
   - Add services (section 5) and start weekly posts (section 6).
 - [ ] **6. Get on Bing, and with it ChatGPT search and Copilot.** Steps below.
-  - [x] **6A. Bing Webmaster Tools:** done 11 Nov (site imported from Search Console). This is the part that feeds ChatGPT search and Copilot.
+  - [x] **6A. Bing Webmaster Tools:** done 11 Nov (site imported from Search Console). This is the part that feeds ChatGPT search and Copilot. Bing hadn't indexed any page yet on 12 Nov; that usually takes one to a few weeks.
   - [ ] **6B. Bing Places:** blocked. The import from Google says "address line 1 missing", so Bing won't verify, and editing the address gives "you don't have the required permission". Google's *Street address* field is filled ("Jay Prakash Marg, Bajrangi Chowk"), so the fault is on Bing's side: contact Bing Places support. See *If Bing Places is stuck* below.
 - [ ] **7. Fix the other listings** so they match `docs/citation-nap.md`.
   - **Facebook:** replace the personal number +91 70045 07988 with +91 94313 94626; add address, hours, website.

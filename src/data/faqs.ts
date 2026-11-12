@@ -4,7 +4,7 @@ import { SITE } from '../config/site';
 
 export const siteFaqs: { q: string; a: string }[] = [
   {
-    q: 'Where is Cee Bee Enterprises (CB Decor) in Hazaribagh?',
+    q: 'Where is Cee Bee Enterprises & CB Decor in Hazaribagh?',
     a: `We are at ${SITE.address.street}, ${SITE.address.city}, ${SITE.address.region} ${SITE.address.postalCode}. Search “Cee Bee Enterprises” on Google Maps for directions.`,
   },
   {
@@ -21,7 +21,7 @@ export const siteFaqs: { q: string; a: string }[] = [
   },
   {
     q: 'Where can I buy plywood in Hazaribagh?',
-    a: 'You can buy plywood at Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.',
+    a: 'You can buy plywood at Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.',
   },
   {
     q: 'Do you deliver?',

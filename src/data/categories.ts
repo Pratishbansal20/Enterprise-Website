@@ -48,7 +48,7 @@ export const categories: Category[] = [
     h1: 'Plywood Dealer & Plywood Shop in Hazaribagh',
     keyword: 'plywood dealer in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is a plywood dealer in Hazaribagh, located near Bajrangi Chowk, and an authorised dealer for Century, Greenply and Royale Touche. We stock BWP, MR and commercial plywood from 3 mm to 25 mm, 19 mm blockboard, MDF, HDHMR and 30 mm flush doors in standard sheet sizes. Homeowners, carpenters and contractors across Hazaribagh district buy from us for kitchens, wardrobes, beds, TV units and doors.',
+      'Cee Bee Enterprises & CB Decor is a plywood dealer in Hazaribagh, located near Bajrangi Chowk, and an authorised dealer for Century, Greenply and Royale Touche. We stock BWP, MR and commercial plywood from 3 mm to 25 mm, 19 mm blockboard, MDF, HDHMR and 30 mm flush doors in standard sheet sizes. Homeowners, carpenters and contractors across Hazaribagh district buy from us for kitchens, wardrobes, beds, TV units and doors.',
     range: [
       { label: 'Plywood grades', items: 'BWP (boiling water proof), MR (moisture resistant) and commercial' },
       { label: 'Thickness', items: '3, 4, 6, 9, 12, 16, 18, 19 and 25 mm' },
@@ -91,7 +91,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy plywood in Hazaribagh?',
-        a: 'You can buy plywood at Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh. We are authorised dealers for Century, Greenply and Royale Touche and are open Tuesday to Sunday, 9:30 AM to 7:30 PM.',
+        a: 'You can buy plywood at Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh. We are authorised dealers for Century, Greenply and Royale Touche and are open Tuesday to Sunday, 9:30 AM to 7:30 PM.',
       },
       {
         q: 'Which plywood is best for a kitchen?',
@@ -123,7 +123,7 @@ export const categories: Category[] = [
     h1: 'Laminate Shop in Hazaribagh',
     keyword: 'laminate shop in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is a laminate shop in Hazaribagh near Bajrangi Chowk and an authorised dealer for Century, Merino and Royale Touche. We stock decorative laminates from 0.7 mm to 1.5 mm in high-gloss, suede, matt, textured and acrylic finishes, inner liners, acrylic glass laminates, natural veneer sheets and Merino Lam Veneer, so you can finish wardrobes, kitchens and wall panelling from one shop.',
+      'Cee Bee Enterprises & CB Decor is a laminate shop in Hazaribagh near Bajrangi Chowk and an authorised dealer for Century, Merino and Royale Touche. We stock decorative laminates from 0.7 mm to 1.5 mm in high-gloss, suede, matt, textured and acrylic finishes, inner liners, acrylic glass laminates, natural veneer sheets and Merino Lam Veneer, so you can finish wardrobes, kitchens and wall panelling from one shop.',
     range: [
       { label: 'Thickness', items: '0.7, 0.72, 0.8, 0.9, 1, 1.25 and 1.5 mm' },
       { label: 'Finishes', items: 'Suede, matt, high gloss, super high gloss, textured, acrylic and PU' },
@@ -157,7 +157,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy laminates in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh sells Century, Merino and Royale Touche laminates. Visit the showroom Tuesday to Sunday, 9:30 AM to 7:30 PM, or WhatsApp us for shades.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh sells Century, Merino and Royale Touche laminates. Visit the showroom Tuesday to Sunday, 9:30 AM to 7:30 PM, or WhatsApp us for shades.',
       },
       {
         q: 'Which laminate finish is best for kitchen shutters?',
@@ -189,7 +189,7 @@ export const categories: Category[] = [
     h1: 'Door Handles and Locks in Hazaribagh',
     keyword: 'door handles and locks in Hazaribagh',
     intro:
-      'For door handles and locks in Hazaribagh, visit Cee Bee Enterprises (CB Decor) near Bajrangi Chowk. We are an authorised Godrej dealer and stock mortise locks and handle sets, cylinders, knobs, tower bolts, door closers, door stoppers, latches, hinges, and floor springs for glass doors. Everything you need to finish a new door or replace old fittings is in one shop, in finishes from classic brass to rose gold, black and PVD gold.',
+      'For door handles and locks in Hazaribagh, visit Cee Bee Enterprises & CB Decor near Bajrangi Chowk. We are an authorised Godrej dealer and stock mortise locks and handle sets, cylinders, knobs, tower bolts, door closers, door stoppers, latches, hinges, and floor springs for glass doors. Everything you need to finish a new door or replace old fittings is in one shop, in finishes from classic brass to rose gold, black and PVD gold.',
     range: [
       { label: 'Locks', items: 'Mortise locks and handle sets, cylinder locks, knob locks and bathroom locks' },
       { label: 'Handles & knobs', items: 'Mortise handles, pull handles and knobs in rose gold, black, matt, brass and PVD finishes' },
@@ -228,7 +228,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy Godrej locks in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh is an authorised Godrej dealer and stocks Godrej door locks, handle sets and fittings.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh is an authorised Godrej dealer and stocks Godrej door locks, handle sets and fittings.',
       },
       {
         q: 'Do you sell door closers and floor springs?',
@@ -260,7 +260,7 @@ export const categories: Category[] = [
     h1: 'Modular Kitchen Hardware & Kitchen Accessories in Hazaribagh',
     keyword: 'modular kitchen hardware Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) supplies modular kitchen hardware in Hazaribagh from our shop near Bajrangi Chowk. As authorised Godrej and Ebco dealers, we stock auto and soft-close hinges, full-extension telescopic channels from 10" to 24", stainless-steel thali, cutlery and plain baskets, gas lifts for overhead shutters, and profile handles. Send your carpenter’s kitchen list on WhatsApp and we will price the full set together.',
+      'Cee Bee Enterprises & CB Decor supplies modular kitchen hardware in Hazaribagh from our shop near Bajrangi Chowk. As authorised Godrej and Ebco dealers, we stock auto and soft-close hinges, full-extension telescopic channels from 10" to 24", stainless-steel thali, cutlery and plain baskets, gas lifts for overhead shutters, and profile handles. Send your carpenter’s kitchen list on WhatsApp and we will price the full set together.',
     range: [
       { label: 'Hinges', items: 'Auto hinges and soft-close hinges in 0 crank (full overlay), 8–9 crank (half overlay) and inset, including SS304 options' },
       { label: 'Drawer channels', items: 'Full-extension telescopic channels in 10" to 24" lengths, soft-close options, up to 45 kg rating' },
@@ -291,7 +291,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy modular kitchen hardware in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh sells modular kitchen hardware including hinges, channels, baskets and gas lifts, and is an authorised Godrej and Ebco dealer.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh sells modular kitchen hardware including hinges, channels, baskets and gas lifts, and is an authorised Godrej and Ebco dealer.',
       },
       {
         q: 'Do you have soft-close hinges and channels?',
@@ -319,7 +319,7 @@ export const categories: Category[] = [
     h1: 'Furniture Fittings in Hazaribagh',
     keyword: 'furniture fittings in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) stocks furniture fittings in Hazaribagh at our shop near Bajrangi Chowk, as authorised Godrej and Ebco dealers. Choose from hundreds of cabinet and wardrobe handles and knobs, hydraulic lift-up bed fittings, wall-bed and sofa-cum-bed mechanisms, sofa legs, sliding and pocket-door wardrobe fittings, friction stays, brackets, hooks and screws, so your carpenter can finish every piece of furniture from one shop.',
+      'Cee Bee Enterprises & CB Decor stocks furniture fittings in Hazaribagh at our shop near Bajrangi Chowk, as authorised Godrej and Ebco dealers. Choose from hundreds of cabinet and wardrobe handles and knobs, hydraulic lift-up bed fittings, wall-bed and sofa-cum-bed mechanisms, sofa legs, sliding and pocket-door wardrobe fittings, friction stays, brackets, hooks and screws, so your carpenter can finish every piece of furniture from one shop.',
     range: [
       { label: 'Handles & knobs', items: 'Cabinet and wardrobe handles from about 150 mm to 300 mm and longer, plus knobs, in rose gold, black, SS, brass and PVD finishes' },
       { label: 'Bed fittings', items: 'Hydraulic lift-up bed mechanisms, bed fittings, wall-bed and sofa-cum-bed fittings' },
@@ -349,7 +349,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy furniture fittings in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh sells furniture fittings including handles, bed fittings, sofa legs and wardrobe fittings, and is an authorised Godrej and Ebco dealer.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh sells furniture fittings including handles, bed fittings, sofa legs and wardrobe fittings, and is an authorised Godrej and Ebco dealer.',
       },
       {
         q: 'Do you sell hydraulic bed fittings?',
@@ -377,7 +377,7 @@ export const categories: Category[] = [
     h1: 'Fevicol, Adhesives & Sealants in Hazaribagh',
     keyword: 'Fevicol and adhesives in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is an authorised Pidilite dealer selling Fevicol and adhesives in Hazaribagh from our shop near Bajrangi Chowk. We stock Fevicol SH and other Fevicol grades for wood and laminate work, Araldite epoxy for strong repairs, Feviseal and silicone sealants, and Dr. Fixit waterproofing, in sizes from small packs for home repairs to large tins for carpenters and contractors.',
+      'Cee Bee Enterprises & CB Decor is an authorised Pidilite dealer selling Fevicol and adhesives in Hazaribagh from our shop near Bajrangi Chowk. We stock Fevicol SH and other Fevicol grades for wood and laminate work, Araldite epoxy for strong repairs, Feviseal and silicone sealants, and Dr. Fixit waterproofing, in sizes from small packs for home repairs to large tins for carpenters and contractors.',
     range: [
       { label: 'Wood adhesives', items: 'Fevicol SH and other Fevicol grades for plywood, laminate and veneer work' },
       { label: 'Epoxy', items: 'Araldite epoxy adhesives for metal, stone, ceramic and wood' },
@@ -406,7 +406,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy Fevicol in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh is an authorised Pidilite dealer and stocks Fevicol SH and other Fevicol grades.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh is an authorised Pidilite dealer and stocks Fevicol SH and other Fevicol grades.',
       },
       {
         q: 'Which adhesive is best for sticking laminate on plywood?',
@@ -434,7 +434,7 @@ export const categories: Category[] = [
     h1: 'PVC Board & WPC Board Dealer in Hazaribagh',
     keyword: 'PVC board dealer in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is a PVC board and WPC board dealer in Hazaribagh, near Bajrangi Chowk. We stock PVC foam boards from 5 mm to 19 mm, WPC boards from 12 mm to 28 mm, and ready WPC and PVC doors. These boards do not swell with water or attract termites, which makes them popular for bathroom vanities, under-sink cabinets, balconies and damp walls.',
+      'Cee Bee Enterprises & CB Decor is a PVC board and WPC board dealer in Hazaribagh, near Bajrangi Chowk. We stock PVC foam boards from 5 mm to 19 mm, WPC boards from 12 mm to 28 mm, and ready WPC and PVC doors. These boards do not swell with water or attract termites, which makes them popular for bathroom vanities, under-sink cabinets, balconies and damp walls.',
     range: [
       { label: 'PVC foam boards', items: '5, 6, 8, 11, 12, 18 and 19 mm' },
       { label: 'WPC boards', items: '12, 18, 19, 24 and 28 mm' },
@@ -462,7 +462,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy PVC boards in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh stocks PVC foam boards from 5 mm to 19 mm and WPC boards from 12 mm to 28 mm.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh stocks PVC foam boards from 5 mm to 19 mm and WPC boards from 12 mm to 28 mm.',
       },
       {
         q: 'Is WPC better than plywood for a bathroom?',
@@ -490,7 +490,7 @@ export const categories: Category[] = [
     h1: 'ACP Sheet Dealer & Acrylic Sheets in Hazaribagh',
     keyword: 'ACP sheet dealer in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is an ACP sheet dealer in Hazaribagh, near Bajrangi Chowk. We stock 3 mm and 4 mm aluminium composite panels in 8×4, 10×4 and 12×4 ft sizes for shop fronts, building elevations, signboards and interiors, along with 6 mm acrylic solid surface for countertops and vanities, and coloured and fluted acrylic sheets.',
+      'Cee Bee Enterprises & CB Decor is an ACP sheet dealer in Hazaribagh, near Bajrangi Chowk. We stock 3 mm and 4 mm aluminium composite panels in 8×4, 10×4 and 12×4 ft sizes for shop fronts, building elevations, signboards and interiors, along with 6 mm acrylic solid surface for countertops and vanities, and coloured and fluted acrylic sheets.',
     range: [
       { label: 'ACP thickness', items: '3 mm and 4 mm' },
       { label: 'ACP sizes', items: '8×4, 10×4 and 12×4 ft' },
@@ -519,7 +519,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy ACP sheets in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh stocks 3 mm and 4 mm ACP sheets in 8×4, 10×4 and 12×4 ft sizes.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh stocks 3 mm and 4 mm ACP sheets in 8×4, 10×4 and 12×4 ft sizes.',
       },
       {
         q: 'Which ACP is best for a shop front?',
@@ -547,7 +547,7 @@ export const categories: Category[] = [
     h1: 'Wall Panels & Louvers in Hazaribagh',
     keyword: 'wall panels and louvers in Hazaribagh',
     intro:
-      'Give a TV wall, bedroom or shop a finished look with wall panels and louvers from Cee Bee Enterprises (CB Decor), Hazaribagh. At our showroom near Bajrangi Chowk we stock interior and exterior-grade louvers, charcoal panels in 8×2 and 8×4 ft sheets, PVC wall panels, fluted panels, and the profiles, clips and mouldings needed to fit them neatly.',
+      'Give a TV wall, bedroom or shop a finished look with wall panels and louvers from Cee Bee Enterprises & CB Decor, Hazaribagh. At our showroom near Bajrangi Chowk we stock interior and exterior-grade louvers, charcoal panels in 8×2 and 8×4 ft sheets, PVC wall panels, fluted panels, and the profiles, clips and mouldings needed to fit them neatly.',
     range: [
       { label: 'Louvers', items: 'Interior louvers, exterior-grade louvers and PVC louvers' },
       { label: 'Charcoal panels', items: 'Wood, stone and metallic designs in 8×2 and 8×4 ft' },
@@ -575,7 +575,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy wall panels and louvers in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh stocks louvers, charcoal panels, PVC and fluted wall panels, with fitting profiles.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh stocks louvers, charcoal panels, PVC and fluted wall panels, with fitting profiles.',
       },
       {
         q: 'What are charcoal panels?',
@@ -603,7 +603,7 @@ export const categories: Category[] = [
     h1: 'Gypsum False Ceiling Material in Hazaribagh',
     keyword: 'false ceiling material in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) supplies gypsum false ceiling material in Hazaribagh from our shop near Bajrangi Chowk. We stock gypsum boards, laminated gypsum ceiling tiles, PVC gypsum tiles, GI ceiling and floor channels, ceiling sections, grids and drywall tape. Ceiling contractors and homeowners can get boards and framing together.',
+      'Cee Bee Enterprises & CB Decor supplies gypsum false ceiling material in Hazaribagh from our shop near Bajrangi Chowk. We stock gypsum boards, laminated gypsum ceiling tiles, PVC gypsum tiles, GI ceiling and floor channels, ceiling sections, grids and drywall tape. Ceiling contractors and homeowners can get boards and framing together.',
     range: [
       { label: 'Boards', items: 'Gypsum boards for plain and designer ceilings' },
       { label: 'Ceiling tiles', items: 'Laminated gypsum ceiling tiles and 7 mm PVC gypsum tiles for grid ceilings' },
@@ -631,7 +631,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy false ceiling material in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh stocks gypsum boards, ceiling tiles, GI channels and grid for false ceilings.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh stocks gypsum boards, ceiling tiles, GI channels and grid for false ceilings.',
       },
       {
         q: 'Do you deliver false ceiling material to site?',
@@ -659,7 +659,7 @@ export const categories: Category[] = [
     h1: 'Wallpaper, Flooring & Window Blinds in Hazaribagh',
     keyword: 'wallpaper and blinds in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is an authorised Excel dealer for wallpaper, flooring and blinds in Hazaribagh, at our showroom near Bajrangi Chowk. Choose wallpapers from design catalogues, flooring for homes and offices, and roller, venetian and custom-printed window blinds, plus curtain rods and brackets to finish your windows. We don’t sell curtain fabric.',
+      'Cee Bee Enterprises & CB Decor is an authorised Excel dealer for wallpaper, flooring and blinds in Hazaribagh, at our showroom near Bajrangi Chowk. Choose wallpapers from design catalogues, flooring for homes and offices, and roller, venetian and custom-printed window blinds, plus curtain rods and brackets to finish your windows. We don’t sell curtain fabric.',
     range: [
       { label: 'Wallpaper', items: 'Excel wallpapers and design catalogues' },
       { label: 'Flooring', items: 'Excel flooring' },
@@ -689,7 +689,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy wallpaper in Hazaribagh?',
-        a: 'Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh is an authorised Excel dealer for wallpaper, flooring and blinds. Visit the showroom to see the catalogues.',
+        a: 'Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh is an authorised Excel dealer for wallpaper, flooring and blinds. Visit the showroom to see the catalogues.',
       },
       {
         q: 'Do you make custom-size blinds?',
@@ -717,7 +717,7 @@ export const categories: Category[] = [
     h1: 'King Koil Mattress Dealer in Hazaribagh',
     keyword: 'King Koil mattress dealer in Hazaribagh',
     intro:
-      'Cee Bee Enterprises (CB Decor) is an authorised King Koil mattress dealer in Hazaribagh. Visit our showroom near Bajrangi Chowk to see King Koil mattresses and pillows, and get help choosing the right size and firmness for your bed. Since we also sell plywood and hydraulic bed fittings, you can plan a new bed and its mattress in one place.',
+      'Cee Bee Enterprises & CB Decor is an authorised King Koil mattress dealer in Hazaribagh. Visit our showroom near Bajrangi Chowk to see King Koil mattresses and pillows, and get help choosing the right size and firmness for your bed. Since we also sell plywood and hydraulic bed fittings, you can plan a new bed and its mattress in one place.',
     range: [
       { label: 'Mattresses', items: 'King Koil mattresses in standard bed sizes' },
       { label: 'Pillows', items: 'King Koil pillows' },
@@ -744,7 +744,7 @@ export const categories: Category[] = [
     faqs: [
       {
         q: 'Where can I buy a King Koil mattress in Hazaribagh?',
-        a: 'At Cee Bee Enterprises (CB Decor) near Bajrangi Chowk, Hazaribagh, an authorised King Koil dealer. Open Tuesday to Sunday, 9:30 AM to 7:30 PM.',
+        a: 'At Cee Bee Enterprises & CB Decor near Bajrangi Chowk, Hazaribagh, an authorised King Koil dealer. Open Tuesday to Sunday, 9:30 AM to 7:30 PM.',
       },
       {
         q: 'Do you deliver mattresses?',

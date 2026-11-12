@@ -9,8 +9,8 @@ import { SITE, addressLine, yearsInBusiness } from '../config/site';
 import { brands } from '../data/brands';
 
 const aboutPhotos = [
-  { name: 'cee-bee-enterprises-shop-interior-hazaribagh', alt: 'Inside the Cee Bee Enterprises (CB Decor) shop near Bajrangi Chowk, Hazaribagh' },
-  { name: 'satish-bansal-cee-bee-enterprises-hazaribagh', alt: 'Satish Bansal at Cee Bee Enterprises (CB Decor), Hazaribagh', ratio: '1 / 1' },
+  { name: 'cee-bee-enterprises-shop-interior-hazaribagh', alt: 'Inside the Cee Bee Enterprises & CB Decor shop near Bajrangi Chowk, Hazaribagh' },
+  { name: 'satish-bansal-cee-bee-enterprises-hazaribagh', alt: 'Satish Bansal at Cee Bee Enterprises & CB Decor, Hazaribagh', ratio: '1 / 1' },
 ].filter((p) => showPhoto(p.name));
 const crumbs = [
   { name: 'Home', path: '/' },
@@ -19,14 +19,14 @@ const crumbs = [
 ---
 
 <Base
-  title="About Cee Bee Enterprises (CB Decor), Hazaribagh"
-  description="Cee Bee Enterprises (CB Decor): family-run hardware, plywood & interiors shop near Bajrangi Chowk, Hazaribagh, run by Satish Bansal since 2001. Visit us."
+  title="About Cee Bee Enterprises & CB Decor, Hazaribagh"
+  description="Cee Bee Enterprises & CB Decor: family-run hardware, plywood & interiors shop near Bajrangi Chowk, Hazaribagh, run by Satish Bansal since 2001. Visit us."
   path="/about/"
   breadcrumbs={crumbs}
 >
-  <PageHero crumbs={crumbs} h1="About Cee Bee Enterprises (CB Decor)" eyebrow="Family-run since 2001">
+  <PageHero crumbs={crumbs} h1="About Cee Bee Enterprises & CB Decor" eyebrow="Family-run since 2001">
     <p class="lead">
-      Cee Bee Enterprises (CB Decor) is a family-run hardware, plywood and interior products shop at {addressLine()}. Run
+      Cee Bee Enterprises & CB Decor is a family-run hardware, plywood and interior products shop at {addressLine()}. Run
       by {SITE.owner}, the shop has served homeowners, carpenters, contractors, builders, architects and interior designers in Hazaribagh
       (also spelt Hazaribag) and across the district since {SITE.foundingYear}.
     </p>
