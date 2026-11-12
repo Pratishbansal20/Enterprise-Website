@@ -19,24 +19,33 @@ and no posts, so check those two in the dashboard.
 | Address | Bajrangi chowk, Jai Prakash Marg, Kani bazar, Hazaribagh 825301 | same | ✅ Website matches |
 | Pin / plus code | 23.9913656, 85.3528197 · X9R3+G4 | **23.9915308, 85.3528508 · X9R3+J4** | ✅ Owner moved the pin ~2 houses to the shop's true spot (~9 Nov). Listing still live and normal on 11 Nov; website schema matches. No more location edits until ~23 Nov |
 | Phone | 094313 94626 | same | ✅ |
-| Hours | Tue–Sun 9:30–7:30, Mon closed | same, with "Diwali might affect these hours" | ⚠️ Set holiday hours (1.3) |
+| Hours | Tue–Sun 9:30–7:30, Mon closed | same; the "Diwali might affect these hours" warning was gone on 12 Nov | ✅ Keep setting special hours before festivals (1.3) |
 | Website | none | **ceebee-enterprises.netlify.app with UTM** | ✅ Done (1.1) |
 | Description | not visible | **added** | ✅ Done (section 3) |
 | Products | none | **added**: Century, Royale Touche and Greenply plywood | ⚠️ Fix names: "Green" → "Greenply", "Royal Touche" → "Royale Touche"; add the other categories (1.5) |
-| Photos | 31 | **69** | ✅ Keep adding; add a video (2.1) |
+| Photos | 31 | **70** (12 Nov) | ✅ Keep adding; add a video (2.1) |
+| Attributes | not visible | **"Delivery"** badge shows in local results (12 Nov) | ✅ |
 | Owner replies to reviews | none visible | none on the 3 reviews shown publicly | ❌ Check the dashboard and reply to all (1.4) |
 | Posts | none visible | none visible | ❌ Start weekly posts (1.6) |
 
 Google's internal *Street address* field reads "Jay Prakash Marg, Bajrangi Chowk". Google displays it as "Bajrangi Chowk, Jai Prakash Marg, Kani bazar". Both are fine; leave the address alone.
 
-### Where the shop ranks on Maps (11 Nov 2026 snapshot)
+### Rankings
 
-Checked from outside Hazaribagh with the map centred on the shop. Real positions depend on where each customer searches from, so use this only as a rough baseline.
+Checked from outside Hazaribagh, logged out, in two views:
+- **Maps view:** the Google Maps list with the map centred on the shop. It shows only 10 results when logged out.
+- **Local results:** Google Search's "Places" list for the same words. It shows 20 results and is closer to what most phone searches show.
 
-| Search | Position | Top results |
-| --- | --- | --- |
-| plywood shop in Hazaribagh | **7th** (not in the top 3 shown on Google Search) | Laxmi ply home, Amit Ply, Pankaj ply, Allied Agencies, Shree Ram Sales |
-| hardware shop in Hazaribagh | **not in top 10** | Vijeta Hardware, Guru Hardware Store, Amit Hardware Store, Siddhi Dhata, Laxmi ply home |
+Real positions depend on where each customer searches from, so treat these as rough trends and use the dashboard's *Performance* report as the real measure.
+
+| Date | Search | Maps view | Local results | Shops above |
+| --- | --- | --- | --- | --- |
+| 11 Nov | plywood shop in Hazaribagh | **7th** | not checked | Laxmi ply home, Amit Ply, Pankaj ply, Allied Agencies, Shree Ram Sales |
+| 11 Nov | hardware shop in Hazaribagh | not in top 10 | not checked | Vijeta Hardware, Guru Hardware Store, Amit Hardware Store, Siddhi Dhata, Laxmi ply home |
+| 12 Nov | plywood shop in Hazaribagh | not in top 10 | **5th** | Laxmi ply home, M/S M P Jayaswal Saw Mill, Pankaj ply, Prabhat Ply and Hardware |
+| 12 Nov | hardware shop in Hazaribagh | not in top 10 | **10th** | Siddhi Dhata, Amit Hardware Store, Laxmi ply home, Vijeta Hardware, Agarwal Hardware, Pankaj ply, Hardware Junction, Allied Agencies, New Keshri Hardware |
+
+**12 Nov reading:** mixed rather than a clear jump. In local results the shop is 5th for plywood and now appears for hardware (10th). In the Maps view it slipped out of the top 10 for plywood. That swing is typical in the week or two after a pin move; judge the trend after ~23 Nov.
 
 - **After the pin move (~9 Nov):** Google re-checks a listing after a location edit, and positions can wobble for a week or two. A move of about two houses doesn't normally trigger re-verification. If it does, a *Verify* banner appears in the dashboard and Google sends an email. The listing showed no such sign on 11 Nov. Don't move the pin back: the correct spot gives customers accurate directions.
 - **The hardware gap:** "Hardware Shop" is already a secondary category, but the **primary** category (Plywood supplier) carries the most weight in local ranking. That's why the shop shows for plywood searches but not hardware ones. Whether to swap the primary is in section 1.2; decide after the edit pause.
@@ -127,8 +136,12 @@ GBP → *Edit profile* → *About* → *Opening date* → **2001**.
 ### 2.4 Attributes
 GBP → *Edit profile* → *More*. Tick only what's true: payment options (cash, UPI, debit/credit cards), "In-store shopping", "Delivery", wheelchair-accessible entrance (if true), "Family-owned" if offered for your category.
 
-### 2.5 Business name: leave it
-Keep **Cee Bee Enterprises**. Adding words like "Plywood & Hardware Hazaribagh" to the name is against Google's guidelines and a common cause of suspension. You can add "(CB Decor)" only if "CB Decor" is printed on your signboard. Your second Justdial listing already uses "Cee Bee Enterprises & CB Decor", so check the board.
+### 2.5 Business name
+The shop's full name is **Cee Bee Enterprises & CB Decor** (confirmed by the owner 12 Nov 2026). The website, the citation block and the description in section 3 all use it. Google currently shows just **Cee Bee Enterprises**.
+
+- Changing the Google name to "Cee Bee Enterprises & CB Decor" is allowed **only if that's how the shop is named in the real world**, on the signboard and bills. The second Justdial listing already uses it.
+- A name change is a core edit and can trigger re-verification, so **wait until after the edit pause (~23 Nov)**, and don't change the primary category in the same week.
+- Never add keywords like "Plywood & Hardware Hazaribagh" to the name. That's against Google's guidelines and a common cause of suspension.
 
 ### 2.6 Address: leave it
 The address is correct. Its lowercase "chowk"/"bazar" is cosmetic, and **editing the address can trigger re-verification**, so don't touch it. The website uses the same words with tidy capitals.
@@ -147,7 +160,7 @@ Google shows the auto-transliteration "की बी एंटरप्राइ
 ## 3. Business description (735 / 750 characters)
 
 ```
-Cee Bee Enterprises (CB Decor) is a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, serving homeowners, carpenters, contractors and interior designers since 2001. We stock BWP, MR and commercial plywood, blockboard, MDF and flush doors; laminates and veneers; door handles and locks; modular kitchen hardware; furniture fittings; Fevicol and adhesives; PVC and WPC boards, ACP and acrylic sheets; wall panels, louvers and false ceiling material; wallpaper, wall putty, flooring and blinds; chandeliers and decorative lights; and King Koil mattresses. Authorised dealer for Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel and King Koil. Delivery across Hazaribagh district.
+Cee Bee Enterprises & CB Decor is a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, serving homeowners, carpenters, contractors and interior designers since 2001. We stock BWP, MR and commercial plywood, blockboard, MDF and flush doors; laminates and veneers; door handles and locks; modular kitchen hardware; furniture fittings; Fevicol and adhesives; PVC and WPC boards, ACP and acrylic sheets; wall panels, louvers and false ceiling material; wallpaper, wall putty, flooring and blinds; chandeliers and decorative lights; and King Koil mattresses. Authorised dealer for Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel and King Koil. Delivery across Hazaribagh district.
 ```
 
 ---
@@ -185,7 +198,7 @@ Leave price blank. Button: **Learn more**. All links start with `https://ceebee-
 Use a real photo with each. Button: **Learn more**.
 
 **Post 1: Our new website**
-> Cee Bee Enterprises (CB Decor) now has a website: browse plywood, laminates, locks, kitchen hardware, wall panels, wallpaper, lights and King Koil mattresses, read our buying guides, and WhatsApp us for today's price. Visit us at Bajrangi Chowk, Tuesday to Sunday, 9:30 AM–7:30 PM.
+> Cee Bee Enterprises & CB Decor now has a website: browse plywood, laminates, locks, kitchen hardware, wall panels, wallpaper, lights and King Koil mattresses, read our buying guides, and WhatsApp us for today's price. Visit us at Bajrangi Chowk, Tuesday to Sunday, 9:30 AM–7:30 PM.
 > Link: `https://ceebee-enterprises.netlify.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post`
 
 **Post 2: Send your material list**
@@ -225,11 +238,11 @@ Use the exact block in `docs/citation-nap.md` everywhere.
 
 Google has largely removed the public Q&A section from profiles. These answers live on the website's FAQ page (`src/data/faqs.ts`), which Google and AI tools read. Reuse them in posts or replies as needed.
 
-1. **Where is Cee Bee Enterprises (CB Decor) in Hazaribagh?** Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301.
+1. **Where is Cee Bee Enterprises & CB Decor in Hazaribagh?** Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301.
 2. **What are your shop timings?** Tuesday to Sunday, 9:30 AM – 7:30 PM. Closed on Monday.
 3. **What does Cee Bee Enterprises sell?** Plywood, blockboard, MDF, flush doors, laminates and veneers, door handles and locks, modular kitchen hardware, furniture fittings, Fevicol and adhesives, PVC/WPC boards, ACP and acrylic sheets, wall panels and louvers, false ceiling material, wallpaper, wall putty, flooring, blinds, curtain rods, chandeliers and decorative lights, and King Koil mattresses.
 4. **Which brands are you an authorised dealer for?** Century, Greenply, Royale Touche, Merino, Godrej, Ebco, Pidilite, Excel and King Koil.
-5. **Where can I buy plywood in Hazaribagh?** At Cee Bee Enterprises (CB Decor) near Bajrangi Chowk. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.
+5. **Where can I buy plywood in Hazaribagh?** At Cee Bee Enterprises & CB Decor near Bajrangi Chowk. We stock Century, Greenply and Royale Touche BWP, MR and commercial plywood from 3 mm to 25 mm.
 6. **Do you deliver?** Yes, across Hazaribagh district. WhatsApp us your location and material list for delivery details.
 7. **Do you supply contractors and builders in bulk?** Yes. Send your material list on WhatsApp for a bulk quote with delivery to site.
 8. **Can you recommend a carpenter?** Yes. Ask us and we can refer you to carpenters we know.

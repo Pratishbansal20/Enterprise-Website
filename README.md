@@ -1,6 +1,6 @@
-# Cee Bee Enterprises (CB Decor) — website
+# Cee Bee Enterprises & CB Decor — website
 
-Website for **Cee Bee Enterprises (CB Decor)**, a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, Jharkhand.
+Website for **Cee Bee Enterprises & CB Decor**, a family-run hardware, plywood and interior products shop at Bajrangi Chowk, Hazaribagh, Jharkhand.
 
 **Live:** https://ceebee-enterprises.netlify.app
 

@@ -54,7 +54,7 @@ export function storeSchema() {
     parentOrganization: { '@id': ORG_ID },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Products sold at Cee Bee Enterprises (CB Decor)',
+      name: 'Products sold at Cee Bee Enterprises & CB Decor',
       itemListElement: categories.map((c) => ({
         '@type': 'OfferCatalog',
         name: c.name,

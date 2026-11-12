@@ -13,7 +13,7 @@ the full record of launch steps and status.
 - [x] Netlify site created from the GitHub repo and named `ceebee-enterprises`, giving https://ceebee-enterprises.netlify.app. Every push to `main` redeploys. The address comes from Netlify's `URL` variable, so canonicals, sitemap and robots.txt follow it.
 - [x] Site is public: visitor protection is off and every page returns 200 (checked 11 Nov 2026).
 - [x] Google-listing fixes merged (PR #2): Hazaribagh URLs, 7:30 PM hours, exact address.
-- [ ] **Quote form emails.** Netlify → *Forms* → enable form detection → redeploy → *Forms → quote → Form notifications* → email to satish.hzb@gmail.com. Send a test quote with a file attached (max 8 MB) and check it arrives.
+- [x] Quote form emails set up in Netlify (done by 12 Nov).
 
 ## B. After it's live
 
@@ -21,11 +21,11 @@ the full record of launch steps and status.
 - [ ] PageSpeed Insights (mobile) on home, one category page and one guide. Targets: LCP < 2.5 s, INP < 200 ms, CLS < 0.1.
 - [ ] Rich Results Test and schema.org validator on home, a category page and a guide.
 - [x] Google Search Console: *URL prefix* property `https://ceebee-enterprises.netlify.app/`, verified by the HTML file `public/google678c51c84924c368.html` (keep it). `sitemap-index.xml` submitted 11 Nov 2026 with status Success; Google has discovered all 28 pages. Next, watch *Pages* → *Indexed* (discovered ≠ indexed) and, after 2–4 weeks, *Performance* for the searches that show the site.
-- [ ] Search Console → *URL inspection* → *Request indexing*: **home page first**, because on 11 Nov it was the only page in Google and still showed the old "Hazaribag" / "8 PM" text. Then the main category pages (plywood, laminates, door hardware, kitchen hardware), a few a day.
+- [ ] Search Console → *URL inspection* → *Request indexing*. Home page done: Google shows the new text (12 Nov). Still to do: the main category pages (plywood, laminates, door hardware, kitchen hardware), a few a day.
 - [x] Bing Webmaster Tools: site imported from Search Console (11 Nov). Check in about a week that pages appear for `site:ceebee-enterprises.netlify.app` on bing.com.
 - [ ] **Bing Places:** blocked. The Google import reports "address line 1 missing" and the address can't be edited ("required permission"). Way out in `docs/todo.md` (step 6B).
 - [ ] Claim **Apple Business Connect**.
-- [ ] Update GBP (see `docs/google-business-profile.md`). Done by 11 Nov: website link with UTM, description, all 10 categories, plywood products, 69 photos, 115 reviews, pin moved to the correct spot (~9 Nov; edit pause until ~23 Nov). Still to do: primary-category decision after the pause, holiday hours, review replies, product name fixes and remaining products, services, posts.
+- [ ] Update GBP (see `docs/google-business-profile.md`). Done by 12 Nov: website link with UTM, description, all 10 categories, plywood products, 70 photos, 115 reviews, Delivery attribute, festival-hours warning cleared, pin moved to the correct spot (~9 Nov; edit pause until ~23 Nov). Still to do: paste the description with the full name "Cee Bee Enterprises & CB Decor", the name and primary-category decisions after the pause, review replies, product name fixes and remaining products, services, posts.
 - [ ] Make Justdial, Facebook and Instagram match the NAP block in `docs/citation-nap.md` exactly.
 - [x] `/robots.txt`, `/llms.txt` and `/sitemap-index.xml` open (checked 11 Nov).
 
@@ -63,7 +63,7 @@ Nothing here blocks launch. Each item appears on the live site as soon as it's a
 
 **Questions for you (answers change the site):**
 
-- Is **"CB Decor"** on the shop signboard? This decides whether GBP can use "Cee Bee Enterprises (CB Decor)" (see `docs/google-business-profile.md`).
+- Is **"CB Decor"** on the shop signboard? This decides whether GBP can use "Cee Bee Enterprises & CB Decor" (see `docs/google-business-profile.md`).
 - Besides Hazaribagh district, **which nearby towns** do you deliver to?
 - The stock list also shows **Greenlam, Hettich, Amulya, Vivre, Alstar, Krayon, Saint-Gobain and Abhiyan**. Should any be named on category pages as "also in stock"?
 - The stock list has **aluminium and stainless-steel ladders**. Should they appear on the site?

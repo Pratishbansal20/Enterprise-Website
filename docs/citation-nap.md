@@ -6,7 +6,7 @@ Business Profile and the website (`src/config/site.ts`). If anything changes,
 change Google first, then `site.ts`, then every listing.
 
 ```
-Business name:  Cee Bee Enterprises (CB Decor)
+Business name:  Cee Bee Enterprises & CB Decor
 Address:        Bajrangi Chowk, Jai Prakash Marg, Kani Bazar, Hazaribagh, Jharkhand 825301, India
 Phone:          +91 94313 94626
 WhatsApp:       +91 94313 94626

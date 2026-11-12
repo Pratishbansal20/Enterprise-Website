@@ -30,7 +30,7 @@ export const ui = {
     switchLangLabel: 'हिंदी में पढ़ें',
     skip: 'Skip to content',
     home: 'Home',
-    defaultWa: 'Hi, I want to know about products at Cee Bee Enterprises (CB Decor).',
+    defaultWa: 'Hi, I want to know about products at Cee Bee Enterprises & CB Decor.',
   },
   hi: {
     menu: 'मेनू',
@@ -42,6 +42,6 @@ export const ui = {
     switchLangLabel: 'Read in English',
     skip: 'मुख्य सामग्री पर जाएँ',
     home: 'होम',
-    defaultWa: 'नमस्ते, मुझे Cee Bee Enterprises (CB Decor) के सामान के बारे में जानकारी चाहिए।',
+    defaultWa: 'नमस्ते, मुझे Cee Bee Enterprises & CB Decor के सामान के बारे में जानकारी चाहिए।',
   },
 } as const;

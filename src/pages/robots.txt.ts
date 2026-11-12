@@ -5,7 +5,7 @@ import { SITE } from '../config/site';
 
 export const GET: APIRoute = () =>
   new Response(
-    `# robots.txt — Cee Bee Enterprises (CB Decor)
+    `# robots.txt — Cee Bee Enterprises & CB Decor
 
 # Search engines
 User-agent: Googlebot

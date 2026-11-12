@@ -64,7 +64,7 @@ const og = `
   <rect x="0" y="0" width="1200" height="10" fill="#c9231a"/>
   <g font-family="Georgia, 'Times New Roman', serif" fill="#fff8ec">
     <text x="420" y="230" font-size="64" font-weight="700">Cee Bee Enterprises</text>
-    <text x="420" y="292" font-size="40" fill="#d6a24e">(CB Decor)</text>
+    <text x="420" y="292" font-size="40" fill="#d6a24e">&amp; CB Decor</text>
   </g>
   <g font-family="Segoe UI, Arial, sans-serif" fill="#eadcc6">
     <text x="420" y="370" font-size="34" font-weight="600">Hardware &amp; Plywood Shop in Hazaribagh</text>

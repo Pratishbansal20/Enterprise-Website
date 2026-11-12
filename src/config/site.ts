@@ -9,7 +9,7 @@ export const SITE = {
   url: import.meta.env.SITE.replace(/\/$/, ''),
 
   // ── Name ────────────────────────────────────────────────────────────────
-  name: 'Cee Bee Enterprises (CB Decor)',
+  name: 'Cee Bee Enterprises & CB Decor',
   legalName: 'Cee Bee Enterprises',
   brand: 'CB Decor',
 

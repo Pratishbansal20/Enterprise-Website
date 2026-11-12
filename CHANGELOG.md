@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.3.0 — 2026-11-12 · Full shop name: Cee Bee Enterprises & CB Decor
+
+- The shop's full name is **Cee Bee Enterprises & CB Decor**. It replaces "Cee Bee Enterprises (CB Decor)" everywhere: titles, headings, body copy, schema `name`, `llms.txt`, the web manifest, the social-share image (regenerated) and the docs. The legal name stays "Cee Bee Enterprises" (as on Google and the GST record).
+- GBP description in `docs/google-business-profile.md` uses the new name (still 735 characters). Section 2.5 explains when to change the Google listing name.
+- Status docs updated from a 12 Nov check: quote-form emails, holiday hours and home-page re-indexing done; Bing not indexed yet; rankings table now tracks both the Maps view and Google's local results.
+- Includes the 720×720 Google logo from `docs/gbp-logo` (previously unpushed).
+
 ## 2.2.3 — 2026-11-11 · Logo for Google Business Profile
 
 - Added `docs/brand/cb-decor-logo-google-720.png`, a 720×720 copy of the CB logo filling the square on white, for the Google listing. `docs/google-business-profile.md` points to it.
